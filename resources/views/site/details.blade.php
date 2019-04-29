@@ -193,7 +193,17 @@
                                     @if($info_value == "Venda")      
                                     <span> Indisponível</span>
                                     @else
-                                    <span> R$ {{ number_format($immobile->immobiles_rental_price, 2, ',' , '.') }} mensal</span>
+                                    @php
+                                    if($immobile->immobiles_type_rental == 2){
+                                        $infoRentDetail = "Diária";
+                                    }elseif($immobile->immobiles_type_rental == 3){
+                                        $infoRentDetail = "Mensal";
+                                    }
+                                    @endphp
+                                            <span>         
+                                        R$ {{ number_format($immobile->immobiles_rental_price, 2, ',' , '.') }} 
+                                        {{$infoRentDetail}}
+                                    </span>
                                     @endif
                                 </li>
                                 {{--  
@@ -355,21 +365,20 @@
                 <!-- end description -->
                 <div class="widget property-single-item property-amenities">
                     <h4>
-                        <span>Amenities</span> <img class="divider-hex" src="images/divider-half.png" alt="">
+                    <span>Característica</span> <img class="divider-hex" src="{{url('img/site/divider-half.png')}}" alt="">
                         <div class="divider-fade"></div>
                     </h4>
-                    <ul class="amenities-list">
-                        <li><i class="fa fa-check icon"></i> Portão eletrônico</li>
-                        <li><i class="fa fa-check icon"></i> Frente para o Mar</li>
-                        <li><i class="fa fa-check icon"></i> Beira Mar</li>
-                        <li><i class="fa fa-check icon"></i> Adega</li>
-                        <li><i class="fa fa-check icon"></i> Elevador</li>
-                        <li><i class="fa fa-close icon"></i> Churrasqueira</li>
-                        <li><i class="fa fa-check icon"></i> Piscina</li>
-                        <li><i class="fa fa-check icon"></i> Quadra Poli Esportiva</li>
-                        <li><i class="fa fa-check icon"></i> Campo de Futebol</li>
-                        <li><i class="fa fa-close icon"></i> Mobiliado</li>
-                        
+                    <ul class="amenities-list">      
+                        @if($immobile->immobiles_electronic_door == 1)  <li><i class="fa fa-check icon"></i> Portão Elet.</li> @else <li><i class="fa fa-close icon"></i>  Portão Elet.</li>@endif                    
+                        @if($immobile->immobiles_front_sea == 1)        <li><i class="fa fa-check icon"></i> Frente Mar</li> @else <li><i class="fa fa-close icon"></i>  Frente Mar</li>@endif                    
+                        @if($immobile->immobiles_sea_shore == 1)        <li><i class="fa fa-check icon"></i> Beira Mar</li> @else <li><i class="fa fa-close icon"></i>  Beira Mar</li>@endif                    
+                        @if($immobile->immobiles_wine_house == 1)       <li><i class="fa fa-check icon"></i> Adega</li> @else <li><i class="fa fa-close icon"></i>  Adega</li>@endif                    
+                        @if($immobile->immobiles_elevator > 0)          <li><i class="fa fa-check icon"></i> Elevador</li> @else <li><i class="fa fa-close icon"></i>  Elevador</li>@endif                    
+                        @if($immobile->immobiles_barbecue_grill == 1)   <li><i class="fa fa-check icon"></i> Churrasqueira</li> @else <li><i class="fa fa-close icon"></i>  Churrasqueira</li>@endif                    
+                        @if($immobile->immobiles_poll == 1)             <li><i class="fa fa-check icon"></i> Piscina</li> @else <li><i class="fa fa-close icon"></i>  Piscina</li>@endif                    
+                        @if($immobile->immobiles_sports_court == 1)     <li><i class="fa fa-check icon"></i> Q. Poli Esportiva</li> @else <li><i class="fa fa-close icon"></i>Q. Poli Esportiva</li>@endif                    
+                        @if($immobile->immobiles_soccer_field == 1)     <li><i class="fa fa-check icon"></i> Campo Futebol</li> @else <li><i class="fa fa-close icon"></i>  Campo Futebol</li>@endif                    
+                        @if($immobile->immobiles_furnished == 1)        <li><i class="fa fa-check icon"></i> Mobiliado</li> @else <li><i class="fa fa-close icon"></i>  Mobiliado</li>@endif                    
                     </ul>
                 </div>
                 <div class="widget property-single-item property-location">
