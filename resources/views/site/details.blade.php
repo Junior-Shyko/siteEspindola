@@ -31,8 +31,14 @@
                             $info = 'Para Venda';
                             }else{
                             $value_immobile = number_format($immobile->immobiles_rental_price, 2 , ',' , '.');
-                            $info = 'Para Alugar';
-                            $info_value = 'Por Mês';
+                                
+                                $info = 'Para Alugar';
+                                $info_value = 'Por Mês';
+                                $infoRent = 'Locação';
+                                if($immobile->immobiles_type_rental == 2){
+                                    $info_value = 'Por dia';
+                                    $infoRent = 'Temporada';
+                                }
                             }
                             @endphp                  
                             <p class="property-address">
@@ -45,9 +51,9 @@
                                     <label>Venda</label>                         
                                     <div class="property-price-single ">R$ {{ number_format($immobile->immobiles_selling_price, 0, ',' , '.') }}</div>
                                 </div>
-                                @if( $info_value == "Por Mês")
+                                @if( $info_value == "Por Mês" || $info_value == "Por dia")
                                 <div class="col-md-6">
-                                    <label>Locação </label>    
+                                    <label> {{$infoRent}} </label>    
                                     <div class="property-price-single ">R$ {{ number_format($immobile->immobiles_rental_price, 0 , ',' , '.') }} <label style="font-size: 14px;">{{ $info_value }}</label></div>
                                 </div>
                                 @endif
@@ -347,6 +353,25 @@
                     </div>
                 </div>
                 <!-- end description -->
+                <div class="widget property-single-item property-amenities">
+                    <h4>
+                        <span>Amenities</span> <img class="divider-hex" src="images/divider-half.png" alt="">
+                        <div class="divider-fade"></div>
+                    </h4>
+                    <ul class="amenities-list">
+                        <li><i class="fa fa-check icon"></i> Portão eletrônico</li>
+                        <li><i class="fa fa-check icon"></i> Frente para o Mar</li>
+                        <li><i class="fa fa-check icon"></i> Beira Mar</li>
+                        <li><i class="fa fa-check icon"></i> Adega</li>
+                        <li><i class="fa fa-check icon"></i> Elevador</li>
+                        <li><i class="fa fa-close icon"></i> Churrasqueira</li>
+                        <li><i class="fa fa-check icon"></i> Piscina</li>
+                        <li><i class="fa fa-check icon"></i> Quadra Poli Esportiva</li>
+                        <li><i class="fa fa-check icon"></i> Campo de Futebol</li>
+                        <li><i class="fa fa-close icon"></i> Mobiliado</li>
+                        
+                    </ul>
+                </div>
                 <div class="widget property-single-item property-location">
                     <h4>
                         <span>Localização</span> <img class="divider-hex" src="{{ url('/img/site/divider-half.png') }}" alt="" />
