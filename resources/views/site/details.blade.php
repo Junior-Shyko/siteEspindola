@@ -30,8 +30,7 @@
                             $info_value = 'Venda';
                             $info = 'Para Venda';
                             }else{
-                            $value_immobile = number_format($immobile->immobiles_rental_price, 2 , ',' , '.');
-                                
+                            $value_immobile = number_format($immobile->immobiles_rental_price, 2 , ',' , '.');                                
                                 $info = 'Para Alugar';
                                 $info_value = 'Por Mês';
                                 $infoRent = 'Locação';
@@ -197,6 +196,8 @@
                                     if($immobile->immobiles_type_rental == 2){
                                         $infoRentDetail = "Diária";
                                     }elseif($immobile->immobiles_type_rental == 3){
+                                        $infoRentDetail = "Mensal";
+                                    }else{
                                         $infoRentDetail = "Mensal";
                                     }
                                     @endphp
