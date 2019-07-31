@@ -2,7 +2,7 @@
                 <ul>
                     <li><a href="#alugar">Alugar</a></li>
                     <li><a href="#comprar">Comprar</a></li>
-                    <li><a href="#todos">Ambos</a></li>
+                    
                     <li class="hidden-xs"><a href="#codigo">Código</a></li>
 
                 </ul>
