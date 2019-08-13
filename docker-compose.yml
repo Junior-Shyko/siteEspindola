@@ -39,7 +39,7 @@ services:
     phpmyadmin:
       restart: always
       image: phpmyadmin/phpmyadmin
-      container_name: phpmyadmin
+      container_name: phpmyadmin_site
       hostname: phpmyadmin
       depends_on: 
         - mysql

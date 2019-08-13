@@ -404,6 +404,36 @@
                     <div id="map-single"></div>
                 </div>
                 <!-- end location -->
+                <div class="widget property-single-item property-agent">
+                    <h4>
+                        <span>Corretor</span> <img class="divider-hex" src="images/divider-half.png" alt="" />
+                        <div class="divider-fade"></div>
+                    </h4>
+                    <div class="agent">
+                        <a href="#" class="agent-img">
+                            <div class="img-fade"></div>
+                            <div class="button alt agent-tag">4 Imóveis</div>
+                            <img src="http://cdn1.valuegaia.com.br/_Fotos/2299/usuarios/1092072299FC707C2AF6AC008BECBF3D0BD7D692E1B0137979.jpg" alt="" />
+                        </a>
+                        <div class="agent-content">
+                            
+                            <div class="agent-details">
+                                <h4><a href="#">Renan Bastor</a></h4>
+                                <p><i class="fa fa-tag icon"></i>Agência Aldeota</p>
+                                <p><i class="fa fa-envelope icon"></i>renan_jnb@hotmail.com</p>
+                                <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
+                            </div>
+                            <ul class="social-icons">
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>    
                 <div class="widget property-single-item property-related">
                     <h4>
                         <span>Imóveis Relacionados</span> <img class="divider-hex" src="images/divider-half.png" alt="" />

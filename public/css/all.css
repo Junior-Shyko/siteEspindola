@@ -195,7 +195,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
  .container { position:relative; }
 
- .module { position:relative; padding:70px 0px 70px 0px; }
+ .module { position:relative; padding:70px 0px 70px 0px; background: #dad8dc99}
  .module.no-padding { padding:0; }
  .module.no-padding-top { padding-top:0; }
  .module.no-padding-bottom { padding-bottom:0; }
