@@ -290,7 +290,7 @@ public function show($id)
         $other_immobile = Immobile::where([
             ['immobiles_type_immobiles',$immobile->immobiles_type_immobiles]  
         ])->get();
-        //dd($immobile->immobiles_iptu_price);
+       
         return view('site.details' , compact('immobile' , 'photo_immobile' , 'rental_type' , 'recents' , 
         'offer_type' , 'page_title' , 'type' , 'district' , 'meta_site' , 'insurance_fire_monthly' ,
         'body_info_fire' , 'accept_negotiation' , 'key_cadastre' , 'insurance_fire_annual', 'other_immobile'));

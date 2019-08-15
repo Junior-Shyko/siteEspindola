@@ -410,18 +410,33 @@
                         <div class="divider-fade"></div>
                     </h4>
                     <div class="agent">
+                      
+                        @php $realtor = SiteEspindola\Immobile::getRealtor($immobile->immobiles_code); $agencia = "";  @endphp 
+                        
                         <a href="#" class="agent-img">
                             <div class="img-fade"></div>
-                            <div class="button alt agent-tag">4 Imóveis</div>
-                            <img src="http://cdn1.valuegaia.com.br/_Fotos/2299/usuarios/1092072299FC707C2AF6AC008BECBF3D0BD7D692E1B0137979.jpg" alt="" />
+                            
+                        @if($realtor->realtor_fixo == '(85) 3461-1166')  
+                            @php
+                                $agencia = 'Aldeota';
+                            @endphp
+                            <img src="https://static.wixstatic.com/media/cffaeb_a72f6ed685534fb4b93ca55dde2e5848~mv2_d_6016_4016_s_4_2.jpg/v1/fill/w_1518,h_1013,al_c,q_85,usm_0.66_1.00_0.01/cffaeb_a72f6ed685534fb4b93ca55dde2e5848~mv2_d_6016_4016_s_4_2.jpg" alt="" />
+                        @else 
+                            @php
+                                $agencia = 'Fátima';
+                            @endphp
+                            <img src="https://static.wixstatic.com/media/cffaeb_902df736c84047c0a0f77378efc0c7c8~mv2_d_5125_2883_s_4_2.jpg/v1/fill/w_1013,h_570,al_c,q_85,usm_0.66_1.00_0.01/cffaeb_902df736c84047c0a0f77378efc0c7c8~mv2_d_5125_2883_s_4_2.jpg" alt="" />
+                        @endif
+                            <div class="button alt agent-tag">Ag. {{$agencia}}</div>
                         </a>
+
                         <div class="agent-content">
                             
                             <div class="agent-details">
-                                <h4><a href="#">Renan Bastor</a></h4>
-                                <p><i class="fa fa-tag icon"></i>Agência Aldeota</p>
-                                <p><i class="fa fa-envelope icon"></i>renan_jnb@hotmail.com</p>
-                                <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
+                                <h4><a href="#">{{$realtor->realtor_name}}</a></h4>
+                            <p><i class="fa fa-tag icon"></i>Agência {{$agencia}}</p>
+                                <p><i class="fa fa-envelope icon"></i>{{$realtor->realtor_email}}</p>
+                            <p><i class="fa fa-phone icon"></i>{{$realtor->realtor_fixo}}</p>
                             </div>
                             <ul class="social-icons">
                                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -432,6 +447,7 @@
                             </ul>
                         </div>
                         <div class="clear"></div>
+                       
                     </div>
                 </div>    
                 <div class="widget property-single-item property-related">

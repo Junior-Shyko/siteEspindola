@@ -195,7 +195,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
  .container { position:relative; }
 
- .module { position:relative; padding:70px 0px 70px 0px; background: #dad8dc99}
+ .module { position:relative; padding:70px 0px 70px 0px; }
  .module.no-padding { padding:0; }
  .module.no-padding-top { padding-top:0; }
  .module.no-padding-bottom { padding-bottom:0; }
@@ -1171,11 +1171,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  .property-cat h3 { color:white; font-weight:200; }
  .property-cat:hover .color-bar { width:130px; }
 
- .property-cat-apartments { background-image:url(../images/1000x560.png);}
- .property-cat-houses { background-image:url(../images/1000x560.png);}
- .property-cat-condos { background-image:url(../images/1000x560.png);}
- .property-cat-waterfront { background-image:url(../images/1000x560.png);}
- .property-cat-cozy { background-image:url(../images/1000x560.png);}
+ .property-cat-apartments { background-image:url(../img/site/apartamento.jpg);}
+ .property-cat-houses { background-image:url(../img/site/casa.png);}
+ .property-cat-condos { background-image:url(../img/site/sala.jpg);}
+ .property-cat-waterfront { background-image:url(../img/site/loja.png);}
+ .property-cat-cozy { background-image:url(../img/site/fortaleza.png);}
 
  /** PROPERTY SINGLE **/
  .property-single-item { margin-bottom:45px; background:white; padding:30px; }
@@ -2026,7 +2026,7 @@ input[type="text"].ui-autocomplete-input:-ms-input-placeholder { color:black; }
 .select_filter{
   margin-top: -20px !important;
 }
-/*PÁGINA DE LISTA DE IMÓVEIS*/
+/*PÃGINA DE LISTA DE IMÃ“VEIS*/
 .img_property{
 	max-width: 281px; height: 187px !important; margin: 0 auto;
 }
@@ -2221,7 +2221,12 @@ input[type="text"].ui-autocomplete-input:-ms-input-placeholder { color:black; }
   }
   #input-code-mobile{
     color: black;
-  }
+	}
+	.property-gallery img {
+    max-width: 100%;
+		height: auto !important;
+		margin: 0 auto;
+	}
   
 
 }
@@ -2312,7 +2317,11 @@ input[type="text"].ui-autocomplete-input:-ms-input-placeholder { color:black; }
 #input-code-mobile{
 	color: black;
 }
-
+.property-gallery img {
+	max-width: 100%;
+	height: auto !important;
+	margin: 0 auto;
+}
 }
 
 @media only screen and (max-width: 480px) {
@@ -2351,6 +2360,11 @@ input[type="text"].ui-autocomplete-input:-ms-input-placeholder { color:black; }
   }
   #input-code-mobile{
     color: black;
-  }
+	}
+	.property-gallery img {
+    max-width: 100%;
+		height: auto !important;
+		margin: 0 auto;
+	}
   
 }

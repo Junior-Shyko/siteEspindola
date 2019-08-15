@@ -32,6 +32,13 @@ class Immobile extends Model
 
     	return $photo_featured->photo_immobiles_url;
     }
+
+    static public function getRealtor($code)
+    {
+    	$realtor = DB::table('realtor')->where('realtor_code_imobile' , '=', $code)->first();
+
+    	return $realtor;
+    }
     //TIPO DE LOCAÇÃO
     static public function typeRental($type_rental)
     {
@@ -133,7 +140,7 @@ class Immobile extends Model
         $type_rental = [];
         switch ( $option ) {
             case 'alugar':
-            $type_rental = [1];
+            $type_rental = [1,3];
             break;
             case 'comprar':
             $type_rental = [2,1];

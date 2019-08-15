@@ -164,7 +164,7 @@ $(document).ready(function () {
 
     });
     //OCUTANDO DIV DE BUSCA AVANÇADA  
-    //$("#filterAdvancedImmobile").hide();
+    $("#filterAdvancedImmobile").hide();
     $("#code-mobile").hide();
     all_district = [];
     //URL COM DADOS
