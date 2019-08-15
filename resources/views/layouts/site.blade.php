@@ -60,7 +60,7 @@
          /*]]>*/
          
          //GLOBALIZANDO URL
-         var project_survey = ':3050';
+         var project_survey = ':3060';
          domin  =  window.location.protocol + "//" + window.location.hostname;
          var domain_complet = domin + project_survey; 
          var url = window.location.origin;

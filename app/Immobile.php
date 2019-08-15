@@ -129,10 +129,11 @@ class Immobile extends Model
 
     static public function getTypeRental( $option )
     {
+      
         $type_rental = [];
         switch ( $option ) {
             case 'alugar':
-            $type_rental = [3,1];
+            $type_rental = [1];
             break;
             case 'comprar':
             $type_rental = [2,1];
