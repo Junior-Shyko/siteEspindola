@@ -290,10 +290,23 @@ public function show($id)
         $other_immobile = Immobile::where([
             ['immobiles_type_immobiles',$immobile->immobiles_type_immobiles]  
         ])->get();
-       
+        $districtAll = DB::table('district')->get();
+        // dump($immobile->immobiles_district);
+        $id_agency = 0;
+            foreach ($districtAll as $key => $value) {
+                if(str_contains($value->district_name, $immobile->immobiles_district))
+                {
+                   $id_agency = $value->district_id_agency;
+                }
+            }
+
+        $realtor = DB::table('realtor')->where('realtor_code_imobile', $immobile->immobiles_code)->first();
+        
+        // dd($district);
         return view('site.details' , compact('immobile' , 'photo_immobile' , 'rental_type' , 'recents' , 
         'offer_type' , 'page_title' , 'type' , 'district' , 'meta_site' , 'insurance_fire_monthly' ,
-        'body_info_fire' , 'accept_negotiation' , 'key_cadastre' , 'insurance_fire_annual', 'other_immobile'));
+        'body_info_fire' , 'accept_negotiation' , 'key_cadastre' , 'insurance_fire_annual', 'other_immobile', 'districtAll',
+        'id_agency' , 'realtor'));
     }    
 }
 

@@ -77,6 +77,15 @@
                             <div class="property-tag button status">
                                 {{ $info }}
                             </div>
+                            @if ($id_agency == 1)
+                                <div class="property-tag button alt featured">
+                                       Agência Aldeota
+                                </div> 
+                            @else
+                                <div class="property-tag button alt featured">
+                                        Agência Fátima
+                                </div> 
+                            @endif
                             <div class="property-type right">Finalidade: <a href="#">{{ $immobile->immobiles_finality }}</a></div>
                         </div>
                     </div>
@@ -404,52 +413,34 @@
                     <div id="map-single"></div>
                 </div>
                 <!-- end location -->
+                @if ($immobile->immobiles_selling_price > 0)                
                 <div class="widget property-single-item property-agent">
                     <h4>
                         <span>Corretor</span> <img class="divider-hex" src="images/divider-half.png" alt="" />
                         <div class="divider-fade"></div>
                     </h4>
+                    {{-- <img src="https://static.wixstatic.com/media/cffaeb_902df736c84047c0a0f77378efc0c7c8~mv2_d_5125_2883_s_4_2.jpg/v1/fill/w_1013,h_570,al_c,q_85,usm_0.66_1.00_0.01/cffaeb_902df736c84047c0a0f77378efc0c7c8~mv2_d_5125_2883_s_4_2.jpg" alt="" />
+                                   --}}
                     <div class="agent">
-                      
-                        @php $realtor = SiteEspindola\Immobile::getRealtor($immobile->immobiles_code); $agencia = "";  @endphp 
                         
-                        <a href="#" class="agent-img">
-                            <div class="img-fade"></div>
-                            
-                        @if($realtor->realtor_fixo == '(85) 3461-1166')  
-                            @php
-                                $agencia = 'Aldeota';
-                            @endphp
-                            <img src="https://static.wixstatic.com/media/cffaeb_a72f6ed685534fb4b93ca55dde2e5848~mv2_d_6016_4016_s_4_2.jpg/v1/fill/w_1518,h_1013,al_c,q_85,usm_0.66_1.00_0.01/cffaeb_a72f6ed685534fb4b93ca55dde2e5848~mv2_d_6016_4016_s_4_2.jpg" alt="" />
-                        @else 
-                            @php
-                                $agencia = 'Fátima';
-                            @endphp
-                            <img src="https://static.wixstatic.com/media/cffaeb_902df736c84047c0a0f77378efc0c7c8~mv2_d_5125_2883_s_4_2.jpg/v1/fill/w_1013,h_570,al_c,q_85,usm_0.66_1.00_0.01/cffaeb_902df736c84047c0a0f77378efc0c7c8~mv2_d_5125_2883_s_4_2.jpg" alt="" />
-                        @endif
-                            <div class="button alt agent-tag">Ag. {{$agencia}}</div>
-                        </a>
-
-                        <div class="agent-content">
-                            
-                            <div class="agent-details">
-                                <h4><a href="#">{{$realtor->realtor_name}}</a></h4>
-                            <p><i class="fa fa-tag icon"></i>Agência {{$agencia}}</p>
-                                <p><i class="fa fa-envelope icon"></i>{{$realtor->realtor_email}}</p>
-                            <p><i class="fa fa-phone icon"></i>{{$realtor->realtor_fixo}}</p>
-                            </div>
-                            <ul class="social-icons">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="clear"></div>
-                       
+                                    <a href="#" class="agent-img">
+                                        <div class="img-fade"></div>
+                                    <img src="{{$realtor->realtor_photo}}" alt="" />
+                                        <div class="button alt agent-tag">Espíndola Imobiliária</div>
+                                    </a>
+                                    <div class="agent-content">                            
+                                        <div class="agent-details">
+                                        <h4><a href="#">{{$realtor->realtor_name}}</a></h4>
+                                        
+                                            <p><i class="fa fa-envelope icon"></i>{{$realtor->realtor_email}}</p>
+                                        <p><i class="fa fa-phone icon"></i>{{$realtor->	realtor_fixo}}</p>
+                                        <p><i class="fa fa-whatsapp icon"></i>{{$realtor->realtor_mobile}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
                     </div>
                 </div>    
+                @endif
                 <div class="widget property-single-item property-related">
                     <h4>
                         <span>Imóveis Relacionados</span> <img class="divider-hex" src="images/divider-half.png" alt="" />
@@ -501,11 +492,28 @@
             <!-- end col -->
             <div class="col-lg-4 col-md-4 sidebar sidebar-property-single">
                 <div class="widget widget-sidebar advanced-search">
-                    <h4><span>Busca Avançada</span> <img src="{{ url('public/img/site/divider-half-white.png') }}" alt="" /></h4>
+                    <h4><span>Contato</span> <img src="{{ url('img/site/divider-half.png') }}" alt="" /></h4>
                     <div class="widget-content box">
                         {{ Form::open(['url' => 'searchadvance']) }}
                         <div class="form-block border">
-                            <label for="property-location">Tipo de Imóvel</label>
+                            <label for="property-location">Nome</label>
+                            <input type="text" class="form-control" placeholder="Informe seu nome">
+                        </div>
+                        <div class="form-block border">
+                            <label for="property-status">Telefone*</label>
+                            <input type="text" class="form-control" placeholder="Informe seu telefone (opcional)">
+                        </div>
+                        <div class="form-block">
+                            <label>Email</label>                               
+                            <input type="text" name="immobiles_rental_price" class="form-control"  placeholder="Informe seu telefone (opcional)">                                
+                        </div>
+                        <div class="form-block">
+                            <label>Mensagem</label>                               
+                            <textarea name="" id="" cols="30" rows="10" class="form-control">Olá, eu gostaria de obter mais informações sobre este imóvel: {{$immobile->immobiles_property_title}} – {{$immobile->immobiles_code}}. Aguardarei o contato.Obrigado.</textarea>                                
+                        </div>
+
+                        {{-- <div class="form-block border">
+                            <label for="property-location">Nome</label>
                             <select  class="select-form type-immobile" id="immobile-type-advanced" name="immobiles_type_immobiles[]"  data-placeholder="Tipo de imóvel" multiple="multiple" style=" width: 100% !important;">
                                 @foreach($type as $types)
                                 <option value="{{ $types->immobiles_type_immobiles }}">{{ $types->immobiles_type_immobiles }}</option>
@@ -537,11 +545,28 @@
                             <input type="number" name="areaMin" class="area-filter border" placeholder="Min" />
                             <input type="number" name="areaMax" class="area-filter border" placeholder="Max" />
                             <div class="clear"></div>
-                        </div>
-                        <div class="form-block">
-                            {{ Form::submit('Buscar!' , ['class' => 'button', 'id' => 'submitSearch']) }}
+                        </div> --}}
+                        <div class="form-block text-center">
+                            {{ Form::submit('Entrar em contato' , ['class' => 'button', 'id' => 'submitSearch']) }}
                         </div>
                         {{ Form::close() }}
+                        <div class="form-block ">
+                            @if ($id_agency == 1)
+                            <div class="agent-details">                                      
+                                    <p><i class="fa fa-tag icon"></i>Agência Aldeota</p>
+                                        <p><i class="fa fa-envelope icon"></i>meajuda@espindolaimobiliaria.com.br</p>
+                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
+                                    <p><i class="fa fa-whatsapp icon"></i>(85) 98810-1166</p>
+                                    </div>
+                            @else
+                            <div class="agent-details">                                    
+                                    <p><i class="fa fa-tag icon"></i>Agência Fátima</p>
+                                        <p><i class="fa fa-envelope icon"></i>meajuda@espindolaimobiliaria.com.br</p>
+                                    <p><i class="fa fa-phone icon"></i>(85) 3038-0014</p>
+                                    <p><i class="fa fa-whatsapp icon"></i>(85) 98990-4899</p>
+                                    </div> 
+                            @endif
+                        </div>
                     </div>
                     <!-- end widget content -->
                 </div>
