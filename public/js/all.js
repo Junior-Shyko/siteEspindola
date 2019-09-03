@@ -1,116 +1,21 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, {
-/******/ 				configurable: false,
-/******/ 				enumerable: true,
-/******/ 				get: getter
-/******/ 			});
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
-/************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(1);
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
 
 $(function () {
     PNotify.prototype.options.styling = "bootstrap3";
     PNotify.prototype.options.styling = "fontawesome";
 
     $("#submitSearch").click(function (event) {
-        if ($("#immobile-type-advanced").val() == "") {
-            new PNotify({
-                title: 'Importante',
-                text: 'O Tipo deve ser preenchido',
-                type: 'error',
-                icon: 'fa fa-error',
-                styling: 'fontawesome',
-                animate_speed: 'fast'
-            });
-            return false;
-        }
-
-        if ($("#immobiles_district").val() == "") {
-            new PNotify({
-                title: 'Importante',
-                text: 'Pelo menos um bairro deve ser escolhido',
-                type: 'error',
-                icon: 'fa fa-error',
-                styling: 'fontawesome',
-                animate_speed: 'fast'
-            });
-            // $('#immobiles_district').SumoSelect({
-            //        isOpen: true,
-            //        keepOpen: true
-            //    });
-            $('#immobiles_district').SumoSelect();
-            return false;
-        }
-
-        if ($("#immobile-type-advanced").val() && $("#immobiles_district-type-advanced").val() != "") {
-            return true;
-        }
+        $("#img-load").show();
+        $("#submitSearch").text('Enviando mensagem');
+        $.ajax({
+            type: "post",
+            url: domain_complet+'/enviar-mensagem',
+            data: $("#form-enviar-mensagem").serialize(),
+            dataType: "json",
+            success: function (response) {
+                $("#img-load").hide();
+                $("#submitSearch").text('Mensagem Enviada');
+            }
+        });
     });
 
     $("#selectDistrictForm").select2();
@@ -120,7 +25,7 @@ $(document).ready(function () {
     //modal de contato
     //$("#modal_reserve_key").modal('show');
     $("#btn_send_contact").html('Enviar Mensagem');
-
+    $("#img-load").hide();
     //modal contato
     $("#id_icon_send").hide();
     $("#info_send_contact").hide();
@@ -431,6 +336,3 @@ $(document).ready(function () {
         language: 'pt-BR'
     });
 }); // FIM READY
-
-/***/ })
-/******/ ]);

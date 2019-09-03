@@ -45,6 +45,7 @@ static protected $geoip;
 */
 public function index()
 {
+
     if(!isset($_SERVER['HTTP_REFERER']))
     {
         $refer = url('/');
@@ -487,11 +488,20 @@ public function immobileAdvanced(Request $request)
 
 public function sendContact(Request $request)
 {
-            
+       
     $immobile = Immobile::where('immobiles_code' , '=' , $request['immobiles_code'])->first();
     $contact = $request->all();
-
-    $mail = \Mail::to('franciscoanto@gmail.com')->send(new ContactMail($immobile, $contact ));
+   
+    $date_send = Carbon::now('America/Fortaleza');
+    $date = Carbon::parse($date_send, 'UTC');
+    $date = $date->format('d \d\e F \d\e Y H:m');
+    if($request->id_agency == 1){
+        $agency = "Ag. Aldeota";
+    }else{
+        $agency = "Ag. Fátima";
+    }
+    $mail = \Mail::to('meajuda@espindolaimobiliaria.com.br')->send(new ContactMail($immobile, $contact, $date, $agency ));
+   
     if($mail)
     {
         return response()->json(['message' => 'success']);
@@ -578,6 +588,10 @@ public function allType($type)
 
 }
     
-    
+    public function sync()
+    {
+        $sync = Immobile::xml();
+        return $sync;
+    }    
 
 }

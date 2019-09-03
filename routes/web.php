@@ -48,7 +48,8 @@ Route::get('calculos-imobiliarios' , 'CalculationController@index');
 
 /* REDIRECIONAMENTO DE ERROS */
 Route::get('/pagenotfound', 'HomeController@padenotfound');
-
+/** SINCRONIZAR */
+Route::get('xml' , 'SiteController@sync');
 
 
 

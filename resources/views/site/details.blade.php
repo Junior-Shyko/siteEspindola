@@ -4,13 +4,12 @@
 @endsection
 @section('content')
 <style type="text/css">
-.amenities-list li {
+    .amenities-list li {
     font-weight: normal;
     color: #556878;
     display: block;
     line-height: 2.4;
-}
-
+    }
 </style>
 <section class="module">
     <div class="container">
@@ -23,11 +22,11 @@
                             @php
                             //PARA ATIVAÇÃO DAS ABAS DE FOTOS E TOUR VIRTUAL
                             if($immobile->immobiles_tour_virtual != ""){
-                                $active_360 = "active";
-                                $active_photo = "";
+                            $active_360 = "active";
+                            $active_photo = "";
                             }else{
-                                $active_360 = "";
-                                $active_photo = "active";
+                            $active_360 = "";
+                            $active_photo = "active";
                             }
                             if($immobile->immobiles_rental_price == 0)
                             {
@@ -36,13 +35,13 @@
                             $info = 'Para Venda';
                             }else{
                             $value_immobile = number_format($immobile->immobiles_rental_price, 2 , ',' , '.');                                
-                                $info = 'Para Alugar';
-                                $info_value = 'Por Mês';
-                                $infoRent = 'Locação';
-                                if($immobile->immobiles_type_rental == 2){
-                                    $info_value = 'Por dia';
-                                    $infoRent = 'Temporada';
-                                }
+                            $info = 'Para Alugar';
+                            $info_value = 'Por Mês';
+                            $infoRent = 'Locação';
+                            if($immobile->immobiles_type_rental == 2){
+                            $info_value = 'Por dia';
+                            $infoRent = 'Temporada';
+                            }
                             }
                             @endphp                  
                             <p class="property-address">
@@ -78,94 +77,90 @@
                                 {{ $info }}
                             </div>
                             @if ($id_agency == 1)
-                                <div class="property-tag button alt featured">
-                                       Agência Aldeota
-                                </div> 
+                            <div class="property-tag button alt featured">
+                                Agência Aldeota
+                            </div>
                             @else
-                                <div class="property-tag button alt featured">
-                                        Agência Fátima
-                                </div> 
+                            <div class="property-tag button alt featured">
+                                Agência Fátima
+                            </div>
                             @endif
                             <div class="property-type right">Finalidade: <a href="#">{{ $immobile->immobiles_finality }}</a></div>
                         </div>
                     </div>
                     <div class="property-single-item property-main">
-                            <!-- Nav tabs -->
-                            <ul class="nav nav-tabs" role="tablist" style="">
-                                <li role="presentation active" style="margin:5px;">
-                                    <div class="button">                                    
-                                        <a href="#home" aria-controls="home" style="color:#ffffff;" role="tab" data-toggle="tab">
-                                        Fotos
-                                        <i class="fa fa-image"  aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </li>
-                               
-                            @if(!empty($immobile->immobiles_tour_virtual))
-                                
-                                <li role="presentation" style="margin:5px;">
-                                    <div class="button">
-                                        <a href="#profile" aria-controls="profile" style="color:#ffffff;" role="tab" data-toggle="tab">
-                                            360º <i class="fa fa-street-view" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </li>
-                            @endif
-                            </ul>
-                          
-                            <!-- Tab panes -->
-                            <div class="tab-content">
-                              <div role="tabpanel" class="tab-pane active" id="home">
-                                    <table class="property-details-single">
-                                            <tr>
-                                                <td><i class="fa fa-bed"></i> <span>{{ $immobile->immobiles_qtd_dormitory }}</span> Quarto(s).</td>
-                                                <td><i class="fa fa-shower"></i> <span>{{ $immobile->immobiles_qtd_toilet }}</span> WC.</td>
-                                                <td><i class="fa fa-expand"></i> <span>{{ $immobile->immobiles_total_area }}</span> m²</td>
-                                                <td><i class="fa fa-car"></i> <span>
-                                                    @if( $immobile->immobiles_qtd_uncovered_jobs == "")
-                                                    0
-                                                    @else
-                                                    {{ $immobile->immobiles_qtd_uncovered_jobs }}
-                                                    @endif
-                                                    </span> vaga.(s)
-                                                </td>
-                                            </tr>
-                                        </table>
-                                        <div class="property-gallery">
-                                            <div class="slider-nav slider-nav-property-gallery">
-                                                <span class="slider-prev"><i class="fa fa-angle-left"></i></span>
-                                                <span class="slider-next"><i class="fa fa-angle-right"></i></span>
-                                            </div>
-                                            <div class="slide-counter"></div>
-                                            <div class="slider slider-property-gallery">
-                                                @foreach($photo_immobile as $photos)
-                                                <div class="slide" style="background: #e7e7e7;">
-                                                    <img src="{{ $photos->photo_immobiles_url }}" 
-                                                    alt="{{ $photos->photo_immobiles_url }}" 
-                                                    style="margin: 0 auto;"/>
-                                                </div>
-                                                @endforeach
-                                            </div>
-                                            <div class="slider property-gallery-pager">
-                                                @foreach($photo_immobile as $photos)
-                                                <a class="property-gallery-thumb">
-                                                <img src="{{ $photos->photo_immobiles_url }}" alt="{{ $photos->photo_immobiles_url }}" />
-                                                </a>
-                                                @endforeach
-                                            </div>
-                                        </div>
-                              </div>
-                              <div role="tabpanel" class="tab-pane" id="profile">
-                                  <iframe frameborder='0' height='465px' width='100%' scrolling='no'
-                                  src="{{$immobile->immobiles_tour_virtual}}" allowfullscreen></iframe>
-                                    <a href="{{$immobile->immobiles_tour_virtual}}" class="btn btn-block btn-primary" target="_blank">
-                                     <i class="fa fa-arrows-alt" aria-hidden="true"></i>
-                                     Expandir Tour Virtual
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist" style="">
+                            <li role="presentation active" style="margin:5px;">
+                                <div class="button">                                    
+                                    <a href="#home" aria-controls="home" style="color:#ffffff;" role="tab" data-toggle="tab">
+                                    Fotos
+                                    <i class="fa fa-image"  aria-hidden="true"></i>
                                     </a>
-                              </div>
-                              
-                            </div>                      
-                          </div>
+                                </div>
+                            </li>
+                            @if(!empty($immobile->immobiles_tour_virtual))
+                            <li role="presentation" style="margin:5px;">
+                                <div class="button">
+                                    <a href="#profile" aria-controls="profile" style="color:#ffffff;" role="tab" data-toggle="tab">
+                                    360º <i class="fa fa-street-view" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </li>
+                            @endif
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home">
+                                <table class="property-details-single">
+                                    <tr>
+                                        <td><i class="fa fa-bed"></i> <span>{{ $immobile->immobiles_qtd_dormitory }}</span> Quarto(s).</td>
+                                        <td><i class="fa fa-shower"></i> <span>{{ $immobile->immobiles_qtd_toilet }}</span> WC.</td>
+                                        <td><i class="fa fa-expand"></i> <span>{{ $immobile->immobiles_total_area }}</span> m²</td>
+                                        <td><i class="fa fa-car"></i> <span>
+                                            @if( $immobile->immobiles_qtd_uncovered_jobs == "")
+                                            0
+                                            @else
+                                            {{ $immobile->immobiles_qtd_uncovered_jobs }}
+                                            @endif
+                                            </span> vaga.(s)
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="property-gallery">
+                                    <div class="slider-nav slider-nav-property-gallery">
+                                        <span class="slider-prev"><i class="fa fa-angle-left"></i></span>
+                                        <span class="slider-next"><i class="fa fa-angle-right"></i></span>
+                                    </div>
+                                    <div class="slide-counter"></div>
+                                    <div class="slider slider-property-gallery">
+                                        @foreach($photo_immobile as $photos)
+                                        <div class="slide" style="background: #e7e7e7;">
+                                            <img src="{{ $photos->photo_immobiles_url }}" 
+                                                alt="{{ $photos->photo_immobiles_url }}" 
+                                                style="margin: 0 auto;"/>
+                                        </div>
+                                        @endforeach
+                                    </div>
+                                    <div class="slider property-gallery-pager">
+                                        @foreach($photo_immobile as $photos)
+                                        <a class="property-gallery-thumb">
+                                        <img src="{{ $photos->photo_immobiles_url }}" alt="{{ $photos->photo_immobiles_url }}" />
+                                        </a>
+                                        @endforeach
+                                    </div>
+                                </div>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile">
+                                <iframe frameborder='0' height='465px' width='100%' scrolling='no'
+                                    src="{{$immobile->immobiles_tour_virtual}}" allowfullscreen></iframe>
+                                <a href="{{$immobile->immobiles_tour_virtual}}" class="btn btn-block btn-primary" target="_blank">
+                                <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                                Expandir Tour Virtual
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- end property title and gallery -->
                 <div class="widget property-single-item property-description content">
@@ -208,16 +203,16 @@
                                     @else
                                     @php
                                     if($immobile->immobiles_type_rental == 2){
-                                        $infoRentDetail = "Diária";
+                                    $infoRentDetail = "Diária";
                                     }elseif($immobile->immobiles_type_rental == 3){
-                                        $infoRentDetail = "Mensal";
+                                    $infoRentDetail = "Mensal";
                                     }else{
-                                        $infoRentDetail = "Mensal";
+                                    $infoRentDetail = "Mensal";
                                     }
                                     @endphp
-                                            <span>         
-                                        R$ {{ number_format($immobile->immobiles_rental_price, 2, ',' , '.') }} 
-                                        {{$infoRentDetail}}
+                                    <span>         
+                                    R$ {{ number_format($immobile->immobiles_rental_price, 2, ',' , '.') }} 
+                                    {{$infoRentDetail}}
                                     </span>
                                     @endif
                                 </li>
@@ -226,24 +221,20 @@
                                 --}}
                                 <li>Valor Condo: <span>R$ {{ number_format($immobile->immobiles_condominium_price, 2, ',' , '.') }}</span></li>
                                 <li>Valor IPTU: 
-                                   
                                     <button type="button" class="btn btn-default" title="IPTU" 
-                                    data-toggle="popover" data-placement="top" data-content="Valor Mensal" 
-                                    style="border-color: #fff; border-radius: 100px;"> 
+                                        data-toggle="popover" data-placement="top" data-content="Valor Mensal" 
+                                        style="border-color: #fff; border-radius: 100px;"> 
                                     <i class="fa fa-question-circle" title="click para mais Informações"></i>
                                     </button>
-                                     
                                     <span> 
-                                    
                                     R$ {{ number_format($immobile->immobiles_iptu_price ,2, ',', '.') }}
-                                    
                                     </span>
                                 </li>
                                 <li>Seguro Incêndio: 
                                     @if($info_value !== "Venda")
                                     <button type="button" class="btn btn-default" title="Seguro incêndio" 
-                                    data-toggle="popover" data-placement="top" data-content="{{ $body_info_fire }}" 
-                                    style="border-color: #fff; border-radius: 100px;"> 
+                                        data-toggle="popover" data-placement="top" data-content="{{ $body_info_fire }}" 
+                                        style="border-color: #fff; border-radius: 100px;"> 
                                     <i class="fa fa-question-circle" title="click para mais Informações"></i>
                                     </button>
                                     @endif    
@@ -265,7 +256,6 @@
                             </ul>
                             <div class="row alert">
                                 <div class="col-md-6 space_button">
-                                    
                                 </div>
                                 <div class="col-md-6">
                                     <a href="#fazerproposta" data-toggle="modal" class="button"> 
@@ -380,30 +370,63 @@
                 <!-- end description -->
                 <div class="widget property-single-item property-amenities">
                     <h4>
-                    <span>Característica</span> <img class="divider-hex" src="{{url('img/site/divider-half.png')}}" alt="">
+                        <span>Característica</span> <img class="divider-hex" src="{{url('img/site/divider-half.png')}}" alt="">
                         <div class="divider-fade"></div>
                     </h4>
-                    <ul class="amenities-list">      
-                        @if($immobile->immobiles_electronic_door == 1)  <li><i class="fa fa-check icon"></i> <strong>Portão Elet.</strong></li> @else <li><i class="fa fa-close icon"></i>  Portão Elet.</li>@endif                    
-                        @if($immobile->immobiles_front_sea == 1)        <li><i class="fa fa-check icon"></i> <strong>Frente Mar</strong></li> @else <li><i class="fa fa-close icon"></i>  Frente Mar</li>@endif                    
-                        @if($immobile->immobiles_sea_shore == 1)        <li><i class="fa fa-check icon"></i> <strong>Beira Mar</strong></li> @else <li><i class="fa fa-close icon"></i>  Beira Mar</li>@endif                    
-                        @if($immobile->immobiles_wine_house == 1)       <li><i class="fa fa-check icon"></i> <strong>Adega</strong></li> @else <li><i class="fa fa-close icon"></i>  Adega</li>@endif                    
-                        @if($immobile->immobiles_barbecue_grill == 1)   <li><i class="fa fa-check icon"></i> <strong>Churrasqueira</strong></li> @else <li><i class="fa fa-close icon"></i>  Churrasqueira</li>@endif                    
-                        @if($immobile->immobiles_poll == 1)             <li><i class="fa fa-check icon"></i> <strong>Piscina</strong></li> @else <li><i class="fa fa-close icon"></i>  Piscina</li>@endif                    
-                        @if($immobile->immobiles_sports_court == 1)     <li><i class="fa fa-check icon"></i> <strong>Q. Poli Esportiva</strong></li> @else <li><i class="fa fa-close icon"></i>Q. Poli Esportiva</li>@endif                    
-                        @if($immobile->immobiles_soccer_field == 1)     <li><i class="fa fa-check icon"></i> <strong>Campo Futebol</strong></li> @else <li><i class="fa fa-close icon"></i>  Campo Futebol</li>@endif                    
-                        @if($immobile->immobiles_furnished == 1)        <li><i class="fa fa-check icon"></i> <strong>Mobiliado</strong></li> @else <li><i class="fa fa-close icon"></i>  Mobiliado</li>@endif                    
-                       
+                    <ul class="amenities-list">
+                        @if($immobile->immobiles_electronic_door == 1)  
+                        <li><i class="fa fa-check icon"></i> <strong>Portão Elet.</strong></li>
+                        @else 
+                        <li><i class="fa fa-close icon"></i>  Portão Elet.</li>
+                        @endif                    
+                        @if($immobile->immobiles_front_sea == 1)        
+                        <li><i class="fa fa-check icon"></i> <strong>Frente Mar</strong></li>
+                        @else 
+                        <li><i class="fa fa-close icon"></i>  Frente Mar</li>
+                        @endif                    
+                        @if($immobile->immobiles_sea_shore == 1)        
+                        <li><i class="fa fa-check icon"></i> <strong>Beira Mar</strong></li>
+                        @else 
+                        <li><i class="fa fa-close icon"></i>  Beira Mar</li>
+                        @endif                    
+                        @if($immobile->immobiles_wine_house == 1)       
+                        <li><i class="fa fa-check icon"></i> <strong>Adega</strong></li>
+                        @else 
+                        <li><i class="fa fa-close icon"></i>  Adega</li>
+                        @endif                    
+                        @if($immobile->immobiles_barbecue_grill == 1)   
+                        <li><i class="fa fa-check icon"></i> <strong>Churrasqueira</strong></li>
+                        @else 
+                        <li><i class="fa fa-close icon"></i>  Churrasqueira</li>
+                        @endif                    
+                        @if($immobile->immobiles_poll == 1)             
+                        <li><i class="fa fa-check icon"></i> <strong>Piscina</strong></li>
+                        @else 
+                        <li><i class="fa fa-close icon"></i>  Piscina</li>
+                        @endif                    
+                        @if($immobile->immobiles_sports_court == 1)     
+                        <li><i class="fa fa-check icon"></i> <strong>Q. Poli Esportiva</strong></li>
+                        @else 
+                        <li><i class="fa fa-close icon"></i>Q. Poli Esportiva</li>
+                        @endif                    
+                        @if($immobile->immobiles_soccer_field == 1)     
+                        <li><i class="fa fa-check icon"></i> <strong>Campo Futebol</strong></li>
+                        @else 
+                        <li><i class="fa fa-close icon"></i>  Campo Futebol</li>
+                        @endif                    
+                        @if($immobile->immobiles_furnished == 1)        
+                        <li><i class="fa fa-check icon"></i> <strong>Mobiliado</strong></li>
+                        @else 
+                        <li><i class="fa fa-close icon"></i>  Mobiliado</li>
+                        @endif                    
                     </ul>
                     @if ($immobile->immobiles_elevator !== "")
                     <h4><span>Mais informações</span></h4>
                     <ul class="amenities-list">
-                    <li><span class="badge" style="padding:15px;"> Cond: <br> <br>{{$immobile->immobiles_elevator}} andares</span></li>
-                    <li><span class="badge" style="padding:15px;">Imóvel: <br> <br>{{$immobile->immobiles_floors}}º andar.  </span></li>
+                        <li><span class="badge" style="padding:15px;"> Cond: <br> <br>{{$immobile->immobiles_elevator}} andares</span></li>
+                        <li><span class="badge" style="padding:15px;">Imóvel: <br> <br>{{$immobile->immobiles_floors}}º andar.  </span></li>
                     </ul>
                     @endif
-                    
-                    
                 </div>
                 <div class="widget property-single-item property-location">
                     <h4>
@@ -420,26 +443,24 @@
                         <div class="divider-fade"></div>
                     </h4>
                     {{-- <img src="https://static.wixstatic.com/media/cffaeb_902df736c84047c0a0f77378efc0c7c8~mv2_d_5125_2883_s_4_2.jpg/v1/fill/w_1013,h_570,al_c,q_85,usm_0.66_1.00_0.01/cffaeb_902df736c84047c0a0f77378efc0c7c8~mv2_d_5125_2883_s_4_2.jpg" alt="" />
-                                   --}}
+                    --}}
                     <div class="agent">
-                        
-                                    <a href="#" class="agent-img">
-                                        <div class="img-fade"></div>
-                                    <img src="{{$realtor->realtor_photo}}" alt="" />
-                                        <div class="button alt agent-tag">Espíndola Imobiliária</div>
-                                    </a>
-                                    <div class="agent-content">                            
-                                        <div class="agent-details">
-                                        <h4><a href="#">{{$realtor->realtor_name}}</a></h4>
-                                        
-                                            <p><i class="fa fa-envelope icon"></i>{{$realtor->realtor_email}}</p>
-                                        <p><i class="fa fa-phone icon"></i>{{$realtor->	realtor_fixo}}</p>
-                                        <p><i class="fa fa-whatsapp icon"></i>{{$realtor->realtor_mobile}}</p>
-                                        </div>
-                                    </div>
-                                    <div class="clear"></div>
+                        <a href="#" class="agent-img">
+                            <div class="img-fade"></div>
+                            <img src="{{$realtor->realtor_photo}}" alt="" />
+                            <div class="button alt agent-tag">Espíndola Imobiliária</div>
+                        </a>
+                        <div class="agent-content">
+                            <div class="agent-details">
+                                <h4><a href="#">{{$realtor->realtor_name}}</a></h4>
+                                <p><i class="fa fa-envelope icon"></i>{{$realtor->realtor_email}}</p>
+                                <p><i class="fa fa-phone icon"></i>{{$realtor->	realtor_fixo}}</p>
+                                <p><i class="fa fa-whatsapp icon"></i>{{$realtor->realtor_mobile}}</p>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
                     </div>
-                </div>    
+                </div>
                 @endif
                 <div class="widget property-single-item property-related">
                     <h4>
@@ -494,77 +515,47 @@
                 <div class="widget widget-sidebar advanced-search">
                     <h4><span>Contato</span> <img src="{{ url('img/site/divider-half.png') }}" alt="" /></h4>
                     <div class="widget-content box">
-                        {{ Form::open(['url' => 'searchadvance']) }}
+                        <form id="form-enviar-mensagem">
+                        {{ csrf_field() }}
                         <div class="form-block border">
                             <label for="property-location">Nome</label>
-                            <input type="text" class="form-control" placeholder="Informe seu nome">
+                            <input type="text" name="name_contact" class="form-control" placeholder="Informe seu nome">
                         </div>
                         <div class="form-block border">
                             <label for="property-status">Telefone*</label>
-                            <input type="text" class="form-control" placeholder="Informe seu telefone (opcional)">
+                            <input type="text" name="phone_contact" class="form-control" placeholder="Informe seu telefone (opcional)">
                         </div>
                         <div class="form-block">
                             <label>Email</label>                               
-                            <input type="text" name="immobiles_rental_price" class="form-control"  placeholder="Informe seu telefone (opcional)">                                
+                            <input type="text" name="email_contact" name="immobiles_rental_price" class="form-control"  placeholder="Informe seu telefone (opcional)">                                
                         </div>
                         <div class="form-block">
                             <label>Mensagem</label>                               
-                            <textarea name="" id="" cols="30" rows="10" class="form-control">Olá, eu gostaria de obter mais informações sobre este imóvel: {{$immobile->immobiles_property_title}} – {{$immobile->immobiles_code}}. Aguardarei o contato.Obrigado.</textarea>                                
+                            <textarea name="message_contact" id="" cols="30" rows="10" class="form-control">Olá, eu gostaria de obter mais informações sobre este imóvel: {{$immobile->immobiles_property_title}} – {{$immobile->immobiles_code}}. Aguardarei o contato.Obrigado.</textarea>                                
                         </div>
-
-                        {{-- <div class="form-block border">
-                            <label for="property-location">Nome</label>
-                            <select  class="select-form type-immobile" id="immobile-type-advanced" name="immobiles_type_immobiles[]"  data-placeholder="Tipo de imóvel" multiple="multiple" style=" width: 100% !important;">
-                                @foreach($type as $types)
-                                <option value="{{ $types->immobiles_type_immobiles }}">{{ $types->immobiles_type_immobiles }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                        <div class="form-block border">
-                            <label for="property-status">Bairros</label>
-                            <select name="immobiles_district[]" class="select-form type-immobile" id="immobiles_district"  title="Escolha um ou mais de um bairro" data-placeholder="Escolha um ou mais de um" multiple="multiple">
-                                @foreach($district as $districts)
-                                <option value="{{ $districts->immobiles_district }}">{{ $districts->immobiles_district }} - {{ $districts->immobiles_city }}</option>
-                                @endforeach   
-                            </select>
-                        </div>
-                        <div class="form-block">
-                            <label>Preço do aluguel</label>                               
-                            <input type="text" id="input-range-prince" name="immobiles_rental_price">                                
-                        </div>
-                        <div class="form-block border">
-                            <label>Dormitórios</label>
-                            {{ Form::selectRange('immobiles_qtd_dormitory', 0, 10 , 2, ['class' => 'form-control', 'required' => 'true']) }}
-                        </div>
-                        <div class="form-block border">
-                            <label>vagas</label>
-                            {{ Form::selectRange('immobiles_qtd_uncovered_jobs', 0, 10 , 2, ['class' => 'form-control', 'required' => 'true']) }}
-                        </div>
-                        <div class="form-block">
-                            <label>Area</label>
-                            <input type="number" name="areaMin" class="area-filter border" placeholder="Min" />
-                            <input type="number" name="areaMax" class="area-filter border" placeholder="Max" />
-                            <div class="clear"></div>
-                        </div> --}}
+                       
                         <div class="form-block text-center">
-                            {{ Form::submit('Entrar em contato' , ['class' => 'button', 'id' => 'submitSearch']) }}
+                            {{ Form::text('immobiles_code', $immobile->immobiles_code)}}
+                            {{ Form::text('id_agency', $id_agency)}}
+                            {{ Form::button('Entrar em contato' , ['class' => 'button', 'id' => 'submitSearch']) }}
+                        <img src="{{url('img/site/spinner.gif')}}" id="img-load" alt="" style="width: 100px;">
                         </div>
-                        {{ Form::close() }}
+                        </form>
                         <div class="form-block ">
                             @if ($id_agency == 1)
-                            <div class="agent-details">                                      
-                                    <p><i class="fa fa-tag icon"></i>Agência Aldeota</p>
-                                        <p><i class="fa fa-envelope icon"></i>meajuda@espindolaimobiliaria.com.br</p>
-                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
-                                    <p><i class="fa fa-whatsapp icon"></i>(85) 98810-1166</p>
-                                    </div>
+                            <div class="agent-details">
+                                <p><i class="fa fa-tag icon"></i>Agência Aldeota</p>
+                                <p><i class="fa fa-envelope icon"></i>meajuda@espindolaimobiliaria.com.br</p>
+                                <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
+                                <p><i class="fa fa-whatsapp icon"></i>(85) 98810-1166</p>
+                            </div>
                             @else
-                            <div class="agent-details">                                    
-                                    <p><i class="fa fa-tag icon"></i>Agência Fátima</p>
-                                        <p><i class="fa fa-envelope icon"></i>meajuda@espindolaimobiliaria.com.br</p>
-                                    <p><i class="fa fa-phone icon"></i>(85) 3038-0014</p>
-                                    <p><i class="fa fa-whatsapp icon"></i>(85) 98990-4899</p>
-                                    </div> 
+                            <div class="agent-details">
+                                <p><i class="fa fa-tag icon"></i>Agência Fátima</p>
+                                <p><i class="fa fa-envelope icon"></i>meajuda@espindolaimobiliaria.com.br</p>
+                                <p><i class="fa fa-phone icon"></i>(85) 3038-0014</p>
+                                <p><i class="fa fa-whatsapp icon"></i>(85) 98990-4899</p>
+                            </div>
                             @endif
                         </div>
                     </div>
