@@ -64,7 +64,7 @@
                 <td><i class="fa fa-envelope"></i></td>
                 <td class="header-item-text">
                   E-mail<br/>
-                  <span>meajuda@espindolaimobiliaria.com.br</span>
+                  <span style="font-size: 15px; color: black;"><a href="mailto: meajuda@espindolaimobiliaria.com.br">meajuda@espindolaimobiliaria.com.br</a> </span>
                 </td>
               </tr>
             </table>

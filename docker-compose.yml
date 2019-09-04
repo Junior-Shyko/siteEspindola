@@ -9,7 +9,7 @@ services:
       container_name: site_mysql_local
       working_dir: /application
       volumes:
-        - .:/application
+        - /application:/var/lib/mysql
       environment:
         - MYSQL_ROOT_PASSWORD=livre
         - MYSQL_DATABASE=site
@@ -49,5 +49,4 @@ services:
         - PMA_ARBITRARY=1   
       volumes:
         - ~/docker/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
-        - /custom/phpmyadmin/theme/:/www/themes/theme/   
 
