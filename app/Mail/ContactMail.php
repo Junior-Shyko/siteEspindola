@@ -15,17 +15,21 @@ class ContactMail extends Mailable
 
     public $immobile;
     public $contact;
+    public $date;
+    public $agency;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Immobile $immobile, $contact)
+    public function __construct(Immobile $immobile, $contact, $date, $agency)
     {
         $this->immobile = $immobile;
         $this->contact  = $contact;
-        //dd($this->contact);
+        $this->agency = $agency;
+        $this->date = $date;
+        
     }
 
     /**
@@ -35,6 +39,11 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->subject("Mensagem do Site")->view('email.contact');
+       
+       try {
+        return $this->subject("Lead para ".$this->agency)->view('email.contact');
+       } catch (\Throwable $th) {
+           return $th->getMessage();
+       }
     }
 }

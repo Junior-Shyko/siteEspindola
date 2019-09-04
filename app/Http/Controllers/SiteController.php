@@ -45,6 +45,7 @@ static protected $geoip;
 */
 public function index()
 {
+
     if(!isset($_SERVER['HTTP_REFERER']))
     {
         $refer = url('/');
@@ -290,10 +291,23 @@ public function show($id)
         $other_immobile = Immobile::where([
             ['immobiles_type_immobiles',$immobile->immobiles_type_immobiles]  
         ])->get();
-       
+        $districtAll = DB::table('district')->get();
+        // dump($immobile->immobiles_district);
+        $id_agency = 0;
+            foreach ($districtAll as $key => $value) {
+                if(str_contains($value->district_name, $immobile->immobiles_district))
+                {
+                   $id_agency = $value->district_id_agency;
+                }
+            }
+
+        $realtor = DB::table('realtor')->where('realtor_code_imobile', $immobile->immobiles_code)->first();
+        
+        // dd($district);
         return view('site.details' , compact('immobile' , 'photo_immobile' , 'rental_type' , 'recents' , 
         'offer_type' , 'page_title' , 'type' , 'district' , 'meta_site' , 'insurance_fire_monthly' ,
-        'body_info_fire' , 'accept_negotiation' , 'key_cadastre' , 'insurance_fire_annual', 'other_immobile'));
+        'body_info_fire' , 'accept_negotiation' , 'key_cadastre' , 'insurance_fire_annual', 'other_immobile', 'districtAll',
+        'id_agency' , 'realtor'));
     }    
 }
 
@@ -474,11 +488,20 @@ public function immobileAdvanced(Request $request)
 
 public function sendContact(Request $request)
 {
-            
+       
     $immobile = Immobile::where('immobiles_code' , '=' , $request['immobiles_code'])->first();
     $contact = $request->all();
-
-    $mail = \Mail::to('franciscoanto@gmail.com')->send(new ContactMail($immobile, $contact ));
+   
+    $date_send = Carbon::now('America/Fortaleza');
+    $date = Carbon::parse($date_send, 'UTC');
+    $date = $date->format('d \d\e F \d\e Y H:m');
+    if($request->id_agency == 1){
+        $agency = "Ag. Aldeota";
+    }else{
+        $agency = "Ag. Fátima";
+    }
+    $mail = \Mail::to('meajuda@espindolaimobiliaria.com.br')->send(new ContactMail($immobile, $contact, $date, $agency ));
+   
     if($mail)
     {
         return response()->json(['message' => 'success']);
@@ -565,6 +588,10 @@ public function allType($type)
 
 }
     
-    
+    public function sync()
+    {
+        $sync = Immobile::xml();
+        return $sync;
+    }    
 
 }
