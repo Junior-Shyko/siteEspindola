@@ -1,44 +1,48 @@
 
-       <div class="form-group col-md-3 col-xs-12">
+       <div class="form-group col-md-4 col-xs-12">
          <label>Tipo</label>
-         <select name="immobiles_type_immobiles[]" class="form-control typefilteradvanced" multiple="multiple" style="">
+         <select name="immobiles_type_immobiles[]" id="" class="form-control typefilteradvanced" multiple="multiple" 
+         data-placeholder="Qual o tipo?">
            @foreach($type as $types)
             <option>{{ $types->immobiles_type_immobiles }}</option>
            @endforeach
          </select>
        </div>
-        <div class="form-group col-md-3 col-xs-12">
+        <div class="form-group col-md-4 col-xs-12">
          <label>Cidade</label>
-         <select name="immobiles_city[]" class="form-control cityfilteradvanced" multiple="multiple" >
+         <select name="immobiles_city[]" class="form-control cityfilteradvanced" multiple="multiple" 
+         data-placeholder="Qual a cidade?" >
            @foreach($city_all as $cities)
             <option>{{ $cities->immobiles_city }}</option>
            @endforeach
          </select>
        </div>
  
-       <div class="form-group col-md-3 col-xs-12">
+       <div class="form-group col-md-4 col-xs-12">
 
          <label>Bairro</label>
-         <select name="immobiles_district[]" class="form-control districtfilteradvanced" multiple="multiple">
-           @foreach($immobile as $immobiles)
-            <option>{{ $immobiles->immobiles_district }}</option>
+         
+         <select name="immobiles_district[]" id="" multiple="multiple" class="form-control districtfilteradvanced"
+         data-placeholder="Qual a bairro?">
+           @foreach($uniqueDistrict as $immobiles)
+            <option>{{ $immobiles }}</option>
            @endforeach
          </select>
        </div>
-       <div class="form-group col-md-3 col-xs-12" id="dormitoryfilteradvanced">
+       <div class="form-group col-md-1 col-xs-12">
          <label>Dormitório</label>
-         <select name="immobiles_qtd_dormitory" class="form-control dormitoryfilteradvanced" >
+         <select name="immobiles_qtd_dormitory" id="immobiles_qtd_dormitory" class="form-control">
             <option>1</option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
             <option>+5</option>
          </select>
-       </div>
+       </div>       
 
-      <div class="form-group col-md-3 col-xs-12">
+      <div class="form-group col-md-2 col-xs-12">
          <label>Garagem</label>
-         <select name="immobiles_qtd_uncovered_jobs" class="form-control jobsfilteradvanced">
+         <select name="immobiles_qtd_uncovered_jobs" id="immobiles_qtd_uncovered_jobs" class="form-control">
             <option value="0">Quantas vagas?</option>
             <option value="1">1</option>
             <option value="2">2</option>
@@ -47,7 +51,6 @@
             <option value="5">+5</option>
          </select>
        </div>
-
        
         <div class="form-group col-md-3 col-xs-12">
           <label for="">Tamanho desejado</label>

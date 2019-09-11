@@ -11,4 +11,3 @@
 
 {{-- {{Form::select('region-immobile[]', $immobile->pluck('immobile_district', 'immobiles_id'), null, ['id' => 'selectDistrictForm','placeholder' => 'Pick a size...'])}} --}}
 
-<button type="submit" class="btn btn-success btn-buscar"> Buscar </button>

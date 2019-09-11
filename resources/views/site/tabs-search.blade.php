@@ -1,4 +1,4 @@
- <div class="tabs" id="tabs-option">
+ <div class="tabs" id="tabs-option" >
                 <ul>
                     <li><a href="#alugar">Alugar</a></li>
                     <li><a href="#comprar">Comprar</a></li>
@@ -6,21 +6,26 @@
                     <li class="hidden-xs"><a href="#codigo">Código</a></li>
 
                 </ul>
-                <div id="alugar" class="ui-tabs-hide ">                    
-                   <div class="col-md-12">
+                <div id="alugar" class="ui-tabs-hide">                    
+                   <div class="col-md-12" style="background: blue;">
                         {{ Form::open(['url' => 'search' , 'method' => 'GET']) }} 
-                        <div class="col-md-1">
-                            {{ Form::hidden('opcao' , 'alugar') }}
-                        </div>
-                        <div class="col-md-11">
-                             <select id="type-immobile" class="form-control"  data-placeholder="Tipo de imóvel" multiple="multiple" name="typeImmobile[]">
+                        <div class="col-md-1"></div>
+                       
+                        <div class="col-md-3">
+                             <select id="" class="form-control typefilteradvanced"  data-placeholder="Tipo de imóvel" 
+                             multiple="multiple" name="typeImmobile[]">
                             @foreach($type as $types)
                                 <option value="{{ $types->immobiles_type_immobiles }}">{{ $types->immobiles_type_immobiles }}</option>
                             @endforeach
-                        </select>
-                        @include('site.form')   
+                            </select>
                         </div>
+                        <div class="col-md-7">
+                            @include('site.form')   
+                        </div>
+                        <div class="col-md-1"><button type="submit" class="btn btn-success btn-buscar"> Buscar </button></div>
+                        {{ Form::hidden('opcao' , 'alugar') }}
                         {{ Form::close() }}
+                    
                    </div>
                    
                 </div>

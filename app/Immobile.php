@@ -13,8 +13,9 @@ class Immobile extends Model
 
     //
     static public function getDistrinct(){
-    	$immobile =  DB::table('immobiles')->select('immobiles_id','immobiles_district' , 'immobiles_city')->distinct()->orderby('immobiles_district' , 'ASC' )->get();
-
+        $immobile =  DB::table('immobiles')->select('immobiles_id','immobiles_district' , 'immobiles_city')
+                    ->orderby('immobiles_district' , 'ASC' )->distinct()->get();
+                    
     	return $immobile;
     }
 

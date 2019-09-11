@@ -13,6 +13,7 @@
         </div>
         <div class="form-block border">
             <label for="property-status">Bairros</label>
+           
             <select name="immobiles_district[]" class="select-form type-immobile" id="immobiles_district"  title="Escolha um ou mais de um bairro" data-placeholder="Escolha um ou mais de um" multiple="multiple">
                 @foreach($district as $districts)
                 <option value="{{ $districts->immobiles_district }}">{{ $districts->immobiles_district }} - {{ $districts->immobiles_city }}</option>
