@@ -535,8 +535,8 @@
                         </div>
                        
                         <div class="form-block text-center">
-                            {{ Form::text('immobiles_code', $immobile->immobiles_code)}}
-                            {{ Form::text('id_agency', $id_agency)}}
+                            {{ Form::hidden('immobiles_code', $immobile->immobiles_code)}}
+                            {{ Form::hidden('id_agency', $id_agency)}}
                             {{ Form::button('Entrar em contato' , ['class' => 'button', 'id' => 'submitSearch']) }}
                         <img src="{{url('img/site/spinner.gif')}}" id="img-load" alt="" style="width: 100px;">
                         </div>

@@ -356,13 +356,14 @@ class Immobile extends Model
             
            echo "campoFutebol = ".gettype($value->campoFutebol);
            if($value->PrecoVenda == ""){
-               $precoVenda = null;
-               $temporada = $value->PrecoLocacaoTemporada;
-               echo "venda" . $precoVenda;
+               $precoVenda = 0;
+              echo "venda" . $precoVenda;
+           }else{
+            $precoVenda = $value->PrecoVenda
            }
            if($value->PrecoLocacaoTemporada == ""){
            
-                $temporada = null;
+                $temporada = 0;
                 echo "temporada" . $temporada;
             }else{
                 $temporada = $value->PrecoLocacaoTemporada;
