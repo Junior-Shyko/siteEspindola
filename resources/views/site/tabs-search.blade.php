@@ -1,4 +1,4 @@
- <div class="tabs" id="tabs-option">
+ <div class="tabs" id="tabs-option" >
                 <ul>
                     <li><a href="#alugar">Alugar</a></li>
                     <li><a href="#comprar">Comprar</a></li>
@@ -6,38 +6,49 @@
                     <li class="hidden-xs"><a href="#codigo">Código</a></li>
 
                 </ul>
-                <div id="alugar" class="ui-tabs-hide ">                    
+                <div id="alugar" class="ui-tabs-hide">                    
                    <div class="col-md-12">
                         {{ Form::open(['url' => 'search' , 'method' => 'GET']) }} 
-                        <div class="col-md-1">
-                            {{ Form::hidden('opcao' , 'alugar') }}
-                        </div>
-                        <div class="col-md-11">
-                             <select id="type-immobile" class="form-control"  data-placeholder="Tipo de imóvel" multiple="multiple" name="typeImmobile[]">
+                        <div class="col-md-1"></div>                       
+                        <div class="col-md-3">
+                             <select id="" class="form-control typefilteradvanced"  data-placeholder="Tipo de imóvel" 
+                             multiple="multiple" name="typeImmobile[]">
                             @foreach($type as $types)
                                 <option value="{{ $types->immobiles_type_immobiles }}">{{ $types->immobiles_type_immobiles }}</option>
                             @endforeach
-                        </select>
-                        @include('site.form')   
+                            </select>
                         </div>
+                        <div class="col-md-7">
+                            @include('site.form')   
+                        </div>
+                        <div class="col-md-1">
+                            <button type="submit" class="btn btn-buscar"> Buscar </button>
+                        </div>
+                        {{ Form::hidden('opcao' , 'alugar') }}
                         {{ Form::close() }}
+                    
                    </div>
-                   
+
                 </div>
                 <div id="comprar" class="ui-tabs-hide">
                     <div class="col-md-12">
                         {{ Form::open(['url' => 'search', 'method' => 'GET']) }}
-                        <div class="col-md-1">
-                            {{ Form::hidden('opcao' , 'comprar') }}
-                        </div>
-                        <div class="col-md-11">
-                            <select id="type-immobile-by" class="form-control"  data-placeholder="Qual imóvel?" multiple="multiple" name="typeImmobile[]">
-                                @foreach($type as $types)
+                        <div class="col-md-1"></div>                       
+                        <div class="col-md-3">
+                             <select id="" class="form-control typefilteradvanced"  data-placeholder="Tipo de imóvel" 
+                             multiple="multiple" name="typeImmobile[]">
+                            @foreach($type as $types)
                                 <option value="{{ $types->immobiles_type_immobiles }}">{{ $types->immobiles_type_immobiles }}</option>
-                                @endforeach
+                            @endforeach
                             </select>
-                            @include('site.form')
                         </div>
+                        <div class="col-md-7">
+                            @include('site.form')   
+                        </div>
+                        <div class="col-md-1">
+                            <button type="submit" class="btn btn-buscar"> Buscar </button>
+                        </div>
+                        {{ Form::hidden('opcao' , 'comprar') }}
                         {{ Form::close() }}
                     </div>
                 </div>
@@ -58,12 +69,12 @@
                         {{ Form::close() }}
                     </div>
                 </div>
-                <div class="ui-tabs-hide" id="codigo">
+                <div class="" id="codigo">
                     <div class="row">
                         <div class="col-md-2"></div>
                         <div class="col-md-8">
                             {{ Form::open(['url' => 'searchCode', 'method' => 'GET']) }}
-                            <input type="text" name="immobiles_code" class="select-form" style="width: 82.5% !important;" placeholder='Digite o código. (Ex: CA0001,CA0002)'>
+                            <input type="text" name="immobiles_code" style="width: 82.5% !important;" placeholder='Digite o código. (Ex: CA0001,CA0002)'>
                             <button type="submit" class="btn btn-success btn-buscar"> Buscar </button>                           
                             {{ Form::close() }}
                         </div>

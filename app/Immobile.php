@@ -1,4 +1,4 @@
-<?php
+s<?php
 
 namespace SiteEspindola;
 
@@ -13,8 +13,9 @@ class Immobile extends Model
 
     //
     static public function getDistrinct(){
-    	$immobile =  DB::table('immobiles')->select('immobiles_id','immobiles_district' , 'immobiles_city')->distinct()->orderby('immobiles_district' , 'ASC' )->get();
-
+        $immobile =  DB::table('immobiles')->select('immobiles_id','immobiles_district' , 'immobiles_city')
+                    ->orderby('immobiles_district' , 'ASC' )->distinct()->get();
+                    
     	return $immobile;
     }
 
@@ -356,14 +357,14 @@ class Immobile extends Model
             
            echo "campoFutebol = ".gettype($value->campoFutebol);
            if($value->PrecoVenda == ""){
-               $precoVenda = 0;
-              echo "venda" . $precoVenda;
+               $precoVenda = null;
+               $temporada = $value->PrecoLocacaoTemporada;
+               echo "venda" . $precoVenda;
            }else{
-            $precoVenda = $value->PrecoVenda
+            $precoVenda = $value->PrecoVenda;
            }
-           if($value->PrecoLocacaoTemporada == ""){
-           
-                $temporada = 0;
+           if($value->PrecoLocacaoTemporada == ""){           
+                $temporada = null;
                 echo "temporada" . $temporada;
             }else{
                 $temporada = $value->PrecoLocacaoTemporada;

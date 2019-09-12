@@ -1999,13 +1999,16 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	width: 35% !important;
  }
  .btn-buscar{
- 	    padding: 7px;
-    margin-top: -14px;
-    width: 16%;
- 	border-radius: 3px;
- 	background-color: #FFB400;
+	margin: 0;
+    
+    height: 40px !important;
+    border: none;
+    box-shadow: none;
+    border-radius: 3px;
+	background-color: #FFB400;
  	font-weight:600;
- 	font-family:'Raleway', Helvetica, Arial;
+	font-family:'Raleway', Helvetica, Arial;
+	color: #fff;
  }
  .btn-buscar:hover{
  	color:white;
@@ -2366,5 +2369,6 @@ input[type="text"].ui-autocomplete-input:-ms-input-placeholder { color:black; }
 		height: auto !important;
 		margin: 0 auto;
 	}
-  
+
+
 }

@@ -55,32 +55,38 @@ public function index()
     date_default_timezone_set('America/Fortaleza');
     
     self::$ip = request()->server()['REMOTE_ADDR'];
-    // self::$geoip = new GeoIP();
-    // self::$geoip->setIp(self::$ip);
+    self::$geoip = new GeoIP();
+    self::$geoip->setIp(self::$ip);
     
-    // self::$agent = request()->userAgent();
-    // self::$route = request()->route()->uri;
+    self::$agent = request()->userAgent();
+    self::$route = request()->route()->uri;
 
-    // self::$lat = self::$geoip->getLatitude();
+    self::$lat = self::$geoip->getLatitude();
 
-    // self::$log = self::$geoip->getLongitude();
-    // self::$city = self::$geoip->getCity();;
-    // self::$country = self::$geoip->getCountry();;
-    // self::$region = self::$geoip->getRegion();;
-    // self::$timezone = self::$geoip->getTimezone();;
-    // self::$page_previous = $refer;
+    self::$log = self::$geoip->getLongitude();
+    self::$city = self::$geoip->getCity();;
+    self::$country = self::$geoip->getCountry();;
+    self::$region = self::$geoip->getRegion();;
+    self::$timezone = self::$geoip->getTimezone();;
+    self::$page_previous = $refer;
     self::$date = Carbon::now();
     $page_title = "Aluguel e Vendas | Espindola imobiliária";
     $immobile   = Immobile::getDistrinct();
     $type       = Immobile::getTypeImmobile();
     $city_all   = Immobile::getCityAll();
     $immobile_all = Immobile::all();
+    $allDistrict = [];
+    foreach ($immobile as $key => $value) {
+       array_push($allDistrict, $value->immobiles_district);
+    }
+
+    $uniqueDistrict = array_unique($allDistrict);
     
     // Location::createLocation(self::$agent, self::$ip, self::$route, self::$lat, self::$log, self::$city, self::$country, self::$region, self::$timezone, self::$page_previous, self::$date);
     $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('/img/site/logo_redes.png')];
 
 
-    return view('site.index' , compact('page_title' , 'immobile' , 'type' , 'meta_site' , 'city_all' , 'immobile_all'));
+    return view('site.index' , compact('page_title' , 'immobile' , 'type' , 'meta_site' , 'city_all' , 'immobile_all', 'uniqueDistrict'));
 }
 
 public function searchList(Request $request)

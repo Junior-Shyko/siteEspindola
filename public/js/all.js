@@ -19,9 +19,18 @@ $(function () {
     });
 
     $("#selectDistrictForm").select2();
+    $(".typefilteradvanced").chosen({
+        no_results_text: "Oops, Não foi encontrado!",
+        
+    });
+    $(".cityfilteradvanced").chosen();
+    $(".districtfilteradvanced").chosen();
+    $("#immobiles_qtd_uncovered_jobs").chosen();
+    $("#immobiles_qtd_dormitory").chosen();
 });
 
 $(document).ready(function () {
+    
     //modal de contato
     //$("#modal_reserve_key").modal('show');
     $("#btn_send_contact").html('Enviar Mensagem');
@@ -69,17 +78,16 @@ $(document).ready(function () {
 
     });
     //OCUTANDO DIV DE BUSCA AVANÇADA  
-    $("#filterAdvancedImmobile").hide();
+    //$("#filterAdvancedImmobile").hide();
     $("#code-mobile").hide();
     all_district = [];
     //URL COM DADOS
-    $.get(domain_complet + 'todos-bairros', function (data) {
-
+ 
+    $.get(domain_complet + '/todos-bairros', function (data) {
         //LOOP        
         $.each(data, function (index, val) {
             //PREENCHANDO O ARRAY            
             all_district.push(val);
-            //console.log('bairro: ')
         });
     });
 
@@ -93,14 +101,11 @@ $(document).ready(function () {
 
     $(".input-autocomplet").on("keydown", function (event) {
         if (event.keyCode === $.ui.keyCode.TAB && $(this).autocomplete("instance").menu.active) {
-            event.preventDefault();
+            event.preventDefault();            
         }
     }).autocomplete({
-        //source: domain_complet+"district-city",
-
         minLength: 3,
         source: function source(request, response) {
-
             // delegate back to autocomplete, but extract the last term
             response($.ui.autocomplete.filter(all_district, extractLast(request.term)));
         },
@@ -134,15 +139,15 @@ $(document).ready(function () {
         selectAll: true
 
     });
-    $("#immobiles_district").SumoSelect({
-        nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
-        search: true,
-        searchText: 'Escolha o bairro',
-        placeholder: 'Escolha ou pesquise',
-        captionFormat: '{0} selecionado',
-        locale: ['OK', 'Sair', 'Tudo'],
-        selectAll: true
-    });
+    // $("#immobiles_district").SumoSelect({
+    //     nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
+    //     search: true,
+    //     searchText: 'Escolha o bairro',
+    //     placeholder: 'Escolha ou pesquise',
+    //     captionFormat: '{0} selecionado',
+    //     locale: ['OK', 'Sair', 'Tudo'],
+    //     selectAll: true
+    // });
     $("#type-immobile").SumoSelect({
         nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
         search: true,
@@ -209,29 +214,29 @@ $(document).ready(function () {
     });
 
     /*DIV DE FILTRO AVANÇADO*/
-    $(".typefilteradvanced").SumoSelect({
-        search: true,
-        searchText: 'Escolha ou pesquise',
-        placeholder: 'Qual o tipo?',
-        captionFormat: '{0} selecionado',
-        forceCustomRendering: true
-    });
+    // $(".typefilteradvanced").SumoSelect({
+    //     search: true,
+    //     searchText: 'Escolha ou pesquise',
+    //     placeholder: 'Qual o tipo?',
+    //     captionFormat: '{0} selecionado',
+    //     forceCustomRendering: true
+    // });
     // $(".typefilteradvanced").select2();
-    $(".cityfilteradvanced").SumoSelect({
-        search: true,
-        searchText: 'Escolha ou pesquise',
-        placeholder: 'Qual a cidade?',
-        captionFormat: '{0} selecionado',
-        forceCustomRendering: true
-    });
+    // $(".cityfilteradvanced").SumoSelect({
+    //     search: true,
+    //     searchText: 'Escolha ou pesquise',
+    //     placeholder: 'Qual a cidade?',
+    //     captionFormat: '{0} selecionado',
+    //     forceCustomRendering: true
+    // });
 
-    $(".districtfilteradvanced").SumoSelect({
-        search: true,
-        searchText: 'Escolha ou pesquise',
-        placeholder: 'Qual o bairro?',
-        captionFormat: '{0} selecionado',
-        forceCustomRendering: true
-    });
+    // $(".districtfilteradvanced").SumoSelect({
+    //     search: true,
+    //     searchText: 'Escolha ou pesquise',
+    //     placeholder: 'Qual o bairro?',
+    //     captionFormat: '{0} selecionado',
+    //     forceCustomRendering: true
+    // });
 
     $(".dormitoryfilteradvanced").SumoSelect({
         search: true,
@@ -266,16 +271,16 @@ $(document).ready(function () {
         // $(".typefilteradvanced")[0].sumo.enableItem(2);
     }
     //SELECIONANDO A OPÇÃO PARA DESABILITAR OUTROS ITENS
-    $(".typefilteradvanced").change(function (event) {
-        //FORÇANDO A SELEÇÃO
-        $(".typefilteradvanced")[0].sumo.selectItem($(".typefilteradvanced").val());
-        //DESABILITANDO EM CASO DE ESCOLHER TERRENO OU SALA
-        if ($(".typefilteradvanced").val() == "Terreno" || $(".typefilteradvanced").val() == "Sala") {
-            disabledItens();
-        } else if ($(".typefilteradvanced").val() != "Terreno") {
-            enabledItens();
-        }
-    });
+    // $(".typefilteradvanced").change(function (event) {
+    //     //FORÇANDO A SELEÇÃO
+    //     $(".typefilteradvanced")[0].sumo.selectItem($(".typefilteradvanced").val());
+    //     //DESABILITANDO EM CASO DE ESCOLHER TERRENO OU SALA
+    //     if ($(".typefilteradvanced").val() == "Terreno" || $(".typefilteradvanced").val() == "Sala") {
+    //         disabledItens();
+    //     } else if ($(".typefilteradvanced").val() != "Terreno") {
+    //         enabledItens();
+    //     }
+    // });
 
     $(".typefilteradvanced").click(function (event) {
         selec = $(".typefilteradvanced").find('.optWrapper').addClass('select_filter');
