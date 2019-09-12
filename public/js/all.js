@@ -30,6 +30,7 @@ $(function () {
 });
 
 $(document).ready(function () {
+    
     //modal de contato
     //$("#modal_reserve_key").modal('show');
     $("#btn_send_contact").html('Enviar Mensagem');
@@ -81,13 +82,12 @@ $(document).ready(function () {
     $("#code-mobile").hide();
     all_district = [];
     //URL COM DADOS
-    $.get(domain_complet + 'todos-bairros', function (data) {
-
+ 
+    $.get(domain_complet + '/todos-bairros', function (data) {
         //LOOP        
         $.each(data, function (index, val) {
             //PREENCHANDO O ARRAY            
             all_district.push(val);
-            //console.log('bairro: ')
         });
     });
 
@@ -101,14 +101,11 @@ $(document).ready(function () {
 
     $(".input-autocomplet").on("keydown", function (event) {
         if (event.keyCode === $.ui.keyCode.TAB && $(this).autocomplete("instance").menu.active) {
-            event.preventDefault();
+            event.preventDefault();            
         }
     }).autocomplete({
-        //source: domain_complet+"district-city",
-
         minLength: 3,
         source: function source(request, response) {
-
             // delegate back to autocomplete, but extract the last term
             response($.ui.autocomplete.filter(all_district, extractLast(request.term)));
         },
@@ -274,16 +271,16 @@ $(document).ready(function () {
         // $(".typefilteradvanced")[0].sumo.enableItem(2);
     }
     //SELECIONANDO A OPÇÃO PARA DESABILITAR OUTROS ITENS
-    $(".typefilteradvanced").change(function (event) {
-        //FORÇANDO A SELEÇÃO
-        $(".typefilteradvanced")[0].sumo.selectItem($(".typefilteradvanced").val());
-        //DESABILITANDO EM CASO DE ESCOLHER TERRENO OU SALA
-        if ($(".typefilteradvanced").val() == "Terreno" || $(".typefilteradvanced").val() == "Sala") {
-            disabledItens();
-        } else if ($(".typefilteradvanced").val() != "Terreno") {
-            enabledItens();
-        }
-    });
+    // $(".typefilteradvanced").change(function (event) {
+    //     //FORÇANDO A SELEÇÃO
+    //     $(".typefilteradvanced")[0].sumo.selectItem($(".typefilteradvanced").val());
+    //     //DESABILITANDO EM CASO DE ESCOLHER TERRENO OU SALA
+    //     if ($(".typefilteradvanced").val() == "Terreno" || $(".typefilteradvanced").val() == "Sala") {
+    //         disabledItens();
+    //     } else if ($(".typefilteradvanced").val() != "Terreno") {
+    //         enabledItens();
+    //     }
+    // });
 
     $(".typefilteradvanced").click(function (event) {
         selec = $(".typefilteradvanced").find('.optWrapper').addClass('select_filter');

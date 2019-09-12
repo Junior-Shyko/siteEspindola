@@ -36,6 +36,21 @@
     word-wrap: break-word;
     font-weight: bold !important;
 }
+.chosen-container-multi .chosen-choices li.search-field input[type=text] {
+    margin-top: 5px;
+    padding: 0;
+    height: 25px;
+    outline: 0;
+    border: 0!important;
+    background: transparent!important;
+    box-shadow: none;
+    color: #999;
+    font-size: 1em;
+    line-height: normal;
+    border-radius: 0;
+    font-family: Arial,Helvetica,sans-serif !important;
+}
+
 </style>
 <section class="subheader simple-search">
    <div class="container">

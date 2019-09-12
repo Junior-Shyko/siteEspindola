@@ -360,9 +360,10 @@ class Immobile extends Model
                $precoVenda = null;
                $temporada = $value->PrecoLocacaoTemporada;
                echo "venda" . $precoVenda;
+           }else{
+            $precoVenda = $value->PrecoVenda;
            }
-           if($value->PrecoLocacaoTemporada == ""){
-           
+           if($value->PrecoLocacaoTemporada == ""){           
                 $temporada = null;
                 echo "temporada" . $temporada;
             }else{
