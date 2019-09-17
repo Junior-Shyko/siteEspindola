@@ -1,7 +1,6 @@
 
 $(function () {
-    PNotify.prototype.options.styling = "bootstrap3";
-    PNotify.prototype.options.styling = "fontawesome";
+    //PNotify.prototype.options.styling = "fontawesome";
 
     $("#submitSearch").click(function (event) {
         $("#img-load").show();

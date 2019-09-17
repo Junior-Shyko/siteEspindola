@@ -1,7 +1,7 @@
 
        <div class="form-group col-md-4 col-xs-12">
          <label>Tipo</label>
-         <select name="immobiles_type_immobiles[]" id="" class="form-control typefilteradvanced" multiple="multiple" 
+         <select name="immobiles_type_immobiles[]" class="form-control typefilteradvanced" multiple="multiple" 
          data-placeholder="Qual o tipo?">
            @foreach($type as $types)
             <option>{{ $types->immobiles_type_immobiles }}</option>
