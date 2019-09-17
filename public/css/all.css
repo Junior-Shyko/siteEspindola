@@ -2002,10 +2002,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	margin: 0;
     
     height: 40px !important;
-    border: none;
     box-shadow: none;
-    border-radius: 3px;
-	background-color: #FFB400;
+    background-color: #FFB400;
  	font-weight:600;
 	font-family:'Raleway', Helvetica, Arial;
 	color: #fff;

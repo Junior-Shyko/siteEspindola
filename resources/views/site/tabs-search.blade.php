@@ -21,7 +21,7 @@
                         <div class="col-md-7">
                             @include('site.form')   
                         </div>
-                        <div class="col-md-1">
+                        <div class="col-md-1 d-none" >
                             <button type="submit" class="btn btn-buscar"> Buscar </button>
                         </div>
                         {{ Form::hidden('opcao' , 'alugar') }}
