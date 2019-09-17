@@ -25,8 +25,7 @@ $(function () {
     });
     $(".cityfilteradvanced").chosen();
     $(".districtfilteradvanced").chosen();
-    $("#immobiles_qtd_uncovered_jobs").chosen();
-    $("#immobiles_qtd_dormitory").chosen();
+    
 });
 
 $(document).ready(function () {
@@ -78,7 +77,7 @@ $(document).ready(function () {
 
     });
     //OCUTANDO DIV DE BUSCA AVANÇADA  
-    //$("#filterAdvancedImmobile").hide();
+    $("#filterAdvancedImmobile").hide();
     $("#code-mobile").hide();
     all_district = [];
     //URL COM DADOS

@@ -22,8 +22,6 @@
       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
       {{ Html::style('/assets/pnotify/dist/pnotify.css') }}
       {{ Html::style('/assets/pnotify/dist/pnotify.buttons.css') }}
-
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
       {{ Html::style('/assets/jquery-ui/jquery-ui.min.css') }}
       {{ Html::style('/assets/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css') }}
       {{ Html::style('/assets/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5.css') }}
