@@ -51,5 +51,7 @@ Route::get('/pagenotfound', 'HomeController@padenotfound');
 /** SINCRONIZAR */
 Route::get('xml' , 'SiteController@sync');
 
+Route::get('espindola', 'SiteController@espindola');
+
 
 

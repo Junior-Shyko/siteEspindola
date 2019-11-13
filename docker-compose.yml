@@ -5,7 +5,7 @@ version: "3.1"
 services:
 
     mysql:
-      image: mysql:5.5
+      image: mysql:5.6
       container_name: site_mysql_local
       working_dir: /application
       volumes:
@@ -22,11 +22,13 @@ services:
       image: nginx:alpine
       container_name: site-webserver_local
       working_dir: /application
+      links:
+        - mysql:mysql
       volumes:
-          - .:/application
-          - ./phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+        - .:/application
+        - ./phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
       ports:
-       - "3060:80"
+        - "3060:80"
 
     php-fpm:
       build: phpdocker/php-fpm
@@ -48,6 +50,5 @@ services:
       environment:
         - PMA_ARBITRARY=1   
       volumes:
-        - ~/docker/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php
-        - /custom/phpmyadmin/theme/:/www/themes/theme/   
+        - ~/docker/phpmyadmin/config.user.inc.php:/etc/phpmyadmin/config.user.inc.php  
 
