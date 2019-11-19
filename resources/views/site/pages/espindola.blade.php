@@ -1,5 +1,5 @@
 @extends('layouts.site')
-@section('title', ' - Erro 404')
+@section('title', 'A Espíndola')
 @section('sidebar')
 @parent
 @endsection
