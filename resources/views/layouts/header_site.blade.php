@@ -98,7 +98,7 @@
               <li><a href="{{'/'}}">Home</a></li>
 
               <li>
-                <a href="https://www.espindola.imb.br/espindola">A Espíndola</a>
+              <a href="{{url('espindola')}}">A Espíndola</a>
 {{--             <ul class="sub-menu">
               <li><a href="property-listing-grid.html">Listing Grid</a></li>
               <li><a href="property-listing-grid-sidebar.html">Listing Grid Sidebar</a></li>
