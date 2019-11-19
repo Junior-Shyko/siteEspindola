@@ -606,4 +606,11 @@ public function espindola()
     return view('site.pages.espindola' , compact( 'meta_site'));
 }
 
+public function services()
+{
+    $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('img/site/logo.png')];
+   
+    return view('site.pages.services' , compact( 'meta_site'));
+}
+
 }

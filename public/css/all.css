@@ -1826,7 +1826,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	top:23px;
  }
 
- .cta.hexs { background:#ffb400 url(../images/pattern.jpg) no-repeat bottom; background-size:cover; }
+ .cta.hexs { background:#ffb400 url(../img/site/pattern.jpg) no-repeat bottom; background-size:cover; }
  .cta.hexs .hex { min-height:195px; padding-top:57px; text-align:center; position:relative; }
  .cta.hexs .hex p { position:relative; z-index:10; }
  .cta.hexs .hex p span { font-size:33px; font-weight:700; display:block; }
@@ -1836,7 +1836,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	padding:150px 0px;
  	position:relative;
  	text-align:center;
- 	background:#ffb400 url(../images/1920x950.png) no-repeat center; 
+ 	background:#ffb400 url(../img/site/slider-img2.jpg) no-repeat center; 
  	background-attachment:fixed;
  	background-size:cover; 
  }
