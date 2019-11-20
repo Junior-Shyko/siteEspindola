@@ -115,7 +115,7 @@
             </ul> --}}
           </li>
 
-          <li><a href="https://www.espindola.imb.br/servicos">Serviços</a></li>
+        <li><a href="{{url('servicos')}}">Serviços</a></li>
 
           <li><a href="https://www.espindola.imb.br/cliente">Área do Cliente</a></li>
 

@@ -1539,7 +1539,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  .blog-post-img { position:relative; display:block; }
  .blog-post-date { 
  	position:absolute; 
- 	background:url(../images/hexagon.png) no-repeat;
+ 	background:url(../img/site/hexagon.png) no-repeat;
  	line-height:1.1; 
  	bottom:-21px;
  	padding-top:7px; 
