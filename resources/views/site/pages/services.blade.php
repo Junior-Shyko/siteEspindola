@@ -38,7 +38,7 @@
             <div class="col-lg-4 col-md-4 sidebar">
                 <div class="widget widget-sidebar recent-properties">
                     <div class="widget-content box">
-                        <h4><span>Procure por imóvel</span> <img src="images/divider-half.png" alt=""></h4>
+                        <h4><span>Procure por imóvel</span> <img src="img/site/divider-half.png" alt=""></h4>
                         <div class="widget-content">
                             <div class="recent-property">
                                 <div class="row">
@@ -107,6 +107,8 @@
                                 <p class="text-center">
                                     A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel
                                 </p>
+                                
+                                  
                             </div>
                         </div>
                     </div>
@@ -122,6 +124,11 @@
                                 <p class="text-center">
                                     A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel
                                 </p>
+                                <button type="button" class="btn btn-default btn-block read_services" 
+                                data-container="body" data-toggle="popover" data-placement="top" 
+                                id="read_services_juri">
+                                    Saiba mais
+                                  </button>
                             </div>
                         </div>
                     </div>

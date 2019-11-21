@@ -338,4 +338,18 @@ $(document).ready(function () {
         autoclose: true,
         language: 'pt-BR'
     });
+  
 }); // FIM READY
+
+$(function () {
+    //$('[data-toggle="popover"]').popover();
+    $('#read_services_juri').popover({
+        trigger: 'click',
+        content: '<p>O Departamento Jurídico da <b>Espíndola Imobiliária </b> é o escritório de advocacia <a href="https://www.itamarespindola.adv.br/" target="_blank">Itamar Espíndola Advogados</a> Associados, empresa do mesmo grupo,' 
+        +'que dispõe de uma equipe própria de advogados especialistas em Direito Imobiliário, garantindo maior segurança nas negociações.</p>',
+        html: true
+    });
+    $('.read_services').popover({
+        trigger: 'hover',
+    })
+})
