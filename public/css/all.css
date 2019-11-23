@@ -1728,7 +1728,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  /* MISC MODULES
  /*====================================================================================*/
  .about-video-thumb { max-width:100%; height:auto; }
-
+ .about-text-indent-p { text-indent:4em }
  /* SERVICES */
  .services { padding-top:0; }
  .services .service-item {

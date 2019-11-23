@@ -98,7 +98,14 @@
               <li><a href="{{'/'}}">Home</a></li>
 
               <li>
-              <a href="{{url('espindola')}}">A Espíndola</a>
+                  <li class="menu-item-has-children">
+                      <a href="#">A Espíndola</a>
+                      <ul class="sub-menu">
+                      <li><a href="{{url('espindola')}}">Sobre</a></li>
+                        <li><a href="{{url('equipe')}}">Equipe Espíndola</a></li>
+                        
+                      </ul>
+                    </li>
 {{--             <ul class="sub-menu">
               <li><a href="property-listing-grid.html">Listing Grid</a></li>
               <li><a href="property-listing-grid-sidebar.html">Listing Grid Sidebar</a></li>
