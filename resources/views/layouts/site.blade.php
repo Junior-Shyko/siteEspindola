@@ -97,6 +97,7 @@
    {{ Html::script('/assets/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.pt-BR.js') }}
    {{ Html::script('/js/all.js') }}
    {{ Html::script('/assets/chosen-1.6.2/chosen.jquery.min.js') }}
+ 
    <script type="text/javascript">
       $('[data-toggle="tooltip"]').tooltip();
          //PEGANDO O IP DE ONDE ACESSAR
@@ -117,6 +118,12 @@
       });
       $(document).ready(function () {
          getLocation();    
+         $('.slide').addClass('initialized');
+    $('.slider.slider-testimonials').slick({
+		prevArrow: $('.slider-nav-testimonials .slider-prev'),
+		nextArrow: $('.slider-nav-testimonials .slider-next'),
+		adaptiveHeight: true
+	});
       });
    </script>
    @stack('scripts')

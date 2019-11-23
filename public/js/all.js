@@ -352,4 +352,5 @@ $(function () {
     $('.read_services').popover({
         trigger: 'hover',
     })
+    
 })
