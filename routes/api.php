@@ -17,7 +17,7 @@ use Illuminate\Routing\Router;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
-
+Route::get('immobile-all' , 'ImmobileController@all');
 $router->post('newsletters/attachments', [
     'uses' => 'AttachmentsController@store',
     'as' => 'attachments.store',

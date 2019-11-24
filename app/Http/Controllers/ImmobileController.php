@@ -7,6 +7,7 @@ Author: Excellence Soft - by Junior Oliveira
  */
 namespace SiteEspindola\Http\Controllers;
 
+use SiteEspindola\Immobile;
 use Illuminate\Http\Request;
 
 class ImmobileController extends Controller
@@ -26,5 +27,9 @@ class ImmobileController extends Controller
         # code...
     }
     
-    
+    public function all()
+    {
+        $immobile = Immobile::all();
+        return response()->json($immobile);
+    }
 }
