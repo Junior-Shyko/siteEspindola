@@ -3,6 +3,13 @@
 @section('sidebar')
 @parent
 @endsection
+<style>
+.content_fixed{
+    height: 194px;
+    overflow: hidden;
+}
+
+</style>
 @section('content')
 <section class="subheader">
     <div class="container">
@@ -102,7 +109,7 @@
                                 <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
                                 <img src="img/site/1400x595.png" alt="">
                             </a>
-                            <div class="content blog-post-content">
+                            <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Locação</a></h3>
                                 <p class="text-center">
                                     A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel
@@ -112,6 +119,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
@@ -119,7 +127,112 @@
                                 <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
                                 <img src="img/site/1400x595.png" alt="">
                             </a>
-                            <div class="content blog-post-content">
+                            <div class="content blog-post-content content_fixed">
+                                <h3 class="text-center"><a href="#">Administração de Imóveis</a></h3>
+                                <p class="text-center">
+                                    Fazemos toda a gestão da locação do seu imóvel até a sua desocupação no mesmo estado em que foi locado.  
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
+                        <div class="blog-post blog-post-creative shadow-hover">
+                            <a href="#" class="blog-post-img">
+                                <div class="img-fade"></div>
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
+                                <img src="img/site/1400x595.png" alt="">
+                            </a>
+                            <div class="content blog-post-content content_fixed">
+                                <h3 class="text-center"><a href="#">Avaliação Imobiliária</a></h3>
+                                <p class="text-center">
+                                    Avaliamos o seu imóvel.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;" style="height:194px;">
+                        <div class="blog-post blog-post-creative shadow-hover">
+                            <a href="#" class="blog-post-img">
+                                <div class="img-fade"></div>
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
+                                <img src="img/site/1400x595.png" alt="">
+                            </a>
+                            <div class="content blog-post-content content_fixed">
+                                <h3 class="text-center"><a href="#">Vistoria Imobiliária</a></h3>
+                                <p class="text-center">
+                                    Laudo de vistoria completo com imagens e detalhes de todos os ambientes do imóvel.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
+                        <div class="blog-post blog-post-creative shadow-hover">
+                            <a href="#" class="blog-post-img">
+                                <div class="img-fade"></div>
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
+                                <img src="img/site/1400x595.png" alt="">
+                            </a>
+                            <div class="content blog-post-content content_fixed">
+                                <h3 class="text-center"><a href="#">Aluguel Garantido</a></h3>
+                                <p class="text-center">
+                                    Garantimos até 03 meses de aluguel, condomínio e IPTU em caso de atraso no pagamento. Confira!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
+                        <div class="blog-post blog-post-creative shadow-hover">
+                            <a href="#" class="blog-post-img">
+                                <div class="img-fade"></div>
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
+                                <img src="img/site/1400x595.png" alt="">
+                            </a>
+                            <div class="content blog-post-content content_fixed">
+                                <h3 class="text-center"><a href="#">Compra e Venda de Imóveis</a></h3>
+                                <p class="text-center">
+                                    Você pode contar com os corretores e imobiliárias conveniados à Espíndola. Confira!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
+                        <div class="blog-post blog-post-creative shadow-hover">
+                            <a href="#" class="blog-post-img">
+                                <div class="img-fade"></div>
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
+                                <img src="img/site/1400x595.png" alt="">
+                            </a>
+                            <div class="content blog-post-content content_fixed">
+                                <h3 class="text-center"><a href="#">Reformas e Reparos </a></h3>
+                                <p class="text-center">
+                                    Com o intuito de agilizar o processo de locaçao, adiministramos pequenas reformas e reparos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
+                        <div class="blog-post blog-post-creative shadow-hover">
+                            <a href="#" class="blog-post-img">
+                                <div class="img-fade"></div>
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
+                                <img src="img/site/1400x595.png" alt="">
+                            </a>
+                            <div class="content blog-post-content content_fixed">
+                                <h3 class="text-center"><a href="#">Regularização Imobiliária</a></h3>
+                                <p class="text-center">
+                                    Problemas com a documentação do seu imóvel? Nós podemos lhe ajudar!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
+                        <div class="blog-post blog-post-creative shadow-hover">
+                            <a href="#" class="blog-post-img">
+                                <div class="img-fade"></div>
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
+                                <img src="img/site/1400x595.png" alt="">
+                            </a>
+                            <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Assessoria Jurídica</a></h3>
                                 <p class="text-center">
                                     A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel
@@ -129,111 +242,6 @@
                                 id="read_services_juri">
                                     Saiba mais
                                   </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
-                                <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/1400x595.png" alt="">
-                            </a>
-                            <div class="content blog-post-content">
-                                <h3 class="text-center"><a href="#">Administração de Imóveis</a></h3>
-                                <p class="text-center">
-                                    A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
-                                <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/1400x595.png" alt="">
-                            </a>
-                            <div class="content blog-post-content">
-                                <h3 class="text-center"><a href="#">Avaliação Imobiliária</a></h3>
-                                <p class="text-center">
-                                    A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
-                                <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/1400x595.png" alt="">
-                            </a>
-                            <div class="content blog-post-content">
-                                <h3 class="text-center"><a href="#">Vistoria Imobiliária</a></h3>
-                                <p class="text-center">
-                                    A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
-                                <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/1400x595.png" alt="">
-                            </a>
-                            <div class="content blog-post-content">
-                                <h3 class="text-center"><a href="#">Aluguel Garantido</a></h3>
-                                <p class="text-center">
-                                    A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
-                                <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/1400x595.png" alt="">
-                            </a>
-                            <div class="content blog-post-content">
-                                <h3 class="text-center"><a href="#">Compra e Venda de Imóveis</a></h3>
-                                <p class="text-center">
-                                    A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
-                                <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/1400x595.png" alt="">
-                            </a>
-                            <div class="content blog-post-content">
-                                <h3 class="text-center"><a href="#">Reformas e Reparos </a></h3>
-                                <p class="text-center">
-                                    A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
-                                <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/1400x595.png" alt="">
-                            </a>
-                            <div class="content blog-post-content">
-                                <h3 class="text-center"><a href="#">Regularização Imobiliária</a></h3>
-                                <p class="text-center">
-                                    A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel
-                                </p>
                             </div>
                         </div>
                     </div>

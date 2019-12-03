@@ -18,6 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('immobile-all' , 'ImmobileController@all');
+Route::prefix('v1')->group(function () {
+    Route::get('immobile-id/{id}' , 'ImmobileController@show');
+});
+
 $router->post('newsletters/attachments', [
     'uses' => 'AttachmentsController@store',
     'as' => 'attachments.store',
