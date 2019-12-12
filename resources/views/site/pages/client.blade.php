@@ -13,20 +13,21 @@
 @section('content')
 <section class="subheader">
     <div class="container">
-        <h1>Serviços</h1>
+        <h1>Área do Cliente</h1>
         <div class="breadcrumb right">Home <i class="fa fa-angle-right"></i> 
-            <a href="#" class="current">Serviços</a>
+            <a href="#" class="current">Cliente</a>
         </div>
         <div class="clear"></div>
     </div>
 </section>
 <section class="module">
     <div class="container">
+       
         <div class="row">
             <div class="col-lg-8 col-md-8">
                 <div class="blog-post">
                     <div class="content blog-post-content">
-                        <h3><a href="#">Nossos serviços</a></h3>
+                        <h3><a href="#">Área do Cliente</a></h3>
                         <p>
                             <br>
                             <strong>A Espíndola</strong> não pensa apenas em alugar o seu imóvel, mas, também, em lhe proporcionar todo o suporte necessário para que você se 
@@ -106,46 +107,47 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
                                 <img src="img/site/imagem01.jpg" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="#">Locação</a></h3>
+                                <h3 class="text-center">
+                                    <a href="#" target="_blank">Extrato de Repasse</a></h3>
                                 <p class="text-center">
-                                    A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel
-                                </p>
-                                
-                                  
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
-                                <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
-                                <img src="img/site/services02.jpg" alt="">
-                            </a>
-                            <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="#">Administração de Imóveis</a></h3>
-                                <p class="text-center">
-                                    Fazemos toda a gestão da locação do seu imóvel até a sua desocupação no mesmo estado em que foi locado.  
+                                    Cadastre-se aqui para receber seu extrato via e-mail ou solicite sua 2ª via...  
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
+                            <div class="blog-post blog-post-creative shadow-hover">
+                                <a href="#" class="blog-post-img">
+                                    <div class="img-fade"></div>
+                                    <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
+                                    <img src="img/site/1400x595.png" alt="">
+                                </a>
+                                <div class="content blog-post-content content_fixed">
+                                    <h3 class="text-center"><a href="#">
+                                        Reserva de chaves</a></h3>
+                                    <p class="text-center">
+                                        Reserve as chaves para visitar o imóvel escolhido.
+                                    </p>
+                                    
+                                      
+                                </div>
+                            </div>
+                        </div>
+                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
-                                <img src="img/site/services03.jpg" alt="">
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
+                                <img src="img/site/1400x595.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="#">Avaliação Imobiliária</a></h3>
+                                <h3 class="text-center"><a href="#">Delivery</a></h3>
                                 <p class="text-center">
-                                    Avaliamos o seu imóvel.
+                                    Agende sua visita que nós levamos a chave para você!
                                 </p>
                             </div>
                         </div>
@@ -154,43 +156,14 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
-                                <img src="img/site/services04.jpg" alt="">
-                            </a>
-                            <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="#">Vistoria Imobiliária</a></h3>
-                                <p class="text-center">
-                                    Laudo de vistoria completo com imagens e detalhes de todos os ambientes do imóvel.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
-                                <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
-                                <img src="img/site/services05.jpg" alt="">
-                            </a>
-                            <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="#">Aluguel Garantido</a></h3>
-                                <p class="text-center">
-                                    Garantimos até 03 meses de aluguel, condomínio e IPTU em caso de atraso no pagamento. Confira!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
-                                <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
                                 <img src="img/site/1400x595.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="#">Compra e Venda de Imóveis</a></h3>
+                                <h3 class="text-center"><a href="http://espindolaimobiliaria.com.br/escolhaazul/proposta/" target="_blank">
+                                        Proposta para locação</a></h3>
                                 <p class="text-center">
-                                    Você pode contar com os corretores e imobiliárias conveniados à Espíndola. Confira!
+                                    Gostou de algum imóvel? Faça sua proposta aqui...
                                 </p>
                             </div>
                         </div>
@@ -199,13 +172,13 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
                                 <img src="img/site/1400x595.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="#">Reformas e Reparos </a></h3>
+                                <h3 class="text-center"><a href="https://espindolaimobil.superlogica.net/clients/areadocliente"  target="_blank">Boleto do Aluguel</a></h3>
                                 <p class="text-center">
-                                    Com o intuito de agilizar o processo de locaçao, adiministramos pequenas reformas e reparos.
+                                        Caso não tenha recebido seu boleto, solicite sua 2ª via aqui.
                                 </p>
                             </div>
                         </div>
@@ -214,13 +187,31 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
                                 <img src="img/site/1400x595.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="#">Regularização Imobiliária</a></h3>
+                                <h3 class="text-center"><a href="https://www.espindola.imb.br/iptu2019" target="_blank">
+                                        IPTU 2019</a></h3>
                                 <p class="text-center">
-                                    Problemas com a documentação do seu imóvel? Nós podemos lhe ajudar!
+                                        Acompanhe aqui as regras e procedimentos para 2019.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
+                        <div class="blog-post blog-post-creative shadow-hover">
+                            <a href="#" class="blog-post-img">
+                                <div class="img-fade"></div>
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
+                                <img src="img/site/1400x595.png" alt="">
+                            </a>
+                            <div class="content blog-post-content content_fixed">
+                                <h3 class="text-center"><a href="https://www.espindola.imb.br/indique-um-amigo">
+                                        Indique um amigo</a></h3>
+                                <p class="text-center">
+                                    Preparamos neste ano uma promoção especial para você cliente. Confira! 
                                 </p>
                             </div>
                         </div>
@@ -229,20 +220,33 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
+                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
                                 <img src="img/site/1400x595.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="#">Assessoria Jurídica</a></h3>
+                                <h3 class="text-center"><a href="https://www.espindola.imb.br/inspeo-predial">Inspeção Predial</a></h3>
                                 <p class="text-center">
-                                    A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel.
-                                    O Departamento Jurídico da Espíndola Imobiliária é o escritório de advocacia Itamar Espíndola Advogados Associados,
-                                     empresa do mesmo grupo,que dispõe de uma equipe própria de advogados especialistas em Direito Imobiliário, garantindo maior segurança nas negociações.
+                                        Acesse aqui para saber mais sobre a lei de inspeção predial da cidade de Fortaleza.
                                 </p>
                                 
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
+                            <div class="blog-post blog-post-creative shadow-hover">
+                                <a href="#" class="blog-post-img">
+                                    <div class="img-fade"></div>
+                                    <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
+                                    <img src="img/site/1400x595.png" alt="">
+                                </a>
+                                <div class="content blog-post-content content_fixed">
+                                    <h3 class="text-center"><a href="#">Reformas e Reparos </a></h3>
+                                    <p class="text-center">
+                                        Com o intuito de agilizar o processo de locaçao, adiministramos pequenas reformas e reparos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                 </div>
                 <!-- end row -->
             </div>

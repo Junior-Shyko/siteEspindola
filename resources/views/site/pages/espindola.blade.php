@@ -57,57 +57,58 @@
         </div>
     </div>
 </section>
-<section class="module testimonials">
+{{-- <section class="module testimonials">
 
-        <div class="container">
-          <div class="module-header">
-            <h2>Our <strong>Testimonials</strong></h2>
-            <img src="images/divider-white.png" alt="">
-            <p>Morbi accumsan ipsum velit nam nec tellus a odiose tincidunt auctor a ornare odio sed non mauris vitae erat consequat auctor</p>
-          </div>
+    <div class="container">
+        <div class="module-header">
+        <h2>Our <strong>Testimonials</strong></h2>
+        <img src="images/divider-white.png" alt="">
+        <p>Morbi accumsan ipsum velit nam nec tellus a odiose tincidunt auctor a ornare odio sed non mauris vitae erat consequat auctor</p>
         </div>
-      
-        <div class="slider-nav slider-nav-testimonials">
-          <span class="slider-prev slick-arrow" style=""><i class="fa fa-angle-left"></i></span>
-          <span class="slider-next slick-arrow" style=""><i class="fa fa-angle-right"></i></span>
-        </div>
-      
-        <div class="container">
-          <div class="slider slider-testimonials slick-initialized slick-slider">
-            <div aria-live="polite" class="slick-list draggable" style="height: 398px;"><div class="slick-track" role="listbox" style="opacity: 1; width: 4560px; transform: translate3d(-2280px, 0px, 0px);"><div class="testimonial slide slick-slide slick-cloned initialized" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 1140px;">
-              <h3>"Homely helped us sell our house with minimal effort. Their team was efficient and always there to help! Homely helped us sell our house with minimal effort. Their team was efficient and always there to help!"</h3>
-              <div class="testimonial-details">
-                <img class="testimonial-img" src="images/testimonial-img.png" alt="">
-                <p class="testimonial-name"><strong>John Doe</strong></p>
-                <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="-1">Rype Creative</a></em></span>
-              </div>
-            </div><div class="testimonial slide slick-slide initialized" data-slick-index="0" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide10" style="width: 1140px;">
-              <h3>"Homely helped us sell our house with minimal effort. Their team was efficient and always there to help!"</h3>
-              <div class="testimonial-details">
-                <img class="testimonial-img" src="images/testimonial-img.png" alt="">
-                <p class="testimonial-name"><strong>John Doe</strong></p>
-                <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="-1">Rype Creative</a></em></span>
-              </div>
-            </div><div class="testimonial slide slick-slide initialized slick-current slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide11" style="width: 1140px;">
-              <h3>"Homely helped us sell our house with minimal effort. Their team was efficient and always there to help! Homely helped us sell our house with minimal effort. Their team was efficient and always there to help!"</h3>
-              <div class="testimonial-details">
-                <img class="testimonial-img" src="images/testimonial-img.png" alt="">
-                <p class="testimonial-name"><strong>John Doe</strong></p>
-                <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="0">Rype Creative</a></em></span>
-              </div>
-            </div><div class="testimonial slide slick-slide slick-cloned initialized" data-slick-index="2" aria-hidden="true" tabindex="-1" style="width: 1140px;">
-              <h3>"Homely helped us sell our house with minimal effort. Their team was efficient and always there to help!"</h3>
-              <div class="testimonial-details">
-                <img class="testimonial-img" src="images/testimonial-img.png" alt="">
-                <p class="testimonial-name"><strong>John Doe</strong></p>
-                <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="-1">Rype Creative</a></em></span>
-              </div>
-            </div></div></div>
-            
-          </div><!-- end slider -->
-        </div><!-- end container -->
-      </section>
-<section class="module content">
+    </div>
+    
+    <div class="slider-nav slider-nav-testimonials">
+        <span class="slider-prev slick-arrow" style=""><i class="fa fa-angle-left"></i></span>
+        <span class="slider-next slick-arrow" style=""><i class="fa fa-angle-right"></i></span>
+    </div>
+    
+    <div class="container">
+        <div class="slider slider-testimonials slick-initialized slick-slider">
+        <div aria-live="polite" class="slick-list draggable" style="height: 398px;"><div class="slick-track" role="listbox" style="opacity: 1; width: 4560px; transform: translate3d(-2280px, 0px, 0px);"><div class="testimonial slide slick-slide slick-cloned initialized" data-slick-index="-1" aria-hidden="true" tabindex="-1" style="width: 1140px;">
+            <h3>"Homely helped us sell our house with minimal effort. Their team was efficient and always there to help! Homely helped us sell our house with minimal effort. Their team was efficient and always there to help!"</h3>
+            <div class="testimonial-details">
+            <img class="testimonial-img" src="images/testimonial-img.png" alt="">
+            <p class="testimonial-name"><strong>John Doe</strong></p>
+            <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="-1">Rype Creative</a></em></span>
+            </div>
+        </div><div class="testimonial slide slick-slide initialized" data-slick-index="0" aria-hidden="true" tabindex="-1" role="option" aria-describedby="slick-slide10" style="width: 1140px;">
+            <h3>"Homely helped us sell our house with minimal effort. Their team was efficient and always there to help!"</h3>
+            <div class="testimonial-details">
+            <img class="testimonial-img" src="images/testimonial-img.png" alt="">
+            <p class="testimonial-name"><strong>John Doe</strong></p>
+            <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="-1">Rype Creative</a></em></span>
+            </div>
+        </div><div class="testimonial slide slick-slide initialized slick-current slick-active" data-slick-index="1" aria-hidden="false" tabindex="-1" role="option" aria-describedby="slick-slide11" style="width: 1140px;">
+            <h3>"Homely helped us sell our house with minimal effort. Their team was efficient and always there to help! Homely helped us sell our house with minimal effort. Their team was efficient and always there to help!"</h3>
+            <div class="testimonial-details">
+            <img class="testimonial-img" src="images/testimonial-img.png" alt="">
+            <p class="testimonial-name"><strong>John Doe</strong></p>
+            <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="0">Rype Creative</a></em></span>
+            </div>
+        </div><div class="testimonial slide slick-slide slick-cloned initialized" data-slick-index="2" aria-hidden="true" tabindex="-1" style="width: 1140px;">
+            <h3>"Homely helped us sell our house with minimal effort. Their team was efficient and always there to help!"</h3>
+            <div class="testimonial-details">
+            <img class="testimonial-img" src="images/testimonial-img.png" alt="">
+            <p class="testimonial-name"><strong>John Doe</strong></p>
+            <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="-1">Rype Creative</a></em></span>
+            </div>
+        </div></div></div>
+        
+        </div><!-- end slider -->
+    </div><!-- end container -->
+</section> --}}
+
+      <section class="module content">
     <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12">
@@ -136,9 +137,16 @@
                             <br>
                             <div class="divider"></div>
                         </div>
+                        <div class="clear">
+                            <br>
+                        </div>
                     </div>
-                    <div class="quote">
-                        <h5>Quem já alugou com a Espíndola</h5>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>Quem já alugou com a Espíndola</h3>
+                            <img src="img/site/divider-half-blue.png" alt=""><br><br>
+                        </div>
+                        <div class="clear"></div>
                     </div>
                     <div class="row">
                         <div class="col-md-6">
