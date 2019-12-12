@@ -185,7 +185,7 @@
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
                                 <div class="img-overlay black"></div>
-                                <img src="img/site/1400x595.png" alt="">
+                                <img src="img/site/services06.jpg" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Compra e Venda de Imóveis</a></h3>
@@ -200,7 +200,7 @@
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
                                 <div class="img-overlay black"></div>
-                                <img src="img/site/1400x595.png" alt="">
+                                <img src="img/site/services07.jpg" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Reformas e Reparos </a></h3>
@@ -215,7 +215,7 @@
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
                                 <div class="img-overlay black"></div>
-                                <img src="img/site/1400x595.png" alt="">
+                                <img src="img/site/services08.jpg" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Regularização Imobiliária</a></h3>
@@ -230,7 +230,7 @@
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
                                 <div class="img-overlay black"></div>
-                                <img src="img/site/1400x595.png" alt="">
+                                <img src="img/site/services09.jpg" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Assessoria Jurídica</a></h3>
