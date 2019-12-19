@@ -25,8 +25,7 @@
                   <td><i class="fa fa-phone"></i></td>
                   <td class="header-item-text">
                     Ligue<br/>
-                    <span style="font-size: 14px;">(85)3461-2025 ( Ag. Aldeota )</span>
-                    <br>
+                   
                     <span style="font-size: 14px;">(85)3038-0014 ( Ag. Fátima )</span>
                   </td>
                 </tr>

@@ -25,8 +25,7 @@
                   <td><i class="fa fa-phone"></i></td>
                   <td class="header-item-text">
                     Ligue<br/>
-                    <span style="font-size: 14px;">(85)3461-1166 ( Ag. Aldeota )</span>
-                    <br>
+                    
                     <span style="font-size: 14px;">(85)3038-0014 ( Ag. Fátima )</span>
                   </td>
                 </tr>
@@ -51,8 +50,7 @@
                 <td><i class="fa fa-whatsapp"></i></td>
                 <td class="header-item-text">
                   WhatsApp<br/>
-                  <span style="font-size: 14px;">(85) 98810-1166  ( Ag. Aldeota )</span>
-                  <br>
+                  
                   <span style="font-size: 14px;">(85) 98970-4899 ( Ag. Fátima )</span>
                 </td>
               </tr>
