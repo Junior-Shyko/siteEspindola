@@ -51,7 +51,7 @@
                 <td class="header-item-text">
                   WhatsApp<br/>
                   
-                  <span style="font-size: 14px;">(85) 98970-4899 ( Ag. Fátima )</span>
+                  <span style="font-size: 14px;">(85) 98970-4899</span>
                 </td>
               </tr>
             </table>
