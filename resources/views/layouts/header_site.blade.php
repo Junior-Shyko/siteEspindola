@@ -26,7 +26,7 @@
                   <td class="header-item-text">
                     Ligue<br/>
                     
-                    <span style="font-size: 14px;">(85)3038-0014 ( Ag. Fátima )</span>
+                    <span style="font-size: 14px;">(85)3038-0014</span>
                   </td>
                 </tr>
               </table>
