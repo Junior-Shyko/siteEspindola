@@ -8,6 +8,12 @@
     height: 194px;
     overflow: auto;
 }
+.circleOption{
+    border: 4px solid #EAB208;
+    opacity: 1;
+    border-radius: 50%;
+    width: 48px;
+}
 
 </style>
 @section('content')
@@ -50,8 +56,8 @@
                         <div class="widget-content">
                             <div class="recent-property">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <a href="{{url('todos-os-tipos/apartamento')}}"><img src="http://nightshiftcreative.co/static/homely/images/property-img1.jpg" alt=""></a>
+                                    <div class="col-lg-4 col-md-4 col-sm-4  text-center">
+                                        <a href="{{url('todos-os-tipos/apartamento')}}"><img src="img/site/hotel.svg" class="circleOption" alt=""></a>
                                     </div>
                                     <div class="col-lg-8 col-md-8 col-sm-8">
                                         <h5><a href="#">Apartamento</a></h5>
@@ -61,8 +67,8 @@
                             </div>
                             <div class="recent-property">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <a href="{{url('todos-os-tipos/casa')}}"><img src="http://nightshiftcreative.co/static/homely/images/property-img1.jpg" alt=""></a>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 text-center">
+                                        <a href="{{url('todos-os-tipos/casa')}}"><img src="img/site/home.svg" class="circleOption" alt=""></a>
                                     </div>
                                     <div class="col-lg-8 col-md-8 col-sm-8">
                                         <h5><a href="#">Casa</a></h5>
@@ -72,8 +78,8 @@
                             </div>
                             <div class="recent-property">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <a href="{{url('todos-os-tipos/sala')}}"><img src="http://nightshiftcreative.co/static/homely/images/property-img1.jpg" alt=""></a>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 text-center">
+                                        <a href="{{url('todos-os-tipos/sala')}}"><img src="img/site/department.svg" class="circleOption" alt=""></a>
                                     </div>
                                     <div class="col-lg-8 col-md-8 col-sm-8">
                                         <h5><a href="#">Sala comercial</a></h5>
@@ -83,8 +89,8 @@
                             </div>
                             <div class="recent-property">
                                 <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <a href="{{url('todos-os-tipos/loja')}}"><img src="http://nightshiftcreative.co/static/homely/images/property-img1.jpg" alt=""></a>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 text-center">
+                                        <a href="{{url('todos-os-tipos/loja')}}"><img src="img/site/front-business.svg" class="circleOption" alt=""></a>
                                     </div>
                                     <div class="col-lg-8 col-md-8 col-sm-8">
                                         <h5><a href="#">Loja</a></h5>

@@ -57,6 +57,23 @@
         </div>
     </div>
 </section>
+<section class="module contact-details">
+    <div class="container">
+        <h3 class="text-center">
+            <span style="color: #fff;">
+                A Espíndola Imobiliária é reconhecida por prestar serviços de locação e vendas de imóveis no mais elevado padrão de qualidade. Tudo isto só é possível porque temos uma equipe de alto nível!
+            </span>
+        </h3>
+        <div class="row">
+            <video width="100%" height="100%" controls autoplay loop>
+                <source src="img/site/espindola.mp4" type="video/mp4">
+               
+                Seu navegador não tem suporte para esse vídeo.
+            </video>
+        </div><!-- end row -->
+  
+    </div>
+  </section>
 {{-- <section class="module testimonials">
 
     <div class="container">
