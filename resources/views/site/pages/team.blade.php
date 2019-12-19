@@ -39,7 +39,7 @@
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="img/agent-img1.jpg" alt="">
+                                <img src="img/site/bernadete.jpg" alt="">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
@@ -69,7 +69,7 @@
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="images/agent-img2.jpg" alt="">
+                                <img src="img/site/cristiano.jpg" alt="">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
@@ -98,7 +98,7 @@
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="images/agent-img3.jpg" alt="">
+                                <img src="img/site/yara.jpg" alt="">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
@@ -125,7 +125,7 @@
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="images/agent-img3.jpg" alt="">
+                                <img src="img/site/jessyca.jpg" alt="">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
@@ -151,7 +151,7 @@
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="images/agent-img3.jpg" alt="">
+                                <img src="img/site/karine.jpg" alt="">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
@@ -179,7 +179,7 @@
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="images/agent-img3.jpg" alt="">
+                                <img src="img/site/yohana.jpg" alt="">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
@@ -205,7 +205,7 @@
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="images/agent-img3.jpg" alt="">
+                                <img src="img/site/sandy.jpg" alt="">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
@@ -234,7 +234,7 @@
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="images/agent-img3.jpg" alt="">
+                                <img src="img/site/adriano.jpg" alt="">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
@@ -260,7 +260,7 @@
                       <div class="agent agent-row agent-row-sidebar shadow-hover">
                           <a href="#" class="agent-img">
                               <div class="img-fade"></div>
-                              <img src="images/agent-img3.jpg" alt="">
+                              <img src="img/site/aline.jpg" alt="">
                           </a>
                           <div class="agent-content">
                               <div class="agent-details">
