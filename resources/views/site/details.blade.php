@@ -145,10 +145,26 @@
                                     <div class="slider property-gallery-pager">
                                         @foreach($photo_immobile as $photos)
                                         <a class="property-gallery-thumb">
-                                        <img src="{{ $photos->photo_immobiles_url }}" alt="{{ $photos->photo_immobiles_url }}" />
+                                            <img src="{{ $photos->photo_immobiles_url }}" alt="{{ $photos->photo_immobiles_url }}" />
                                         </a>
                                         @endforeach
+                                       
                                     </div>
+                                   
+                                   
+                                
+                                   <div class="row">
+                                    <div class="col-md-12 text-center">
+                                        <span class="text-danger">Link compartilhado</span>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <input id="inputShared" type="text" value="https://espindolaimobiliaria.com.br/imovel/AP0002"/>
+                                        <a href="#" target="_blanck" id="btn_shared" class="btn btn-success">
+                                             Compartilhar link                                            
+                                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                        </a>
+                                    </div>
+                                   </div>
                                 </div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="profile">

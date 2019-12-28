@@ -1,7 +1,23 @@
 
 $(function () {
     //PNotify.prototype.options.styling = "fontawesome";
-
+    function copiarTexto(){
+        //captura o elemento input
+       
+    };
+    $("#btn_shared").click(function (e) { 
+        e.preventDefault();
+        console.log('captura');
+        $("#inputShared").show();
+        const inputTest = document.querySelector("#inputShared");
+        
+        //seleciona todo o texto do elemento
+        inputTest.select();
+        //executa o comando copy
+        //aqui é feito o ato de copiar para a area de trabalho com base na seleção
+        document.execCommand('copy');
+        $("#inputShared").hide();
+    });
     $("#submitSearch").click(function (event) {
         $("#img-load").show();
         $("#submitSearch").text('Enviando mensagem');
@@ -33,6 +49,7 @@ $(document).ready(function () {
     //$("#modal_reserve_key").modal('show');
     $("#btn_send_contact").html('Enviar Mensagem');
     $("#img-load").hide();
+    $("#inputShared").hide();
     //modal contato
     $("#id_icon_send").hide();
     $("#info_send_contact").hide();
@@ -87,7 +104,9 @@ $(document).ready(function () {
             //PREENCHANDO O ARRAY            
             all_district.push(val);
         });
-    });
+});
+
+
 
     function split(val) {
         return val.split(/,\s*/);
