@@ -119,6 +119,12 @@
       });
       $(document).ready(function () {
          getLocation();    
+         $('.slide').addClass('initialized');
+    $('.slider.slider-testimonials').slick({
+		prevArrow: $('.slider-nav-testimonials .slider-prev'),
+		nextArrow: $('.slider-nav-testimonials .slider-next'),
+		adaptiveHeight: true
+	});
       });
    </script>
    @stack('scripts')

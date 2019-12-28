@@ -1539,7 +1539,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  .blog-post-img { position:relative; display:block; }
  .blog-post-date { 
  	position:absolute; 
- 	background:url(../images/hexagon.png) no-repeat;
+ 	background:url(../img/site/hexagon.png) no-repeat;
  	line-height:1.1; 
  	bottom:-21px;
  	padding-top:7px; 
@@ -1728,7 +1728,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  /* MISC MODULES
  /*====================================================================================*/
  .about-video-thumb { max-width:100%; height:auto; }
-
+ .about-text-indent-p { text-indent:4em }
  /* SERVICES */
  .services { padding-top:0; }
  .services .service-item {
@@ -1826,7 +1826,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	top:23px;
  }
 
- .cta.hexs { background:#ffb400 url(../images/pattern.jpg) no-repeat bottom; background-size:cover; }
+ .cta.hexs { background:#ffb400 url(../img/site/pattern.jpg) no-repeat bottom; background-size:cover; }
  .cta.hexs .hex { min-height:195px; padding-top:57px; text-align:center; position:relative; }
  .cta.hexs .hex p { position:relative; z-index:10; }
  .cta.hexs .hex p span { font-size:33px; font-weight:700; display:block; }
@@ -1836,7 +1836,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	padding:150px 0px;
  	position:relative;
  	text-align:center;
- 	background:#ffb400 url(../images/1920x950.png) no-repeat center; 
+ 	background:#ffb400 url(../img/site/slider-img2.jpg) no-repeat center; 
  	background-attachment:fixed;
  	background-size:cover; 
  }
@@ -1845,7 +1845,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
  /** TESTIMONIALS **/
  .testimonials {
- 	background:#ffb400 url(../images/pattern.jpg) no-repeat;
+ 	background:#ffb400 url(../img/site/pattern.jpg) no-repeat;
  	background-size:cover;
  	background-position:bottom;
  	color:white;
@@ -2002,10 +2002,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	margin: 0;
     
     height: 40px !important;
-    border: none;
     box-shadow: none;
-    border-radius: 3px;
-	background-color: #FFB400;
+    background-color: #FFB400;
  	font-weight:600;
 	font-family:'Raleway', Helvetica, Arial;
 	color: #fff;

@@ -22,11 +22,13 @@ services:
       image: nginx:alpine
       container_name: site-webserver_local
       working_dir: /application
+      links:
+        - mysql:mysql
       volumes:
           - .:/application
           - ./phpdocker/nginx/nginx.conf:/etc/nginx/nginx.conf
       ports:
-       - "3060:80"
+        - "3060:80"
 
     php-fpm:
       build: phpdocker/php-fpm

@@ -10,6 +10,9 @@
         </div>
         <div class="clear"></div>
       </div>
+      <div class="container text-center alert">
+        <h5 style="color: #1E3B70;">SITE EM MANUTENÇÃO</h5>
+      </div>
     </div>
 
     <div class="container">
@@ -25,9 +28,8 @@
                   <td><i class="fa fa-phone"></i></td>
                   <td class="header-item-text">
                     Ligue<br/>
-                    <span style="font-size: 14px;">(85)3461-1166 ( Ag. Aldeota )</span>
-                    <br>
-                    <span style="font-size: 14px;">(85)3038-0014 ( Ag. Fátima )</span>
+                    
+                    <span style="font-size: 14px;">(85)3038-0014</span>
                   </td>
                 </tr>
               </table>
@@ -51,9 +53,8 @@
                 <td><i class="fa fa-whatsapp"></i></td>
                 <td class="header-item-text">
                   WhatsApp<br/>
-                  <span style="font-size: 14px;">(85) 98810-1166  ( Ag. Aldeota )</span>
-                  <br>
-                  <span style="font-size: 14px;">(85) 98970-4899 ( Ag. Fátima )</span>
+                  
+                  <span style="font-size: 14px;">(85) 98970-4899</span>
                 </td>
               </tr>
             </table>
@@ -74,8 +75,8 @@
           <div class="clear"></div>
         </div>
 
-        <a class="navbar-brand" href="{{'/'}}"><img src="{{ url('/img/site/logo.png')}}" alt="Espindola imobiliária" /></a>
-
+        <a class="navbar-brand" href="{{'/'}}"><img src="https://i.imgur.com/3aULwmb.png" alt="Espindola imobiliária" /></a>
+       
         <!-- nav toggle -->
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
           <span class="icon-bar"></span>
@@ -98,7 +99,14 @@
               <li><a href="{{'/'}}">Home</a></li>
 
               <li>
-                <a href="https://www.espindola.imb.br/espindola">A Espíndola</a>
+                  <li class="menu-item-has-children">
+                      <a href="#">A Espíndola</a>
+                      <ul class="sub-menu">
+                      <li><a href="{{url('espindola')}}">Sobre</a></li>
+                        <li><a href="{{url('equipe')}}">Equipe Espíndola</a></li>
+                        
+                      </ul>
+                    </li>
 {{--             <ul class="sub-menu">
               <li><a href="property-listing-grid.html">Listing Grid</a></li>
               <li><a href="property-listing-grid-sidebar.html">Listing Grid Sidebar</a></li>
@@ -115,7 +123,7 @@
             </ul> --}}
           </li>
 
-          <li><a href="https://www.espindola.imb.br/servicos">Serviços</a></li>
+        <li><a href="{{url('servicos')}}">Serviços</a></li>
 
           <li><a href="https://www.espindola.imb.br/cliente">Área do Cliente</a></li>
 

@@ -1,8 +1,23 @@
 
 $(function () {
-    PNotify.prototype.options.styling = "bootstrap3";
-    PNotify.prototype.options.styling = "fontawesome";
-
+    //PNotify.prototype.options.styling = "fontawesome";
+    function copiarTexto(){
+        //captura o elemento input
+       
+    };
+    $("#btn_shared").click(function (e) { 
+        e.preventDefault();
+        console.log('captura');
+        $("#inputShared").show();
+        const inputTest = document.querySelector("#inputShared");
+        
+        //seleciona todo o texto do elemento
+        inputTest.select();
+        //executa o comando copy
+        //aqui é feito o ato de copiar para a area de trabalho com base na seleção
+        document.execCommand('copy');
+        $("#inputShared").hide();
+    });
     $("#submitSearch").click(function (event) {
         $("#img-load").show();
         $("#submitSearch").text('Enviando mensagem');
@@ -25,8 +40,7 @@ $(function () {
     });
     $(".cityfilteradvanced").chosen();
     $(".districtfilteradvanced").chosen();
-    $("#immobiles_qtd_uncovered_jobs").chosen();
-    $("#immobiles_qtd_dormitory").chosen();
+    
 });
 
 $(document).ready(function () {
@@ -35,6 +49,7 @@ $(document).ready(function () {
     //$("#modal_reserve_key").modal('show');
     $("#btn_send_contact").html('Enviar Mensagem');
     $("#img-load").hide();
+    $("#inputShared").hide();
     //modal contato
     $("#id_icon_send").hide();
     $("#info_send_contact").hide();
@@ -78,7 +93,7 @@ $(document).ready(function () {
 
     });
     //OCUTANDO DIV DE BUSCA AVANÇADA  
-    //$("#filterAdvancedImmobile").hide();
+    $("#filterAdvancedImmobile").hide();
     $("#code-mobile").hide();
     all_district = [];
     //URL COM DADOS
@@ -89,7 +104,9 @@ $(document).ready(function () {
             //PREENCHANDO O ARRAY            
             all_district.push(val);
         });
-    });
+});
+
+
 
     function split(val) {
         return val.split(/,\s*/);
@@ -340,4 +357,19 @@ $(document).ready(function () {
         autoclose: true,
         language: 'pt-BR'
     });
+  
 }); // FIM READY
+
+$(function () {
+    //$('[data-toggle="popover"]').popover();
+    $('#read_services_juri').popover({
+        trigger: 'click',
+        content: '<p>O Departamento Jurídico da <b>Espíndola Imobiliária </b> é o escritório de advocacia <a href="https://www.itamarespindola.adv.br/" target="_blank">Itamar Espíndola Advogados</a> Associados, empresa do mesmo grupo,' 
+        +'que dispõe de uma equipe própria de advogados especialistas em Direito Imobiliário, garantindo maior segurança nas negociações.</p>',
+        html: true
+    });
+    $('.read_services').popover({
+        trigger: 'hover',
+    })
+    
+})
