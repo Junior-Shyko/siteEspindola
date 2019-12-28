@@ -5,11 +5,11 @@ version: "3.1"
 services:
 
     mysql:
-      image: mysql:5.5
+      image: mysql
       container_name: site_mysql_local
       working_dir: /application
       volumes:
-        - /application:/var/lib/mysql
+        - .:/application
       environment:
         - MYSQL_ROOT_PASSWORD=livre
         - MYSQL_DATABASE=site
@@ -24,7 +24,7 @@ services:
       working_dir: /application
       volumes:
           - .:/application
-          - ./phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+          - ./phpdocker/nginx/nginx.conf:/etc/nginx/nginx.conf
       ports:
        - "3060:80"
 

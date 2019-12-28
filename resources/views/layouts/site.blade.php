@@ -8,7 +8,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="csrf-token" content="{{ csrf_token() }}" />
-      <link rel="icon" href="{{ url('/img/site/favicon.png') }}">
+      <link rel="icon" href="{{ url('public/img/site/favicon.png') }}">
       <meta property="og:url" content="{{ $meta_site['url'] }}" />
       <meta property="og:title" content="{{ $meta_site['title'] }}" />
       <meta property="og:type" content="{{ $meta_site['type'] }}" />
@@ -17,18 +17,18 @@
       <meta property=”og:site_name” content="Espíndola imobiliária"/>
       <title>{{ $page_title or "Site" }} @yield('title')</title>
       <!-- CSS file links -->
-      <link rel="stylesheet" href="{{ url('/css/all.css') }}" type="text/css" media="all" >
+      <link rel="stylesheet" href="{{ url('public/css/all.css') }}" type="text/css" media="all" >
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-      {{ Html::style('/assets/pnotify/dist/pnotify.css') }}
-      {{ Html::style('/assets/pnotify/dist/pnotify.buttons.css') }}
+      {{ Html::style('public/assets/pnotify/dist/pnotify.css') }}
+      {{ Html::style('public/assets/pnotify/dist/pnotify.buttons.css') }}
 
       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-      {{ Html::style('/assets/jquery-ui/jquery-ui.min.css') }}
-      {{ Html::style('/assets/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css') }}
-      {{ Html::style('/assets/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5.css') }}
+      {{ Html::style('public/assets/jquery-ui/jquery-ui.min.css') }}
+      {{ Html::style('public/assets/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css') }}
+      {{ Html::style('public/assets/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5.css') }}
       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-      {{ Html::style('/assets/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css') }}
+      {{ Html::style('public/assets/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css') }}
       <style type="text/css">
          #names_distinct{
          -webkit-columns: 100px 3; /* Chrome, Safari, Opera */
@@ -60,13 +60,13 @@
          /*]]>*/
          
          //GLOBALIZANDO URL
-         var project_survey = ':3060';
+         var project_survey = '/';
          domin  =  window.location.protocol + "//" + window.location.hostname;
          var domain_complet = domin + project_survey; 
          var url = window.location.origin;
          //window.onscroll = function() {scrollFunction()};
 
-
+            console.log(domain_complet);
 
       </script>
       <!-- End of espindola Zendesk Widget script -->
@@ -79,26 +79,26 @@
       @yield('footer')
    </body>
    <!-- JavaScript file links -->
-   {{ Html::script('/js/jquery-3.1.1.min.js') }}
-   {{ Html::script('/assets/jquery-ui/jquery-ui.min.js') }}
-   {{ Html::script('/js/bootstrap.min.js') }}
-   {{ Html::script('/assets/jquery.serializeJSON/jquery.serializejson.min.js') }}
-   {{ Html::script('/assets/slick-1.6.0/slick.min.js') }}
-   {{ Html::script('/js/isotope.min.js') }}
-   {{ Html::script('/js/wNumb.js') }}
-   {{ Html::script('/js/nouislider.min.js') }}
-   {{ Html::script('/js/global.js') }}
-   {{ Html::script('/assets/pnotify/dist/pnotify.js') }}
-   {{ Html::script('/assets/pnotify/dist/pnotify.animate.js') }}
-   {{ Html::script('/assets/ion.rangeSlider-2.2.0/js/ion-rangeSlider/moment-with-locales.js') }}
-   {{ Html::script('/assets/ion.rangeSlider-2.2.0/js/ion-rangeSlider/ion.rangeSlider.min.js') }}
-   {{ Html::script('/assets/sumoselect/jquery.sumoselect.min.js') }}
+   {{ Html::script('public/js/jquery-3.1.1.min.js') }}
+   {{ Html::script('public/assets/jquery-ui/jquery-ui.min.js') }}
+   {{ Html::script('public/js/bootstrap.min.js') }}
+   {{ Html::script('public/assets/jquery.serializeJSON/jquery.serializejson.min.js') }}
+   {{ Html::script('public/assets/slick-1.6.0/slick.min.js') }}
+   {{ Html::script('public/js/isotope.min.js') }}
+   {{ Html::script('public/js/wNumb.js') }}
+   {{ Html::script('public/js/nouislider.min.js') }}
+   {{ Html::script('public/js/global.js') }}
+   {{ Html::script('public/assets/pnotify/dist/pnotify.js') }}
+   {{ Html::script('public/assets/pnotify/dist/pnotify.animate.js') }}
+   {{ Html::script('public/assets/ion.rangeSlider-2.2.0/js/ion-rangeSlider/moment-with-locales.js') }}
+   {{ Html::script('public/assets/ion.rangeSlider-2.2.0/js/ion-rangeSlider/ion.rangeSlider.min.js') }}
+   {{ Html::script('public/assets/sumoselect/jquery.sumoselect.min.js') }}
    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
    
-   {{ Html::script('/assets/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js') }}
-   {{ Html::script('/assets/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.pt-BR.js') }}
-   {{ Html::script('/js/all.js') }}
-   {{ Html::script('/assets/chosen-1.6.2/chosen.jquery.min.js') }}
+   {{ Html::script('public/assets/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.min.js') }}
+   {{ Html::script('public/assets/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.pt-BR.js') }}
+   {{ Html::script('public/js/all.js') }}
+   {{ Html::script('public/assets/chosen-1.6.2/chosen.jquery.min.js') }}
    <script type="text/javascript">
       $('[data-toggle="tooltip"]').tooltip();
          //PEGANDO O IP DE ONDE ACESSAR
@@ -112,7 +112,7 @@
          //TOKEN DE ACESSO
          token = "{{ csrf_token() }}";
    </script>
-   {{ Html::script('/js/location.js') }}
+   {{ Html::script('public/js/location.js') }}
    <script type="text/javascript">
       $(function() {
                 
