@@ -14,10 +14,10 @@
 <section class="module content blog-post">
     <div class="container">
         <div class="row">
-            <div class="col-lg-6 col-md-6">
+            <div class="col-lg-9 col-md-9">
                 <h3>A Espíndola Imobiliária.</h3>
                 <img src="img/site/divider-half-blue.png" alt=""><br><br>
-                <div class="col-md-2">
+                <div class="col-md-2 pull-left">
                         <i class="fa fa-quote-left fa-3x pull-right" aria-hidden="true"></i>
                 </div>
                 <div class="col-md-10" style="text-align: justify;">
@@ -38,7 +38,7 @@
                 </div>
                
             </div>
-            <div class="col-lg-6 col-md-6 col-xs-12">
+            <div class="col-lg-3 col-md-3 col-xs-12">
                 
                 <div class="col-md-12  col-xs-12">
                     <br><br><br>
@@ -59,17 +59,17 @@
 </section>
 <section class="module contact-details">
     <div class="container">
-        <h3 class="text-center">
-            <span style="color: #fff;">
-                A Espíndola Imobiliária é reconhecida por prestar serviços de locação e vendas de imóveis no mais elevado padrão de qualidade. Tudo isto só é possível porque temos uma equipe de alto nível!
-            </span>
-        </h3>
         <div class="row">
-            <video width="100%" height="100%" controls autoplay loop>
-                <source src="img/site/espindola.mp4" type="video/mp4">
-               
-                Seu navegador não tem suporte para esse vídeo.
-            </video>
+            <div class="col-md-12">
+                <h3 class="text-center">
+                    <span style="color: #fff;">
+                        A Espíndola Imobiliária é reconhecida por prestar serviços de locação e vendas de imóveis no mais elevado padrão de qualidade. Tudo isto só é possível porque temos uma equipe de alto nível!
+                    </span>
+                </h3>
+            </div>
+        </div>
+        <div class="row" align="center">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RyjXjZp5tRk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div><!-- end row -->
   
     </div>

@@ -43,7 +43,7 @@ return [
             'driver' => 'mysql',
             'host' => env('DB_HOST', 'mysql'),
             'port' => env('DB_PORT', '3306'),
-            'database' =>  'site',
+            'database' =>  'laravel6',
             'username' => 'root',
             'password' => 'livre',
             'unix_socket' => env('DB_SOCKET', ''),

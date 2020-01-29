@@ -1,4 +1,4 @@
-s<?php
+<?php
 
 namespace SiteEspindola;
 
@@ -355,16 +355,18 @@ class Immobile extends Model
          }
             //$dt = Carbon::createFromFormat('Y-m-d H:i:s', $value->DataCadastro);
             
-           echo "campoFutebol = ".gettype($value->campoFutebol);
+           echo "PreçoVenda = ".gettype($value->PrecoVenda)."\n";
+           echo "Valor da venda = ".$value->PrecoVenda.' do imóvel '.$value->CodigoImovel;
+           echo $br;
            if($value->PrecoVenda == ""){
-               $precoVenda = null;
+               $precoVenda = 0.00;
                $temporada = $value->PrecoLocacaoTemporada;
                echo "venda" . $precoVenda;
            }else{
             $precoVenda = $value->PrecoVenda;
            }
            if($value->PrecoLocacaoTemporada == ""){           
-                $temporada = null;
+                $temporada = 0.00;
                 echo "temporada" . $temporada;
             }else{
                 $temporada = $value->PrecoLocacaoTemporada;

@@ -17,11 +17,14 @@
 
 </style>
 @section('content')
-<section class="subheader">
+<section class="subheader_page">
     <div class="container">
         <h1>Área do Cliente</h1>
-        <div class="breadcrumb right">Home <i class="fa fa-angle-right"></i> 
-            <a href="#" class="current">Cliente</a>
+        <div class="clear"></div>
+    </div>
+    <div class="container">
+        <div>Home <i class="fa fa-angle-right"></i> 
+            <a href="#" class="">Cliente</a>
         </div>
         <div class="clear"></div>
     </div>
@@ -30,7 +33,7 @@
     <div class="container">
        
         <div class="row">
-            <div class="col-lg-8 col-md-8">
+            <div class="col-lg-12 col-md-12">
                 <div class="blog-post">
                     <div class="content blog-post-content">
                         <h3><a href="#">Área do Cliente</a></h3>
@@ -39,16 +42,13 @@
                             <strong>A Espíndola</strong> não pensa apenas em alugar o seu imóvel, mas, também, em lhe proporcionar todo o suporte necessário para que você se 
                             sinta seguro e tranquilo na concretização dos seus negócios imobiliários. Estes são alguns dos serviços que a Espíndola tem a oferecer:
                         </p>
-                        <p>
-                            
-                            Nam porttitor nunc volutpat, bibendum mauris quis, volutpat diam. Nullam vehicula urna id lectus commodo feugiat. Suspendisse sit amet pretium nisi, at placerat lorem. Nunc placerat sapien lectus. Maecenas in elit vitae lacus lacinia convallis sed non lectus. Integer blandit elementum ipsum, ornare porttitor nulla gravida at. 
-                            Maecenas maximus ac nisl sed euismod. Morbi fermentum augue vitae eleifend iaculis. Nulla egestas ullamcorper mi, id eleifend arcu dignissim vel.
-                        </p>
+                        
                     </div>
                 </div>
                 <!-- end blog post -->
             </div>
             <!-- end blog posts -->
+            <!-- 
             <div class="col-lg-4 col-md-4 sidebar">
                 <div class="widget widget-sidebar recent-properties">
                     <div class="widget-content box">
@@ -100,11 +100,11 @@
                             </div>
                         </div>
                     </div>
-                    <!-- end widget content -->
+                  
                 </div>
-                <!-- end widget -->
+               
             </div>
-            <!-- end sidebar -->
+            end sidebar -->
         </div>
         <section class="module">
             <div class="container">
@@ -113,8 +113,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/imagem01.jpg" alt="">
+                                <div class="img-overlay  blacker"> </div>
+                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center">
@@ -129,8 +129,8 @@
                             <div class="blog-post blog-post-creative shadow-hover">
                                 <a href="#" class="blog-post-img">
                                     <div class="img-fade"></div>
-                                    <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                    <img src="img/site/1400x595.png" alt="">
+                                    <div class="img-overlay  blacker"> </div>
+                                    <img src="https://i.imgur.com/eD1jkT1.png" alt="">
                                 </a>
                                 <div class="content blog-post-content content_fixed">
                                     <h3 class="text-center"><a href="#">
@@ -147,8 +147,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/1400x595.png" alt="">
+                                <div class="img-overlay  blacker"> </div>
+                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Delivery</a></h3>
@@ -162,8 +162,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/1400x595.png" alt="">
+                                <div class="img-overlay  blacker"> </div>
+                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="http://espindolaimobiliaria.com.br/escolhaazul/proposta/" target="_blank">
@@ -178,8 +178,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/1400x595.png" alt="">
+                                <div class="img-overlay  blacker"> </div>
+                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="https://espindolaimobil.superlogica.net/clients/areadocliente"  target="_blank">Boleto do Aluguel</a></h3>
@@ -193,8 +193,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/1400x595.png" alt="">
+                                <div class="img-overlay  blacker"> </div>
+                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="https://www.espindola.imb.br/iptu2019" target="_blank">
@@ -210,8 +210,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/1400x595.png" alt="">
+                                <div class="img-overlay  blacker"> </div>
+                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="https://www.espindola.imb.br/indique-um-amigo">
@@ -226,8 +226,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                <img src="img/site/1400x595.png" alt="">
+                                <div class="img-overlay  blacker"> </div>
+                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="https://www.espindola.imb.br/inspeo-predial">Inspeção Predial</a></h3>
@@ -242,8 +242,8 @@
                             <div class="blog-post blog-post-creative shadow-hover">
                                 <a href="#" class="blog-post-img">
                                     <div class="img-fade"></div>
-                                    <div class="img-overlay green"><i class="fa fa-handshake-o"></i></div>
-                                    <img src="img/site/1400x595.png" alt="">
+                                    <div class="img-overlay  blacker"> </div>
+                                    <img src="https://i.imgur.com/eD1jkT1.png" alt="">
                                 </a>
                                 <div class="content blog-post-content content_fixed">
                                     <h3 class="text-center"><a href="#">Reformas e Reparos </a></h3>
@@ -260,13 +260,6 @@
         </section>
     </div>
 </section>
-<section class="module cta image-bg">
-    <div class="img-overlay blacker"></div>
-    <div class="container">
-        <h2>Listamos mais de <strong>2000 Propriedades</strong>.</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam gravida non metus.</p>
-    </div>
-    <!-- end container -->
-</section>
+@include('site.pages.top_footer')
 @include('site.footer')
 @endsection

@@ -698,7 +698,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	position:relative;
  	z-index:1;
  }
+ .subheader_page {
+ 	background:#787c8a url(../img/site/subheader_page.jpg) no-repeat center;
+ 	background-size:cover;
+ 	color:white;
+ 	padding-top:160px;
+ 	padding-bottom:40px;
+ 	letter-spacing:0.5px;
+ 	position:relative;
+ 	z-index:1;
+ }
  .subheader h1 {
+ 	margin-bottom:0px;
+ 	font-weight:700;
+ 	font-size:40px;
+ 	color:white;
+ 	float:left;
+ }
+ .subheader_page h1 {
  	margin-bottom:0px;
  	font-weight:700;
  	font-size:40px;
@@ -714,7 +731,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	padding:0;
  	padding-top:20px;
  }
- .subheader .breadcrumb a { color:white; }
+ .subheader .breadcrumb a { color:white; font-weight:600;}
+ .subheader_page a { color:white; font-weight:600;}
+
  .subheader .breadcrumb a.current { font-weight:600; }
  .subheader .breadcrumb .fa { margin-left:6px; margin-right:6px; }
 
@@ -1487,9 +1506,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  }
  .agent-row .agent-footer .social-icons { margin-top:5px; }
 
- .agent-row-sidebar .agent-img { min-height:254px; max-height:254px;  }
+ .agent-row-sidebar .agent-img { min-height:228px; max-height:228px;  }
  .agent-row-sidebar .agent-text { font-size:13px; }
- .agent-row-sidebar .agent-content { min-height:254px; }
+ .agent-row-sidebar .agent-content { min-height:228px; }
  .agent-row-sidebar .agent-footer { bottom:20px; }
 
  /** AGENT SINGLE **/

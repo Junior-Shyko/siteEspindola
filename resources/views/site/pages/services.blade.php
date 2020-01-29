@@ -17,11 +17,14 @@
 
 </style>
 @section('content')
-<section class="subheader">
+<section class="subheader_page">
     <div class="container">
         <h1>Serviços</h1>
-        <div class="breadcrumb right">Home <i class="fa fa-angle-right"></i> 
-            <a href="#" class="current">Serviços</a>
+        <div class="clear"></div>
+    </div>
+    <div class="container">
+        <div>Home <i class="fa fa-angle-right"></i> 
+            <a href="#" class="">Serviços</a>
         </div>
         <div class="clear"></div>
     </div>
@@ -109,15 +112,13 @@
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
                                 <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/EiYNpok.png" alt="Locação Espíndola imobiliária">
+                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Locação Espíndola imobiliária">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Locação</a></h3>
                                 <p class="text-center">
                                     A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel
                                 </p>
-                                
-                                  
                             </div>
                         </div>
                     </div>
@@ -127,7 +128,7 @@
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
                                 <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/6y1cXr0.png" alt="Administração de Imóveis Espíndola imobiliária">
+                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Administração de Imóveis Espíndola imobiliária">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Administração de Imóveis</a></h3>
@@ -142,7 +143,7 @@
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
                                 <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/vGYyQRi.png" alt="Avaliação Imobiliária Espíndola imobiliária">
+                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Avaliação Imobiliária Espíndola imobiliária">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Avaliação Imobiliária</a></h3>
@@ -157,7 +158,7 @@
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
                                 <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/JPc64Ol.png" alt="Vistoria Imobiliária  Espíndola imobiliária">
+                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Vistoria Imobiliária  Espíndola imobiliária">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Vistoria Imobiliária</a></h3>
@@ -172,7 +173,7 @@
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
                                 <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/zSSms42.png" alt="Aluguel Garantido Espíndola imobiliária">
+                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Aluguel Garantido Espíndola imobiliária">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Aluguel Garantido</a></h3>
@@ -187,7 +188,7 @@
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
                                 <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/12RpptT.png" alt="Compra e Venda de Imóveis">
+                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Compra e Venda de Imóveis">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Compra e Venda de Imóveis</a></h3>
@@ -202,7 +203,7 @@
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
                                 <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/Fmou1hs.png" alt="Reformas e Reparos">
+                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Reformas e Reparos">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Reformas e Reparos </a></h3>
@@ -217,7 +218,7 @@
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
                                 <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/yiSJLhR.png" alt="Regularização Imobiliária">
+                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Regularização Imobiliária">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Regularização Imobiliária</a></h3>
@@ -232,7 +233,7 @@
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
                                 <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/n7MvSK8.jpg" alt="Assessoria Jurídica">
+                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Assessoria Jurídica">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Assessoria Jurídica</a></h3>
@@ -240,8 +241,7 @@
                                     A nossa equipe de locação experiente e comprometida está pronta para alugar o seu imóvel.
                                     O Departamento Jurídico da Espíndola Imobiliária é o escritório de advocacia Itamar Espíndola Advogados Associados,
                                      empresa do mesmo grupo,que dispõe de uma equipe própria de advogados especialistas em Direito Imobiliário, garantindo maior segurança nas negociações.
-                                </p>
-                                
+                                </p>                                
                             </div>
                         </div>
                     </div>
@@ -252,13 +252,6 @@
         </section>
     </div>
 </section>
-<section class="module cta image-bg">
-    <div class="img-overlay blacker"></div>
-    <div class="container">
-        <h2>Quem valoriza o seu patrimônio prefere a <strong>Espíndola</strong>.</h2>
-        {{-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam gravida non metus.</p> --}}
-    </div>
-    <!-- end container -->
-</section>
+@include('site.pages.top_footer')
 @include('site.footer')
 @endsection

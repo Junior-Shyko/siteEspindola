@@ -39,7 +39,7 @@
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/lr4wuJe.jpg" alt="">
+                                <img src="https://i.imgur.com/8BeXI0n.jpg" alt="">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
@@ -69,13 +69,13 @@
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/RUF7R06.jpg" alt="Cristiano Barreto Espíndola Siebra">
+                                <img src="https://i.imgur.com/6cf1QMV.jpg" alt="Cristiano Barreto Espíndola Siebra">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
                                     <h4><a href="#">Cristiano Espíndola</a></h4>
                                     <p><i class="fa fa-tag icon"></i>Gestor Executivo</p>
-                                    <p><i class="fa fa-phone icon"></i>(123) 456-6789</p>
+                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
                                 </div>
                                 <div class="agent-text">                                
                                   Possui MBA em Gestão de Negócios. Graduado em Direito pela Universidade de Fortaleza.
@@ -91,14 +91,10 @@
                             </div>
                             <div class="clear"></div>
                         </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <h4>Agência Aldeota.</h4>
-                        <img src="img/site/divider-half-blue.png" alt=""><br><br>
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/P9tqTTn.jpg" alt="Yara Pereira">
+                                <img src="https://i.imgur.com/7CrXwIC.jpg" alt="Yara Pereira">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
@@ -122,64 +118,12 @@
                         </div>
                     </div>
                     <div class="col-lg-12">
-                        <div class="agent agent-row agent-row-sidebar shadow-hover">
-                            <a href="#" class="agent-img">
-                                <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/yUgWgbV.jpg" alt="Gessica Costa">
-                            </a>
-                            <div class="agent-content">
-                                <div class="agent-details">
-                                    <h4><a href="#">Gessica Costa</a></h4>
-                                    <p><i class="fa fa-tag icon"></i>Administrativo & Financeiro</p>
-                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
-                                </div>
-                                <div class="agent-text">
-                                    Graduanda em Ciências Contábeis, é responsável por auxiliar na resolução dos assuntos 
-                                    administrativos e financeiros.
-                                </div>
-                                <div class="agent-footer center">
-                                    <ul class="social-icons circle">
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                   
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="agent agent-row agent-row-sidebar shadow-hover">
-                            <a href="#" class="agent-img">
-                                <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/BJoaqU4.jpg" alt="Ana Karine Sousa">
-                            </a>
-                            <div class="agent-content">
-                                <div class="agent-details">
-                                    <h4><a href="#">Ana Karine Sousa </a></h4>
-                                    <p><i class="fa fa-tag icon"></i>Administrativo & Financeiro</p>
-                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
-                                </div>
-                                <div class="agent-text">
-                                    Graduada em Administração, é responsável por auxiliar principalmente na gestão da carteira de imóveis, 
-                                    estando sempre disponível para ajudar nosso clientes e inquilinos. 
-                                </div>
-                                <div class="agent-footer center">
-                                    <ul class="social-icons circle">
-                                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                    {{-- AGENCIA fÁTIMA --}}
-                    <div class="col-lg-12">
-                        <h4>Agência Fátima.</h4>
+                        <h4>Comercial.</h4>
                         <img src="img/site/divider-half-blue.png" alt=""><br><br>
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/FyElqXa.jpg" alt="Yohana Martins">
+                                <img src="https://i.imgur.com/D9LBxli.jpg" alt="Yohana Martins">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
@@ -201,17 +145,71 @@
                             <div class="clear"></div>
                         </div>
                     </div>
+                    {{-- AGENCIA fÁTIMA --}}
                     <div class="col-lg-12">
+                        <h4>Administração de Imóveis</h4>
+                        <img src="img/site/divider-half-blue.png" alt=""><br><br>
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/O15i0XF.jpg" alt="Sandy Melo">
+                                <img src="https://i.imgur.com/9YYoGzN.jpg" alt="Ana Karine Sousa">
+                            </a>
+                            <div class="agent-content">
+                                <div class="agent-details">
+                                    <h4><a href="#">Ana Karine Sousa </a></h4>
+                                    <p><i class="fa fa-tag icon"></i>Administrativo & Financeiro</p>
+                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
+                                </div>
+                                <div class="agent-text">
+                                    Graduada em Administração, é responsável por auxiliar principalmente na gestão da carteira de imóveis, 
+                                    estando sempre disponível para ajudar nosso clientes e inquilinos. 
+                                </div>
+                                <div class="agent-footer center">
+                                    <ul class="social-icons circle">
+                                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <h4>Administrativo e Financeiro</h4>
+                        <img src="img/site/divider-half-blue.png" alt=""><br><br>
+                        <div class="agent agent-row agent-row-sidebar shadow-hover">
+                            <a href="#" class="agent-img">
+                                <div class="img-fade"></div>
+                                <img src="https://i.imgur.com/xc4atj3.jpg" alt="Gessica Costa">
+                            </a>
+                            <div class="agent-content">
+                                <div class="agent-details">
+                                    <h4><a href="#">Gessica Costa</a></h4>
+                                    <p><i class="fa fa-tag icon"></i>Administrativo & Financeiro</p>
+                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
+                                </div>
+                                <div class="agent-text">
+                                    Graduanda em Ciências Contábeis, é responsável por auxiliar na resolução dos assuntos 
+                                    administrativos e financeiros.
+                                </div>
+                                <div class="agent-footer center">
+                                    <ul class="social-icons circle">
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                   
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="agent agent-row agent-row-sidebar shadow-hover">
+                            <a href="#" class="agent-img">
+                                <div class="img-fade"></div>
+                                <img src="https://i.imgur.com/knoQo76.jpg" alt="Sandy Melo">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
                                     <h4><a href="#">Sandy Melo </a></h4>
                                     <p><i class="fa fa-tag icon"></i>Administrativo & Financeiro</p>
-                                    <p><i class="fa fa-phone icon"></i>(85) 3038-0014</p>
+                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
                                 </div>
                                 <div class="agent-text">
                                     Graduada em Finanças pela Universidade Federal do Ceará (2019), 
@@ -234,7 +232,7 @@
                         <div class="agent agent-row agent-row-sidebar shadow-hover">
                             <a href="#" class="agent-img">
                                 <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/O75cYTu.jpg" alt="Adriano Espíndola">
+                                <img src="https://i.imgur.com/ZqeFLSd.jpg" alt="Adriano Espíndola">
                             </a>
                             <div class="agent-content">
                                 <div class="agent-details">
@@ -260,7 +258,7 @@
                       <div class="agent agent-row agent-row-sidebar shadow-hover">
                           <a href="#" class="agent-img">
                               <div class="img-fade"></div>
-                              <img src="https://i.imgur.com/D4HXvaH.jpg" alt="Aline Costa">
+                              <img src="https://i.imgur.com/Ioj1xyy.jpg" alt="Aline Costa">
                           </a>
                           <div class="agent-content">
                               <div class="agent-details">
