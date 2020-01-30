@@ -38,7 +38,7 @@
                 </ul>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-4 widget footer-widget from-the-blog">
-                <h4><span>Agência Aldeota</span> <img src="{{ url('/img/site/divider-half.png') }}" alt="" /></h4>
+                <h4><span>Administração e Financeiro</span> <img src="{{ url('/img/site/divider-half.png') }}" alt="" /></h4>
                 <b class="open-hours">Endereço</b><br/>
                 <p>
                 Av. Santos Dumont, 2828, Loja 12<br>Aldeota - Fortaleza - Ceará<br>Brasil - CEP:60.150-161</p>
@@ -51,7 +51,7 @@
                 <p class="footer-phone"><i class="fa fa-whatsapp"></i> +55 (85) 98810.1166</p>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-4 widget footer-widget">
-                <h4><span>Agência Fátima</span> <img src="{{ url('/img/site/divider-half.png') }}" alt="" /></h4>
+                <h4><span>Comercial</span> <img src="{{ url('/img/site/divider-half.png') }}" alt="" /></h4>
                 <b class="open-hours">Endereço</b><br/>
                 <p>
                 Rua Monsenhor Otávio de Castro, 781<br>Fátima - Fortaleza - Ceará<br>Brasil - CEP: 60050-150</p>

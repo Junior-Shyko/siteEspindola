@@ -10,9 +10,6 @@
         </div>
         <div class="clear"></div>
       </div>
-      <div class="container text-center alert">
-        <h5 style="color: #1E3B70;">SITE EM MANUTENÇÃO</h5>
-      </div>
     </div>
 
     <div class="container">
@@ -123,15 +120,11 @@
             </ul> --}}
           </li>
 
-        <li><a href="{{url('servicos')}}">Serviços</a></li>
+          <li><a href="{{url('servicos')}}">Serviços</a></li>
 
-          <li><a href="https://www.espindola.imb.br/cliente">Área do Cliente</a></li>
+          <li><a href="{{url('cliente')}}">Área do Cliente</a></li>        
 
-          <li><a href="https://www.espindola.imb.br/noticias">Notícias</a></li>
-
-          <li><a href="https://www.espindola.imb.br/blog">Blog</a></li>
-
-          <li><a href="https://www.espindola.imb.br/contato">Contato</a></li>
+          <li><a href="{{url('contato')}}">Contato</a></li>
         </ul>
         <div class="clear"></div>
 

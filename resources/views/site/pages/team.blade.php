@@ -4,11 +4,17 @@
 @parent
 @endsection
 @section('content')
-<section class="subheader">
+<section class="subheader_page">
     <div class="container">
         <h1>Equipe Espíndola</h1>
-        <div class="breadcrumb right">Home <i class="fa fa-angle-right"></i> 
-            <a href="#" class="current">Time</a>
+        <div class="clear"></div>
+    </div>
+    <div class="container">
+        <div>
+            Home <i class="fa fa-angle-right"></i> 
+            <a href="#" class="">A Espíndola</a>
+            <i class="fa fa-angle-right"></i>
+            <a href="#" class="">Equipe Espíndola</a>
         </div>
         <div class="clear"></div>
     </div>

@@ -7,7 +7,7 @@
 <section class="subheader">
     <div class="container">
         <h1>A Espíndola</h1>
-        <div class="breadcrumb right">Home <i class="fa fa-angle-right"></i> <a href="#" class="current">A Espíndola</a></div>
+        {{-- <div class="breadcrumb right">Home <i class="fa fa-angle-right"></i> <a href="#" class="current">A Espíndola</a></div> --}}
         <div class="clear"></div>
     </div>
 </section>
