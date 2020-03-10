@@ -34,16 +34,16 @@
           <div class="contact-item">
             <i class="fa fa-phone"></i>
             <h4>Contato</h4>
-            <p>Fixo: (85) 3038-0014</p>
-            <p>Celular: (85) 98970-4899</p>
+            <p>Fixo: (85) 3461-1166</p>
+            <p>Celular: (85) 98810-1166</p>
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="contact-item">
             <i class="fa fa-map-marker"></i>
             <h4>Endereço</h4>
-            <p>Rua Monsenhor Otávio de Castro, 781 <br>
-                Fátima - Fortaleza - Ceará</p>
+            <p>Av. Santos Dumont, 2828, Loja 12 <br>
+              Aldeota - Fortaleza - Ceará</p>
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
@@ -51,7 +51,7 @@
             <i class="fa fa-whatsapp"></i>
             <h4>Whatsapp</h4>
             <p>
-                <a href="https://api.whatsapp.com/send?phone=5585989704899&text=Olá, eu gostaria de algumas informações." class="btn btn-success" target="_blank">Fale agora com nosso atendente</a>
+                <a href="https://api.whatsapp.com/send?phone=55859988101166&text=Olá, eu gostaria de algumas informações." class="btn btn-success" target="_blank">Fale agora com nosso atendente</a>
             </p>
             
           </div>

@@ -166,7 +166,7 @@
                                 <img src="https://i.imgur.com/eD1jkT1.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="http://espindolaimobiliaria.com.br/escolhaazul/proposta/" target="_blank">
+                                <h3 class="text-center"><a href="http://espindolaimobiliaria.com.br/escolhaazul/" target="_blank">
                                         Proposta para locação</a></h3>
                                 <p class="text-center">
                                     Gostou de algum imóvel? Faça sua proposta aqui...
@@ -197,8 +197,8 @@
                                 <img src="https://i.imgur.com/eD1jkT1.png" alt="">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="https://www.espindola.imb.br/iptu2019" target="_blank">
-                                        IPTU 2019</a></h3>
+                                <h3 class="text-center"><a href="https://www.sefin.fortaleza.ce.gov.br/iptu" target="_blank">
+                                        IPTU 2020</a></h3>
                                 <p class="text-center">
                                         Acompanhe aqui as regras e procedimentos para 2019.
                                 </p>

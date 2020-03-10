@@ -26,7 +26,7 @@
                   <td class="header-item-text">
                     Ligue<br/>
                     
-                    <span style="font-size: 14px;">(85)3038-0014</span>
+                    <span style="font-size: 14px;">(85) 3461-1166</span>
                   </td>
                 </tr>
               </table>
@@ -51,7 +51,7 @@
                 <td class="header-item-text">
                   WhatsApp<br/>
                   
-                  <span style="font-size: 14px;">(85) 98970-4899</span>
+                  <span style="font-size: 14px;">(85) 98810-1166</span>
                 </td>
               </tr>
             </table>
@@ -121,9 +121,8 @@
           </li>
 
           <li><a href="{{url('servicos')}}">Serviços</a></li>
-
           <li><a href="{{url('cliente')}}">Área do Cliente</a></li>        
-
+          <li><a href="{{url('https://espindola.zendesk.com/hc/pt-br')}}" target="_blank">Perguntas Frequentes</a></li>
           <li><a href="{{url('contato')}}">Contato</a></li>
         </ul>
         <div class="clear"></div>
