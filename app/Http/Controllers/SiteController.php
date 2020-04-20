@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 use DB;
 use SiteEspindola\Immobile;
 use SiteEspindola\Location;
-
+use SiteEspindola\Site;
 use PulkitJalan\GeoIP\GeoIP;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Input;
@@ -81,12 +81,11 @@ public function index()
     }
 
     $uniqueDistrict = array_unique($allDistrict);
-    
+    $site = Site::all();
     // Location::createLocation(self::$agent, self::$ip, self::$route, self::$lat, self::$log, self::$city, self::$country, self::$region, self::$timezone, self::$page_previous, self::$date);
     $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('/img/site/logo_redes.png')];
 
-
-    return view('site.index' , compact('page_title' , 'immobile' , 'type' , 'meta_site' , 'city_all' , 'immobile_all', 'uniqueDistrict'));
+    return view('site.index' , compact('page_title' , 'immobile' , 'type' , 'meta_site' , 'city_all' , 'immobile_all', 'uniqueDistrict' , 'site'));
 }
 
 public function searchList(Request $request)
@@ -639,6 +638,7 @@ public function allType($type)
             'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 
             'image' => url('img/site/logo.png')];
         $page_title = "Contato | ";
-        return view('site.pages.contact' , compact( 'meta_site' , 'page_title'));
+        $site = Site::all();
+        return view('site.pages.contact' , compact( 'meta_site' , 'page_title', 'site'));
     }
 }

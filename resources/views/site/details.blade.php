@@ -569,8 +569,8 @@
                             <div class="agent-details">
                                 <p><i class="fa fa-tag icon"></i>Agência Fátima</p>
                                 <p><i class="fa fa-envelope icon"></i>meajuda@espindolaimobiliaria.com.br</p>
-                                <p><i class="fa fa-phone icon"></i>(85) 3038-0014</p>
-                                <p><i class="fa fa-whatsapp icon"></i>(85) 98970-4899</p>
+                                <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
+                                <p><i class="fa fa-whatsapp icon"></i>(85) 98810-1166</p>
                             </div>
                             @endif
                         </div>

@@ -2,7 +2,8 @@
     <div  id="demo_loc"></div>
     <div class="top-bar">
       <div class="container">
-
+        @php $site = \SiteEspindola\Site::getInfoSite();
+        @endphp
         <div class="top-bar-right right">
           <a href="https://espindolaimobiliaria.com.br/v1/public/login" target="_blank" class="top-bar-item" title="Login no EspindolaAdmin"><i class="fa fa-sign-in icon"></i>Login</a>
           <a href="https://espindolaimobiliaria.com.br/admin/login" target="_blank" class="top-bar-item"><i class="fa fa-user-plus icon"></i>Vistoria</a>
@@ -26,7 +27,9 @@
                   <td class="header-item-text">
                     Ligue<br/>
                     
-                    <span style="font-size: 14px;">(85) 3461-1166</span>
+                    <span style="font-size: 14px;">
+                    {{$site[0]->sites_phoneFixed}}
+                    </span>
                   </td>
                 </tr>
               </table>
@@ -50,8 +53,7 @@
                 <td><i class="fa fa-whatsapp"></i></td>
                 <td class="header-item-text">
                   WhatsApp<br/>
-                  
-                  <span style="font-size: 14px;">(85) 98810-1166</span>
+                  <span style="font-size: 14px;">{{$site[0]->sites_phoneMobile}}</span>
                 </td>
               </tr>
             </table>
@@ -62,7 +64,7 @@
                 <td><i class="fa fa-envelope"></i></td>
                 <td class="header-item-text">
                   E-mail<br/>
-                  <span style="font-size: 15px; color: black;"><a href="mailto: meajuda@espindolaimobiliaria.com.br">meajuda@espindolaimobiliaria.com.br</a> </span>
+                <span style="font-size: 15px; color: black;"><a href="mailto: meajuda@espindolaimobiliaria.com.br">{{$site[0]->sites_email}}</a> </span>
                 </td>
               </tr>
             </table>

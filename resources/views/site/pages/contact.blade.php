@@ -27,23 +27,28 @@
           <div class="contact-item">
             <i class="fa fa-envelope"></i>
             <h4>E-mail</h4>
-            <p>meajuda@espindolaimobiliaria.com.br</p>
+            <p>{{$site[0]->sites_email}}</p>
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="contact-item">
             <i class="fa fa-phone"></i>
             <h4>Contato</h4>
-            <p>Fixo: (85) 3461-1166</p>
-            <p>Celular: (85) 98810-1166</p>
+            <p>Fixo: {{$site[0]->sites_phoneFixed}}</p>
+            <p>Celular: {{$site[0]->sites_phoneMobile}}</p>
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="contact-item">
             <i class="fa fa-map-marker"></i>
             <h4>Endereço</h4>
-            <p>Av. Santos Dumont, 2828, Loja 12 <br>
-              Aldeota - Fortaleza - Ceará</p>
+            <p>{{$site[0]->sites_addressMatrix}}, 
+              {{$site[0]->sites_numberMatrix}}, 
+              {{$site[0]->sites_compMatrix}} <br>
+              {{$site[0]->sites_districtMatrix}} - 
+              {{$site[0]->sites_cityMatrix}} - 
+              {{$site[0]->sites_stateMatrix}}
+            </p>
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
