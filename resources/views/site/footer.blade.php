@@ -27,7 +27,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-4 widget footer-widget">
-                <a class="footer-logo" href="index.html"><img src="{{ url('/img/site/logo-white.png') }}" alt="Homely" /></a>
+                <a class="footer-logo" href="index.html"><img src="https://i.imgur.com/orVOsad.png" alt="Homely" /></a>
                 <p><strong>Espíndola Imobiliária</strong>- CRECI/CE 847J<br>CNPJ: 09.652.345/0001-02</p>
                 <div class="divider"></div>
                 <ul class="social-icons circle">

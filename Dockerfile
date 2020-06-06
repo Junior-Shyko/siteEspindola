@@ -50,7 +50,7 @@ RUN apt-get update \
 	
 WORKDIR /var/www/html/
 
-RUN chmod 777 /var/run/mysqld/mysqld.sock
+# RUN chmod 777 /var/run/mysqld/mysqld.sock
 
 EXPOSE 80 443
 
