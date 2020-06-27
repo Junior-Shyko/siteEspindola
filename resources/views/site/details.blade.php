@@ -89,30 +89,27 @@
                         </div>
                     </div>
                     <div class="property-single-item property-main">
-                        <!-- Nav tabs -->
-                        <ul class="nav nav-tabs" role="tablist" style="">
-                            <li role="presentation active" style="margin:5px;">
-                                <div class="button">                                    
-                                    <a href="#home" aria-controls="home" style="color:#ffffff;" role="tab" data-toggle="tab">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active" style="margin-left:10px;">
+                                <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
                                     Fotos
                                     <i class="fa fa-image"  aria-hidden="true"></i>
-                                    </a>
-                                </div>
+                                </a>
                             </li>
                             @if(!empty($immobile->immobiles_tour_virtual))
-                            <li role="presentation" style="margin:5px;">
-                                <div class="button">
-                                    <a href="#profile" aria-controls="profile" style="color:#ffffff;" role="tab" data-toggle="tab">
-                                    360º <i class="fa fa-street-view" aria-hidden="true"></i>
-                                    </a>
-                                </div>
+                            <li role="presentation" style="margin-left:10px;">
+                                <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+                                360º <i class="fa fa-street-view" aria-hidden="true"></i>
+                                </a>
                             </li>
                             @endif
-                        </ul>
-                        <!-- Tab panes -->
-                        <div class="tab-content">
+                          </ul>
+                        
+                          <!-- Tab panes -->
+                          <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="home">
-                                <table class="property-details-single">
+                                <table class="property-details-single"
+                                style="margin-top: 10px;">
                                     <tr>
                                         <td><i class="fa fa-bed"></i> <span>{{ $immobile->immobiles_qtd_dormitory }}</span> Quarto(s).</td>
                                         <td><i class="fa fa-shower"></i> <span>{{ $immobile->immobiles_qtd_toilet }}</span> WC.</td>
@@ -148,11 +145,7 @@
                                             <img src="{{ $photos->photo_immobiles_url }}" alt="{{ $photos->photo_immobiles_url }}" />
                                         </a>
                                         @endforeach
-                                       
                                     </div>
-                                   
-                                   
-                                
                                    <div class="row">
                                     <div class="col-md-12 text-center">
                                         <span class="text-danger">Link compartilhado</span>
@@ -160,7 +153,7 @@
                                     <div class="col-md-12 text-center">
                                         <input id="inputShared" type="text" value="https://espindolaimobiliaria.com.br/imovel/AP0002"/>
                                         <a href="#" target="_blanck" id="btn_shared" class="btn btn-success">
-                                             Compartilhar link                                            
+                                             Compartilhar link 
                                             <i class="fa fa-share-alt" aria-hidden="true"></i>
                                         </a>
                                     </div>
@@ -169,17 +162,21 @@
                             </div>
                             <div role="tabpanel" class="tab-pane" id="profile">
                                 <iframe frameborder='0' height='465px' width='100%' scrolling='no'
-                                    src="{{$immobile->immobiles_tour_virtual}}" allowfullscreen></iframe>
+                                    src="{{$immobile->immobiles_tour_virtual}}" allowfullscreen
+                                    style="margin-top: 10px;">
+                                </iframe>
                                 <a href="{{$immobile->immobiles_tour_virtual}}" class="btn btn-block btn-primary" target="_blank">
                                 <i class="fa fa-arrows-alt" aria-hidden="true"></i>
                                 Expandir Tour Virtual
                                 </a>
                             </div>
-                        </div>
+                           
+                          </div>
                     </div>
                 </div>
                 <!-- end property title and gallery -->
                 <div class="widget property-single-item property-description content">
+                
                     <h4>
                         <span>Descrição</span> 
                         <img class="divider-hex" src="{{ url('/img/site/divider-half.png') }}" alt="" />
