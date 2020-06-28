@@ -19,7 +19,7 @@ services:
         container_name: apache-mysql
         working_dir: /public
         volumes:
-            - .:/public
+            - ./dadosMysql:/var/lib/mysql
         environment:
             - MYSQL_ROOT_PASSWORD=livre
             - MYSQL_DATABASE=laravel6
