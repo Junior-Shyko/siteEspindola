@@ -111,8 +111,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Locação Espíndola imobiliária">
+                                <div class="img-overlay black"><i class="fa fa-home"></i></div>
+                                <img src="https://i.imgur.com/UHIWiz2.jpg" alt="Locação Espíndola imobiliária">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Locação</a></h3>
@@ -127,8 +127,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Administração de Imóveis Espíndola imobiliária">
+                                <div class="img-overlay black"><i class="fa fa-building" aria-hidden="true"></i></div>
+                                <img src="https://i.imgur.com/UHIWiz2.jpg" alt="Administração de Imóveis Espíndola imobiliária">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Administração de Imóveis</a></h3>
@@ -142,8 +142,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Avaliação Imobiliária Espíndola imobiliária">
+                                <div class="img-overlay black"><i class="fa fa-list-alt" aria-hidden="true"></i></div>
+                                <img src="https://i.imgur.com/UHIWiz2.jpg" alt="Avaliação Imobiliária Espíndola imobiliária">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Avaliação Imobiliária</a></h3>
@@ -157,8 +157,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Vistoria Imobiliária  Espíndola imobiliária">
+                                <div class="img-overlay black"><i class="fa fa-edit" aria-hidden="true"></i></div>
+                                <img src="https://i.imgur.com/UHIWiz2.jpg" alt="Vistoria Imobiliária  Espíndola imobiliária">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Vistoria Imobiliária</a></h3>
@@ -172,8 +172,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Aluguel Garantido Espíndola imobiliária">
+                                <div class="img-overlay black"><i class="fa fa-usd" aria-hidden="true"></i></div>
+                                <img src="https://i.imgur.com/UHIWiz2.jpg" alt="Aluguel Garantido Espíndola imobiliária">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Aluguel Garantido</a></h3>
@@ -187,8 +187,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Compra e Venda de Imóveis">
+                                <div class="img-overlay black"><i class="fa fa-shopping-basket" aria-hidden="true"></i></div>
+                                <img src="https://i.imgur.com/UHIWiz2.jpg" alt="Compra e Venda de Imóveis">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Compra e Venda de Imóveis</a></h3>
@@ -202,8 +202,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Reformas e Reparos">
+                                <div class="img-overlay black"><i class="fa fa-cogs" aria-hidden="true"></i></div>
+                                <img src="https://i.imgur.com/UHIWiz2.jpg" alt="Reformas e Reparos">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Reformas e Reparos </a></h3>
@@ -217,8 +217,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Regularização Imobiliária">
+                                <div class="img-overlay black"><i class="fa fa-handshake-o" aria-hidden="true"></i></div>
+                                <img src="https://i.imgur.com/UHIWiz2.jpg" alt="Regularização Imobiliária">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Regularização Imobiliária</a></h3>
@@ -232,8 +232,8 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay black"></div>
-                                <img src="https://i.imgur.com/A4DKdpI.jpg" alt="Assessoria Jurídica">
+                                <div class="img-overlay black"><i class="fa fa-university" aria-hidden="true"></i></div>
+                                <img src="https://i.imgur.com/UHIWiz2.jpg" alt="Assessoria Jurídica">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Assessoria Jurídica</a></h3>
