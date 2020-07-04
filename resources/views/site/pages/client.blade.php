@@ -113,8 +113,10 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker"> </div>
-                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
+                                <div class="img-overlay  blacker">
+                                    <i class="fa fa-file-text"></i>
+                                 </div>
+                                <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Extrato de Repasse">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center">
@@ -129,8 +131,10 @@
                             <div class="blog-post blog-post-creative shadow-hover">
                                 <a href="#" class="blog-post-img">
                                     <div class="img-fade"></div>
-                                    <div class="img-overlay  blacker"> </div>
-                                    <img src="https://i.imgur.com/eD1jkT1.png" alt="">
+                                    <div class="img-overlay  blacker">
+                                        <i class="fa fa-key"></i>
+                                     </div>
+                                    <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Reserva de chaves">
                                 </a>
                                 <div class="content blog-post-content content_fixed">
                                     <h3 class="text-center"><a href="#">
@@ -147,8 +151,10 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker"> </div>
-                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
+                                <div class="img-overlay  blacker">
+                                    <i class="fa fa-share-square"></i>
+                                 </div>
+                                <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Delivery">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="#">Delivery</a></h3>
@@ -162,11 +168,14 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker"> </div>
-                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
+                                <div class="img-overlay  blacker">
+                                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                                 </div>
+                                <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Proposta para locação">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="http://espindolaimobiliaria.com.br/escolhaazul/proposta/" target="_blank">
+                                <h3 class="text-center">
+                                    <a href="http://espindolaimobiliaria.com.br/escolhaazul/" target="_blank">
                                         Proposta para locação</a></h3>
                                 <p class="text-center">
                                     Gostou de algum imóvel? Faça sua proposta aqui...
@@ -178,11 +187,15 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker"> </div>
-                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
+                                <div class="img-overlay  blacker">
+                                    <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                                 </div>
+                                <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Boleto do Aluguel">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="https://espindolaimobil.superlogica.net/clients/areadocliente"  target="_blank">Boleto do Aluguel</a></h3>
+                                <h3 class="text-center">
+                                    <a href="https://espindolaimobil.superlogica.net/clients/areadocliente" 
+                                     target="_blank">Boleto do Aluguel</a></h3>
                                 <p class="text-center">
                                         Caso não tenha recebido seu boleto, solicite sua 2ª via aqui.
                                 </p>
@@ -193,12 +206,14 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker"> </div>
-                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
+                                <div class="img-overlay  blacker">
+                                    <i class="fa fa-file-o" aria-hidden="true"></i>
+                                 </div>
+                                <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="IPTU 2020">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="https://www.espindola.imb.br/iptu2019" target="_blank">
-                                        IPTU 2019</a></h3>
+                                <h3 class="text-center"><a href="https://www.sefin.fortaleza.ce.gov.br/iptu" target="_blank">
+                                        IPTU 2020</a></h3>
                                 <p class="text-center">
                                         Acompanhe aqui as regras e procedimentos para 2019.
                                 </p>
@@ -210,8 +225,10 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker"> </div>
-                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
+                                <div class="img-overlay  blacker">
+                                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                                 </div>
+                                 <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Indique um amigo">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center"><a href="https://www.espindola.imb.br/indique-um-amigo">
@@ -226,11 +243,14 @@
                         <div class="blog-post blog-post-creative shadow-hover">
                             <a href="#" class="blog-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker"> </div>
-                                <img src="https://i.imgur.com/eD1jkT1.png" alt="">
+                                <div class="img-overlay  blacker">
+                                    <i class="fa fa-building-o" aria-hidden="true"></i>
+                                 </div>
+                                 <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Indique um amigo">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="https://www.espindola.imb.br/inspeo-predial">Inspeção Predial</a></h3>
+                                <h3 class="text-center">
+                                    <a href="https://www.espindola.imb.br/inspeo-predial">Inspeção Predial</a></h3>
                                 <p class="text-center">
                                         Acesse aqui para saber mais sobre a lei de inspeção predial da cidade de Fortaleza.
                                 </p>
@@ -242,8 +262,10 @@
                             <div class="blog-post blog-post-creative shadow-hover">
                                 <a href="#" class="blog-post-img">
                                     <div class="img-fade"></div>
-                                    <div class="img-overlay  blacker"> </div>
-                                    <img src="https://i.imgur.com/eD1jkT1.png" alt="">
+                                    <div class="img-overlay  blacker">
+                                    <i class="fa fa-wrench" aria-hidden="true"></i>
+                                 </div>
+                                 <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Indique um amigo">
                                 </a>
                                 <div class="content blog-post-content content_fixed">
                                     <h3 class="text-center"><a href="#">Reformas e Reparos </a></h3>
