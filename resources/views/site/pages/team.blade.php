@@ -41,314 +41,174 @@
                         <div class="clear"></div>
                     </div>end agent listing header -->
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="agent agent-row agent-row-sidebar shadow-hover">
-                            <a href="#" class="agent-img">
-                                <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/8BeXI0n.jpg" alt="">
-                            </a>
-                            <div class="agent-content">
-                                <div class="agent-details">
-                                    <h4><a href="#">Bernadete Espíndola</a></h4>
-                                    <p><i class="fa fa-tag icon"></i>Diretora</p>
-                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
-                                </div>
-                                <div class="agent-text">
-                                    <p> Especialista em Direito Imobiliário pela Universidade de Fortaleza – UNIFOR (2006). 
-                                      Graduada em Direito pela Universidade de Fortaleza (1986). Conselheira efetiva do CRECI/CE (2016/2018). 
-                                      Vice-presidente do Secovi-CE. Ex-diretora de relações públicas da AADIC (2016/2017). 
-                                      Membro da Comissão de Direito Imobiliária da OAB/CE. 
-                                      Corretora de Imóveis e Advogada do escritório de advocacia Itamar Espíndola Adv. Associados.
-                                    </p>
-                                </div>
-                                <div class="agent-footer center">
-                                    <ul class="social-icons circle">
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="agent agent-row agent-row-sidebar shadow-hover">
-                            <a href="#" class="agent-img">
-                                <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/6cf1QMV.jpg" alt="Cristiano Barreto Espíndola Siebra">
-                            </a>
-                            <div class="agent-content">
-                                <div class="agent-details">
-                                    <h4><a href="#">Cristiano Espíndola</a></h4>
-                                    <p><i class="fa fa-tag icon"></i>Gestor Executivo</p>
-                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
-                                </div>
-                                <div class="agent-text">                                
-                                  Possui MBA em Gestão de Negócios. Graduado em Direito pela Universidade de Fortaleza.
-                                  Ex-membro da Comissão de Políticas Urbanas e Direito Urbanístico da OAB/CE (2010/2012).
-                                  Advogado inscrito na OAB/CE sob o nº 22.750.
-                                </div>
-                                <div class="agent-footer center">
-                                    <ul class="social-icons circle">
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                    
+                    @foreach ($team as $item)
+                        @if($item->teamSites_office == 'Gestor')
+                            <div class="col-lg-12">
+                                <div class="agent agent-row agent-row-sidebar shadow-hover">
+                                    <a href="#" class="agent-img">
+                                        <div class="img-fade"></div>
+                                        <img src="{{$item->teamSites_photo}}" alt="{{$item->teamSites_name}}">
+                                    </a>
+                                    <div class="agent-content">
+                                        <div class="agent-details">
+                                            <h4><a href="#">{{$item->teamSites_name}}</a></h4>
+                                            @php 
+                                                if ($item->teamSites_name == 'Yara Pereira') {
+                                                    echo '<p><i class="fa fa-tag icon"></i>Gerente Agência Aldeota</p>';
+                                                }elseif ($item->teamSites_name == 'Bernadete Espíndola'){
+                                                    echo '<p><i class="fa fa-tag icon"></i>Diretora</p>';
+                                                }else{
+                                                    echo '<p><i class="fa fa-tag icon"></i>Gestor Executivo</p>';
+                                                }
+                                            @endphp
+                                            <p><i class="fa fa-phone icon"></i>{{$item->teamSites_phoneOne}}</p>
+                                        </div>
+                                        <div class="agent-text">
+                                            <p>{{$item->teamSites_text}}</p>
+                                        </div>
+                                        @if ($item->teamSites_linkedin != '')
+                                        <div class="agent-footer center">
+                                            <ul class="social-icons circle">
+                                                <li><a href="{{$item->teamSites_linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        @endif
+                                        
+                                    </div>
+                                    <div class="clear"></div>
                                 </div>
                             </div>
-                            <div class="clear"></div>
-                        </div>
-                        <div class="agent agent-row agent-row-sidebar shadow-hover">
-                            <a href="#" class="agent-img">
-                                <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/7CrXwIC.jpg" alt="Yara Pereira">
-                            </a>
-                            <div class="agent-content">
-                                <div class="agent-details">
-                                    <h4><a href="#">Yara Pereira</a></h4>
-                                    <p><i class="fa fa-tag icon"></i>Gerente Agência Aldeota</p>
-                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
+                        @endif
+                        @if($item->teamSites_office == 'Comercial')
+                        <div class="col-lg-12">
+                            <h4>Comercial.</h4>
+                            <img src="img/site/divider-half-blue.png" alt=""><br><br>
+                            <div class="agent agent-row agent-row-sidebar shadow-hover">
+                                <a href="#" class="agent-img">
+                                    <div class="img-fade"></div>
+                                    <img src="{{$item->teamSites_photo}}" alt="{{$item->teamSites_name}}">
+                                </a>
+                                <div class="agent-content">
+                                    <div class="agent-details">
+                                        <h4><a href="#">{{$item->teamSites_name}}</a></h4>
+                                        <p><i class="fa fa-tag icon"></i>Comercial</p>
+                                        <p><i class="fa fa-phone icon"></i>{{$item->teamSites_phoneOne}}</p>
+                                    </div>
+                                    <div class="agent-text">
+                                        <p>{{$item->teamSites_text}}</p>
+                                    </div>
+                                    @if ($item->teamSites_linkedin != '')
+                                    <div class="agent-footer center">
+                                        <ul class="social-icons circle">
+                                            <li><a href="{{$item->teamSites_linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    @endif
                                 </div>
-                                <div class="agent-text">
-                                    Responsável pela gerência da Espíndola Aldeota, administra a carteira de imóveis com o desafio de intermediar a 
-                                    relação entre inquilinos e proprietários. 
-                                    ormada em Gestão de Recursos Humanos, com Pós-Graduação em Gestão Empresarial pela Faculdade Farias Brito.
-                                </div>
-                                <div class="agent-footer center">
-                                    <ul class="social-icons circle">
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                    
-                                </div>
+                                <div class="clear"></div>
                             </div>
-                            <div class="clear"></div>
                         </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <h4>Comercial.</h4>
-                        <img src="img/site/divider-half-blue.png" alt=""><br><br>
-                        <div class="agent agent-row agent-row-sidebar shadow-hover">
-                            <a href="#" class="agent-img">
-                                <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/D9LBxli.jpg" alt="Yohana Martins">
-                            </a>
-                            <div class="agent-content">
-                                <div class="agent-details">
-                                    <h4><a href="#">Yohana Martins</a></h4>
-                                    <p><i class="fa fa-tag icon"></i>Comercial</p>
-                                    <p><i class="fa fa-phone icon"></i>(85) 3038-0014</p>
+                        @endif
+
+                        @if ($item->teamSites_office == 'Administração de Imóveis')
+                        <div class="col-lg-12">
+                            <h4>Administração de Imóveis</h4>
+                            <img src="img/site/divider-half-blue.png" alt=""><br><br>
+                            <div class="agent agent-row agent-row-sidebar shadow-hover">
+                                <a href="#" class="agent-img">
+                                    <div class="img-fade"></div>
+                                    <img src="{{$item->teamSites_photo}}" alt="{{$item->teamSites_name}}">
+                                </a>
+                                <div class="agent-content">
+                                    <div class="agent-details">
+                                        <h4><a href="#">{{$item->teamSites_name}} </a></h4>
+                                        <p><i class="fa fa-tag icon"></i>Administrativo & Financeiro</p>
+                                        <p><i class="fa fa-phone icon"></i>{{$item->teamSites_phoneOne}}</p>
+                                    </div>
+                                    <div class="agent-text">
+                                        <p>{{$item->teamSites_text}}</p>
+                                    </div>
+                                    @if ($item->teamSites_linkedin != '')
+                                    <div class="agent-footer center">
+                                        <ul class="social-icons circle">
+                                            <li><a href="{{$item->teamSites_linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    @endif
                                 </div>
-                                <div class="agent-text">
-                                    Pós-graduanda em Gestão de Negócios, Graduada em Design de Interiores, e com Curso Técnica em Transações Imobiliárias (2019), 
-                                    já possui excelente experiência na área comercial e está pronta para ajudar nossos clientes a alugarem ou venderem seus imóveis.
-                                </div>
-                                <div class="agent-footer center">
-                                    <ul class="social-icons circle">
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                    
-                                </div>
+                                <div class="clear"></div>
                             </div>
-                            <div class="clear"></div>
                         </div>
-                    </div>
-                    {{-- AGENCIA fÁTIMA --}}
-                    <div class="col-lg-12">
-                        <h4>Administração de Imóveis</h4>
-                        <img src="img/site/divider-half-blue.png" alt=""><br><br>
-                        <div class="agent agent-row agent-row-sidebar shadow-hover">
-                            <a href="#" class="agent-img">
-                                <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/9YYoGzN.jpg" alt="Ana Karine Sousa">
-                            </a>
-                            <div class="agent-content">
-                                <div class="agent-details">
-                                    <h4><a href="#">Ana Karine Sousa </a></h4>
-                                    <p><i class="fa fa-tag icon"></i>Administrativo & Financeiro</p>
-                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
+                        @endif
+
+                        @if ($item->teamSites_office == 'Administrativo e Financeiro')
+                        @php $infoFinan = 0; @endphp
+                        <div class="col-lg-12">
+                            <h4>Administrativo & Financeiro</h4>
+                            <img src="img/site/divider-half-blue.png" alt=""><br><br>
+                            <div class="agent agent-row agent-row-sidebar shadow-hover">
+                                <a href="#" class="agent-img">
+                                    <div class="img-fade"></div>
+                                    <img src="{{$item->teamSites_photo}}" alt="{{$item->teamSites_name}}">
+                                </a>
+                                <div class="agent-content">
+                                    <div class="agent-details">
+                                        <h4><a href="#">{{$item->teamSites_name}} </a></h4>
+                                        <p><i class="fa fa-tag icon"></i>Administrativo & Financeiro</p>
+                                        <p><i class="fa fa-phone icon"></i>{{$item->teamSites_phoneOne}}</p>
+                                    </div>
+                                    <div class="agent-text">
+                                        <p>{{$item->teamSites_text}}</p>
+                                    </div>
+                                    @if ($item->teamSites_linkedin != '')
+                                    <div class="agent-footer center">
+                                        <ul class="social-icons circle">
+                                            <li><a href="{{$item->teamSites_linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    @endif
                                 </div>
-                                <div class="agent-text">
-                                    Graduada em Administração, é responsável por auxiliar principalmente na gestão da carteira de imóveis, 
-                                    estando sempre disponível para ajudar nosso clientes e inquilinos. 
-                                </div>
-                                <div class="agent-footer center">
-                                    <ul class="social-icons circle">
-                                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
+                                <div class="clear"></div>
                             </div>
-                            <div class="clear"></div>
                         </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <h4>Administrativo e Financeiro</h4>
-                        <img src="img/site/divider-half-blue.png" alt=""><br><br>
-                        <div class="agent agent-row agent-row-sidebar shadow-hover">
-                            <a href="#" class="agent-img">
-                                <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/xc4atj3.jpg" alt="Gessica Costa">
-                            </a>
-                            <div class="agent-content">
-                                <div class="agent-details">
-                                    <h4><a href="#">Gessica Costa</a></h4>
-                                    <p><i class="fa fa-tag icon"></i>Administrativo & Financeiro</p>
-                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
+                        @endif
+
+                        @if ($item->teamSites_office == 'Equipe Jurídico')
+                        <div class="col-lg-12">
+                            <h4>Equipe Jurídico</h4>
+                            <img src="img/site/divider-half-blue.png" alt=""><br><br>
+                            <div class="agent agent-row agent-row-sidebar shadow-hover">
+                                <a href="#" class="agent-img">
+                                    <div class="img-fade"></div>
+                                    <img src="{{$item->teamSites_photo}}" alt="{{$item->teamSites_name}}">
+                                </a>
+                                <div class="agent-content">
+                                    <div class="agent-details">
+                                        <h4><a href="#">{{$item->teamSites_name}} </a></h4>
+                                        <p><i class="fa fa-tag icon"></i>Jurídico</p>
+                                        <p><i class="fa fa-phone icon"></i>{{$item->teamSites_phoneOne}}</p>
+                                    </div>
+                                    <div class="agent-text">
+                                        <p>{{$item->teamSites_text}}</p>
+                                    </div>
+                                    @if ($item->teamSites_linkedin != '')
+                                    <div class="agent-footer center">
+                                        <ul class="social-icons circle">
+                                            <li><a href="{{$item->teamSites_linkedin}}"><i class="fa fa-linkedin"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    @endif
                                 </div>
-                                <div class="agent-text">
-                                    Graduanda em Ciências Contábeis, é responsável por auxiliar na resolução dos assuntos 
-                                    administrativos e financeiros.
-                                </div>
-                                <div class="agent-footer center">
-                                    <ul class="social-icons circle">
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                   
-                                </div>
+                                <div class="clear"></div>
                             </div>
-                            <div class="clear"></div>
                         </div>
-                        <div class="agent agent-row agent-row-sidebar shadow-hover">
-                            <a href="#" class="agent-img">
-                                <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/knoQo76.jpg" alt="Sandy Melo">
-                            </a>
-                            <div class="agent-content">
-                                <div class="agent-details">
-                                    <h4><a href="#">Sandy Melo </a></h4>
-                                    <p><i class="fa fa-tag icon"></i>Administrativo & Financeiro</p>
-                                    <p><i class="fa fa-phone icon"></i>(85) 3461-1166</p>
-                                </div>
-                                <div class="agent-text">
-                                    Graduada em Finanças pela Universidade Federal do Ceará (2019), 
-                                    é responsável pela gestão das contas, além de auxiliar em todos os assuntos relacionados com administrativo e o financeiro.
-                                </div>
-                                <div class="agent-footer center">
-                                    <ul class="social-icons circle">
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <h4>
-                            Equipe Jurídico.
-                        </h4>
-                        <img src="img/site/divider-half-blue.png" alt=""><br><br>
-                        <div class="agent agent-row agent-row-sidebar shadow-hover">
-                            <a href="#" class="agent-img">
-                                <div class="img-fade"></div>
-                                <img src="https://i.imgur.com/ZqeFLSd.jpg" alt="Adriano Espíndola">
-                            </a>
-                            <div class="agent-content">
-                                <div class="agent-details">
-                                    <h4><a href="#">Adriano Espindola</a></h4>
-                                    <p><i class="fa fa-tag icon"></i>Jurídico</p>
-                                </div>
-                                <div class="agent-text">
-                                    Doutorando em Direito Civil pela Universidade de Salamanca-Espanha. Mestre e especialista em Direito Civil. 
-                                    Especialista em Direito Público Municipal. Graduado em Direito pela Universidade de Fortaleza (2009). 
-                                    Atualmente é responsável pelas demandas jurídicas da carteira de imóveis da nossa agência do bairro Aldeota, bem como pelos casos estratégicos. 
-                                </div>
-                                <div class="agent-footer center">
-                                    <ul class="social-icons circle">
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                    
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="agent agent-row agent-row-sidebar shadow-hover">
-                          <a href="#" class="agent-img">
-                              <div class="img-fade"></div>
-                              <img src="https://i.imgur.com/Ioj1xyy.jpg" alt="Aline Costa">
-                          </a>
-                          <div class="agent-content">
-                              <div class="agent-details">
-                                  <h4><a href="#">Aline Costa </a></h4>
-                                  <p><i class="fa fa-tag icon"></i>Jurídico</p>
-                                 
-                              </div>
-                              <div class="agent-text">
-                                  Graduada em Direito pela Estácio (2018), iniciou suas atividades conosco no ano de 2015 na qualidade de estagiária, onde desde então adquiriu muita experiência na área imobiliária e sucessória. 
-                                  Atualmente é responsável pelas demandas jurídicas da carteira de imóveis da nossa agência do bairro de Fátima e assessora a nossa equipe de vendas.
-                              </div>
-                              <div class="agent-footer center">
-                                  <ul class="social-icons circle">
-                                      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                  </ul>
-                                  
-                              </div>
-                          </div>
-                          <div class="clear"></div>
-                      </div>
-                  </div>
+                        @endif
+                        
+                    @endforeach
                 </div>
                 <!-- end row -->
             </div>
-            <!-- end col -->
-            {{-- <div class="col-lg-4 col-md-4 sidebar">
-                <div class="widget widget-sidebar recent-properties">
-                    <div class="widget-content box">
-                        <h4><span>Procure por imóvel</span> <img src="img/site/divider-half.png" alt=""></h4>
-                        <div class="widget-content">
-                            <div class="recent-property">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <a href="http://138.68.230.108:3060/todos-os-tipos/apartamento"><img src="http://nightshiftcreative.co/static/homely/images/property-img1.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <h5><a href="#">Apartamento</a></h5>
-                                        <p>Todos apartamentos.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="recent-property">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <a href="http://138.68.230.108:3060/todos-os-tipos/casa"><img src="http://nightshiftcreative.co/static/homely/images/property-img1.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <h5><a href="#">Casa</a></h5>
-                                        <p>Todas casas.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="recent-property">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <a href="http://138.68.230.108:3060/todos-os-tipos/sala"><img src="http://nightshiftcreative.co/static/homely/images/property-img1.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <h5><a href="#">Sala comercial</a></h5>
-                                        <p>Todas salas comerciais.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="recent-property">
-                                <div class="row">
-                                    <div class="col-lg-4 col-md-4 col-sm-4">
-                                        <a href="http://138.68.230.108:3060/todos-os-tipos/loja"><img src="http://nightshiftcreative.co/static/homely/images/property-img1.jpg" alt=""></a>
-                                    </div>
-                                    <div class="col-lg-8 col-md-8 col-sm-8">
-                                        <h5><a href="#">Loja</a></h5>
-                                        <p>Todas lojas.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- end widget content -->
-                </div>
-                <!-- end widget -->
-            </div> --}}
-        </div>
-        <!-- end row -->
-    </div>
-    <!-- end container -->
+
 </section>
 @include('site.footer')
 @endsection
