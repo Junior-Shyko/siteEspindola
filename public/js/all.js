@@ -9,14 +9,17 @@ $(function () {
         e.preventDefault();
         console.log('captura');
         $("#inputShared").show();
-        const inputTest = document.querySelector("#inputShared");
-        
+        $("#infoShared").show();
+        const inputTest = document.querySelector("#inputShared");        
         //seleciona todo o texto do elemento
         inputTest.select();
         //executa o comando copy
         //aqui é feito o ato de copiar para a area de trabalho com base na seleção
         document.execCommand('copy');
         $("#inputShared").hide();
+        setTimeout(() => {
+           $("#infoShared").hide();
+        }, 2000);
     });
     $("#submitSearch").click(function (event) {
         $("#img-load").show();

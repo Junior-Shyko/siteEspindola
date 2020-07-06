@@ -147,11 +147,11 @@
                                         @endforeach
                                     </div>
                                    <div class="row">
-                                    <div class="col-md-12 text-center">
+                                    <div class="col-md-12 text-center" id="infoShared">
                                         <span class="text-danger">Link compartilhado</span>
                                     </div>
                                     <div class="col-md-12 text-center">
-                                        <input id="inputShared" type="text" value="https://espindolaimobiliaria.com.br/imovel/AP0002"/>
+                                        <input id="inputShared" type="text" value="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}"/>
                                         <a href="#" target="_blanck" id="btn_shared" class="btn btn-success">
                                              Compartilhar link 
                                             <i class="fa fa-share-alt" aria-hidden="true"></i>
@@ -638,12 +638,20 @@
 {{ Html::script('public/js/map-single.js') }}
 <script type="text/javascript">
     code_immobile = '{{ $immobile->immobiles_code }}';
-    
+    $(document).ready(function () {
+        $("#infoShared").hide();
+    });
     $(function () {
      $('[data-toggle="tooltip"]').tooltip();
      $('[data-toggle="popover"]').popover();
      //property-gallery-thumb
-    
+    // $("#btn_shared").click(function (e) { 
+    //     $("#infoShared").show();
+    //     e.preventDefault();
+    //     // setTimeout(() => {
+    //     //    $("#infoShared").hide();
+    //     // }, 3000);
+    // });
     
       
     })
