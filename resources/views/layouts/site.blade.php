@@ -82,14 +82,14 @@
    {{ Html::script('/js/jquery-3.1.1.min.js') }}
    {{ Html::script('/assets/jquery-ui/jquery-ui.min.js') }}
    {{ Html::script('/js/bootstrap.min.js') }}
-   {{ Html::script('/assets/jquery.serializeJSON/jquery.serializejson.min.js') }}
+   {{-- {{ Html::script('/assets/jquery.serializeJSON/jquery.serializejson.min.js') }} --}}
    {{ Html::script('/assets/slick-1.6.0/slick.min.js') }}
    {{ Html::script('/js/isotope.min.js') }}
    {{ Html::script('/js/wNumb.js') }}
    {{ Html::script('/js/nouislider.min.js') }}
    {{ Html::script('/js/global.js') }}
-   {{ Html::script('/assets/pnotify/dist/pnotify.js') }}
-   {{ Html::script('/assets/pnotify/dist/pnotify.animate.js') }}
+   {{-- {{ Html::script('/assets/pnotify/dist/pnotify.js') }}
+   {{ Html::script('/assets/pnotify/dist/pnotify.animate.js') }} --}}
    {{ Html::script('/assets/ion.rangeSlider-2.2.0/js/ion-rangeSlider/moment-with-locales.js') }}
    {{ Html::script('/assets/ion.rangeSlider-2.2.0/js/ion-rangeSlider/ion.rangeSlider.min.js') }}
    {{ Html::script('/assets/sumoselect/jquery.sumoselect.min.js') }}
