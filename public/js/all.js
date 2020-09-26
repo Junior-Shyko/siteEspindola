@@ -1,58 +1,126 @@
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(1);
+
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
 
 $(function () {
-    //PNotify.prototype.options.styling = "fontawesome";
-    function copiarTexto(){
-        //captura o elemento input
-       
-    };
-    $("#btn_shared").click(function (e) { 
-        e.preventDefault();
-        console.log('captura');
-        $("#inputShared").show();
-        $("#infoShared").show();
-        const inputTest = document.querySelector("#inputShared");        
-        //seleciona todo o texto do elemento
-        inputTest.select();
-        //executa o comando copy
-        //aqui é feito o ato de copiar para a area de trabalho com base na seleção
-        document.execCommand('copy');
-        $("#inputShared").hide();
-        setTimeout(() => {
-           $("#infoShared").hide();
-        }, 2000);
-    });
+    PNotify.prototype.options.styling = "bootstrap3";
+    PNotify.prototype.options.styling = "fontawesome";
+
     $("#submitSearch").click(function (event) {
-        $("#img-load").show();
-        $("#submitSearch").text('Enviando mensagem');
-        $.ajax({
-            type: "post",
-            url: domain_complet+'/enviar-mensagem',
-            data: $("#form-enviar-mensagem").serialize(),
-            dataType: "json",
-            success: function (response) {
-                $("#img-load").hide();
-                $("#submitSearch").text('Mensagem Enviada');
-            }
-        });
+        if ($("#immobile-type-advanced").val() == "") {
+            new PNotify({
+                title: 'Importante',
+                text: 'O Tipo deve ser preenchido',
+                type: 'error',
+                icon: 'fa fa-error',
+                styling: 'fontawesome',
+                animate_speed: 'fast'
+            });
+            return false;
+        }
+
+        if ($("#immobiles_district").val() == "") {
+            new PNotify({
+                title: 'Importante',
+                text: 'Pelo menos um bairro deve ser escolhido',
+                type: 'error',
+                icon: 'fa fa-error',
+                styling: 'fontawesome',
+                animate_speed: 'fast'
+            });
+            // $('#immobiles_district').SumoSelect({
+            //        isOpen: true,
+            //        keepOpen: true
+            //    });
+            $('#immobiles_district').SumoSelect();
+            return false;
+        }
+
+        if ($("#immobile-type-advanced").val() && $("#immobiles_district-type-advanced").val() != "") {
+            return true;
+        }
     });
 
     $("#selectDistrictForm").select2();
-    $(".typefilteradvanced").chosen({
-        no_results_text: "Oops, Não foi encontrado!",
-        
-    });
-    $(".cityfilteradvanced").chosen();
-    $(".districtfilteradvanced").chosen();
-    
 });
 
 $(document).ready(function () {
-    
     //modal de contato
     //$("#modal_reserve_key").modal('show');
     $("#btn_send_contact").html('Enviar Mensagem');
-    $("#img-load").hide();
-    $("#inputShared").hide();
+
     //modal contato
     $("#id_icon_send").hide();
     $("#info_send_contact").hide();
@@ -100,16 +168,15 @@ $(document).ready(function () {
     $("#code-mobile").hide();
     all_district = [];
     //URL COM DADOS
- 
-    $.get(domain_complet + '/todos-bairros', function (data) {
+    $.get(domain_complet + 'todos-bairros', function (data) {
+
         //LOOP        
         $.each(data, function (index, val) {
             //PREENCHANDO O ARRAY            
             all_district.push(val);
+            //console.log('bairro: ')
         });
-});
-
-
+    });
 
     function split(val) {
         return val.split(/,\s*/);
@@ -121,11 +188,14 @@ $(document).ready(function () {
 
     $(".input-autocomplet").on("keydown", function (event) {
         if (event.keyCode === $.ui.keyCode.TAB && $(this).autocomplete("instance").menu.active) {
-            event.preventDefault();            
+            event.preventDefault();
         }
     }).autocomplete({
+        //source: domain_complet+"district-city",
+
         minLength: 3,
         source: function source(request, response) {
+
             // delegate back to autocomplete, but extract the last term
             response($.ui.autocomplete.filter(all_district, extractLast(request.term)));
         },
@@ -159,15 +229,15 @@ $(document).ready(function () {
         selectAll: true
 
     });
-    // $("#immobiles_district").SumoSelect({
-    //     nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
-    //     search: true,
-    //     searchText: 'Escolha o bairro',
-    //     placeholder: 'Escolha ou pesquise',
-    //     captionFormat: '{0} selecionado',
-    //     locale: ['OK', 'Sair', 'Tudo'],
-    //     selectAll: true
-    // });
+    $("#immobiles_district").SumoSelect({
+        nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
+        search: true,
+        searchText: 'Escolha o bairro',
+        placeholder: 'Escolha ou pesquise',
+        captionFormat: '{0} selecionado',
+        locale: ['OK', 'Sair', 'Tudo'],
+        selectAll: true
+    });
     $("#type-immobile").SumoSelect({
         nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
         search: true,
@@ -234,29 +304,29 @@ $(document).ready(function () {
     });
 
     /*DIV DE FILTRO AVANÇADO*/
-    // $(".typefilteradvanced").SumoSelect({
-    //     search: true,
-    //     searchText: 'Escolha ou pesquise',
-    //     placeholder: 'Qual o tipo?',
-    //     captionFormat: '{0} selecionado',
-    //     forceCustomRendering: true
-    // });
+    $(".typefilteradvanced").SumoSelect({
+        search: true,
+        searchText: 'Escolha ou pesquise',
+        placeholder: 'Qual o tipo?',
+        captionFormat: '{0} selecionado',
+        forceCustomRendering: true
+    });
     // $(".typefilteradvanced").select2();
-    // $(".cityfilteradvanced").SumoSelect({
-    //     search: true,
-    //     searchText: 'Escolha ou pesquise',
-    //     placeholder: 'Qual a cidade?',
-    //     captionFormat: '{0} selecionado',
-    //     forceCustomRendering: true
-    // });
+    $(".cityfilteradvanced").SumoSelect({
+        search: true,
+        searchText: 'Escolha ou pesquise',
+        placeholder: 'Qual a cidade?',
+        captionFormat: '{0} selecionado',
+        forceCustomRendering: true
+    });
 
-    // $(".districtfilteradvanced").SumoSelect({
-    //     search: true,
-    //     searchText: 'Escolha ou pesquise',
-    //     placeholder: 'Qual o bairro?',
-    //     captionFormat: '{0} selecionado',
-    //     forceCustomRendering: true
-    // });
+    $(".districtfilteradvanced").SumoSelect({
+        search: true,
+        searchText: 'Escolha ou pesquise',
+        placeholder: 'Qual o bairro?',
+        captionFormat: '{0} selecionado',
+        forceCustomRendering: true
+    });
 
     $(".dormitoryfilteradvanced").SumoSelect({
         search: true,
@@ -291,16 +361,16 @@ $(document).ready(function () {
         // $(".typefilteradvanced")[0].sumo.enableItem(2);
     }
     //SELECIONANDO A OPÇÃO PARA DESABILITAR OUTROS ITENS
-    // $(".typefilteradvanced").change(function (event) {
-    //     //FORÇANDO A SELEÇÃO
-    //     $(".typefilteradvanced")[0].sumo.selectItem($(".typefilteradvanced").val());
-    //     //DESABILITANDO EM CASO DE ESCOLHER TERRENO OU SALA
-    //     if ($(".typefilteradvanced").val() == "Terreno" || $(".typefilteradvanced").val() == "Sala") {
-    //         disabledItens();
-    //     } else if ($(".typefilteradvanced").val() != "Terreno") {
-    //         enabledItens();
-    //     }
-    // });
+    $(".typefilteradvanced").change(function (event) {
+        //FORÇANDO A SELEÇÃO
+        $(".typefilteradvanced")[0].sumo.selectItem($(".typefilteradvanced").val());
+        //DESABILITANDO EM CASO DE ESCOLHER TERRENO OU SALA
+        if ($(".typefilteradvanced").val() == "Terreno" || $(".typefilteradvanced").val() == "Sala") {
+            disabledItens();
+        } else if ($(".typefilteradvanced").val() != "Terreno") {
+            enabledItens();
+        }
+    });
 
     $(".typefilteradvanced").click(function (event) {
         selec = $(".typefilteradvanced").find('.optWrapper').addClass('select_filter');
@@ -360,19 +430,7 @@ $(document).ready(function () {
         autoclose: true,
         language: 'pt-BR'
     });
-  
 }); // FIM READY
 
-$(function () {
-    //$('[data-toggle="popover"]').popover();
-    $('#read_services_juri').popover({
-        trigger: 'click',
-        content: '<p>O Departamento Jurídico da <b>Espíndola Imobiliária </b> é o escritório de advocacia <a href="https://www.itamarespindola.adv.br/" target="_blank">Itamar Espíndola Advogados</a> Associados, empresa do mesmo grupo,' 
-        +'que dispõe de uma equipe própria de advogados especialistas em Direito Imobiliário, garantindo maior segurança nas negociações.</p>',
-        html: true
-    });
-    $('.read_services').popover({
-        trigger: 'hover',
-    })
-    
-})
+/***/ })
+/******/ ]);

@@ -22,7 +22,7 @@ services:
             - ./dadosMysql:/var/lib/mysql
         environment:
             - MYSQL_ROOT_PASSWORD=livre
-            - MYSQL_DATABASE=laravel6
+            - MYSQL_DATABASE=lara
             - MYSQL_USER=root
             - MYSQL_PASSWORD=livre
         ports:
