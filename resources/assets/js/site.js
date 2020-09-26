@@ -1,16 +1,17 @@
 $(function() {
-    PNotify.prototype.options.styling = "bootstrap3";
     PNotify.prototype.options.styling = "fontawesome";
 
     $("#submitSearch").click(function(event) {
         if ($("#immobile-type-advanced").val() == "") {
             new PNotify({
-                title: 'Importante',
-                text: 'O Tipo deve ser preenchido',
-                type: 'error',
-                icon: 'fa fa-error',
+                title: 'Copiado',
+                text: 'Esse link foi copiado para sua área de transferencia.',
+                type: 'info',
+                icon: 'fa fa-info-circle',
                 styling: 'fontawesome',
-                animate_speed: 'fast'
+                animation: 'fade',
+                animate_speed: 'fast',
+                stack: {"dir1": "down", "dir2": "right", "push": "bottom", "modal": true, "overlay_close": true}
             });
             return false;
         }

@@ -10,6 +10,13 @@
     display: block;
     line-height: 2.4;
     }
+    .btn_shared_social {
+        padding: 8px;
+        text-align: center;
+        max-width: 150px;
+        border: 1px solid #48a0dc;
+        border-radius: 3px;
+    }
 </style>
 <section class="module">
     <div class="container">
@@ -150,12 +157,33 @@
                                     <div class="col-md-12 text-center" id="infoShared">
                                         <span class="text-danger">Link compartilhado</span>
                                     </div>
+                                    <div class="col-md-12">
+                                        <div class="col-md-4">
+                                            <a href="whatsapp://send?text=GFG Example for whatsapp sharing" data-action="share/whatsapp/share" target="_blank" class="btn_shared_social"> 
+                                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                                Whatsapp
+                                            </a> 
+                                        </div>
+                                        <div class="col-md-4 text-center">
+                                            <div class="fb-share-button" data-href="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" data-layout="button" data-size="large">
+                                                <a target="_blank" href="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" class="fb-xfbml-parse-ignore">
+                                                    <i class="fa fa-facebook"></i>
+                                                    Facebook
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="col-md-4">
+                                            <input id="inputShared" type="text" value="{{url('imovel/'.$immobile->immobiles_code)}}"/>
+                                            <a href="#" target="_blanck" id="btn_shared" class="btn_shared_social pull-right">
+                                                Copiar link 
+                                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
                                     <div class="col-md-12 text-center">
-                                        <input id="inputShared" type="text" value="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}"/>
-                                        <a href="#" target="_blanck" id="btn_shared" class="btn btn-success">
-                                             Compartilhar link 
-                                            <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                        </a>
+                                        
                                     </div>
                                    </div>
                                 </div>
@@ -559,7 +587,7 @@
                                 <i class="fa fa-whatsapp"></i>
                                 Mande um Whatsapp</a>
                         </div>
-                        <div class="form-block ">
+                        {{-- <div class="form-block ">
                             @if ($id_agency == 1)
                             <div class="agent-details">
                                 <p><i class="fa fa-tag icon"></i>Agência Aldeota</p>
@@ -575,7 +603,7 @@
                                 <p><i class="fa fa-whatsapp icon"></i>(85) 98810-1166</p>
                             </div>
                             @endif
-                        </div>
+                        </div> --}}
                     </div>
                     <!-- end widget content -->
                 </div>
@@ -622,6 +650,8 @@
         <!-- end row -->
     </div>
     <!-- end container -->
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v8.0&appId=1504290103179579&autoLogAppEvents=1" nonce="TRGKSuyS"></script>
 </section>
 @endsection
 @push('scripts')
@@ -633,9 +663,26 @@
     district= '{{ $immobile->immobiles_district }}';
     city    = '{{ $immobile->immobiles_city }}';
     codeIm  = '{{ $immobile->immobiles_code }}';
+    
 </script>
+<script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+  
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBisdaSyLJ4WC4bFxEFA5rdhGq_8B1B52I"></script>
-{{ Html::script('public/js/map-single.js') }}
+{{-- {{ Html::script('public/js/map-single.js') }} --}}
 <script type="text/javascript">
     code_immobile = '{{ $immobile->immobiles_code }}';
     $(document).ready(function () {
@@ -645,13 +692,23 @@
      $('[data-toggle="tooltip"]').tooltip();
      $('[data-toggle="popover"]').popover();
      //property-gallery-thumb
-    // $("#btn_shared").click(function (e) { 
-    //     $("#infoShared").show();
-    //     e.preventDefault();
-    //     // setTimeout(() => {
-    //     //    $("#infoShared").hide();
-    //     // }, 3000);
-    // });
+    $("#btn_shared").click(function (e) { 
+        //$("#infoShared").show();
+        e.preventDefault();
+        // setTimeout(() => {
+        //    $("#infoShared").hide();
+        // }, 3000);
+        new PNotify({
+            title: 'Copiado',
+            text: 'Esse link foi copiado para sua área de transferencia.',
+            type: 'info',
+            icon: 'fa fa-info-circle',
+            styling: 'fontawesome',
+            animation: 'fade',
+            animate_speed: 'fast',
+            stack: {"dir1": "down", "dir2": "right", "push": "bottom", "modal": true, "overlay_close": true}
+        });
+    });
     
       
     })
