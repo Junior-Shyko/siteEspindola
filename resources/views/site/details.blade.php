@@ -682,7 +682,7 @@
     return t;
   }(document, "script", "twitter-wjs"));</script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBisdaSyLJ4WC4bFxEFA5rdhGq_8B1B52I"></script>
-{{-- {{ Html::script('public/js/map-single.js') }} --}}
+{{ Html::script('public/js/map-single.js') }}
 <script type="text/javascript">
     code_immobile = '{{ $immobile->immobiles_code }}';
     $(document).ready(function () {
