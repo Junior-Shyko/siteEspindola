@@ -13,9 +13,11 @@
     .btn_shared_social {
         padding: 8px;
         text-align: center;
-        max-width: 150px;
+        /* max-width: 150px; */
         border: 1px solid #48a0dc;
         border-radius: 3px;
+        margin-bottom: 10px;
+        margin-top: 5px;
     }
 </style>
 <section class="module">
@@ -158,24 +160,25 @@
                                         <span class="text-danger">Link compartilhado</span>
                                     </div>
                                     <div class="col-md-12">
-                                        <div class="col-md-4">
-                                            <a href="whatsapp://send?text=GFG Example for whatsapp sharing" data-action="share/whatsapp/share" target="_blank" class="btn_shared_social"> 
+                                        <div class="col-md-4 col-xs-12">
+                                           
+                                        <a href="https://api.whatsapp.com/send?text={{$immobile->immobiles_property_title}} - Ver mais https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" data-action="share/whatsapp/share" target="_blank" class="btn_shared_social btn-block"> 
                                                 <i class="fa fa-whatsapp" aria-hidden="true"></i>
                                                 Whatsapp
                                             </a> 
                                         </div>
                                         <div class="col-md-4 text-center">
                                             <div class="fb-share-button" data-href="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" data-layout="button" data-size="large">
-                                                <a target="_blank" href="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" class="fb-xfbml-parse-ignore">
+                                                <a target="_blank" href="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" class="fb-xfbml-parse-ignore ">
                                                     <i class="fa fa-facebook"></i>
                                                     Facebook
                                                 </a>
                                             </div>
                                         </div>
                                     
-                                        <div class="col-md-4">
+                                        <div class="col-md-4  col-xs-12">
                                             <input id="inputShared" type="text" value="{{url('imovel/'.$immobile->immobiles_code)}}"/>
-                                            <a href="#" target="_blanck" id="btn_shared" class="btn_shared_social pull-right">
+                                            <a href="#" target="_blanck" id="btn_shared" class="btn_shared_social pull-right btn-block">
                                                 Copiar link 
                                                 <i class="fa fa-share-alt" aria-hidden="true"></i>
                                             </a>
