@@ -19,6 +19,9 @@
         margin-bottom: 10px;
         margin-top: 5px;
     }
+    .back-blue {
+        background: #48a0dc !important;
+    }
 </style>
 <section class="module">
     <div class="container">
@@ -100,15 +103,17 @@
                     <div class="property-single-item property-main">
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active" style="margin-left:10px;">
-                                <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                                <a href="#home" aria-controls="home" role="tab" data-toggle="tab" title="Fotos de todos os ambientes">
                                     Fotos
                                     <i class="fa fa-image"  aria-hidden="true"></i>
                                 </a>
                             </li>
                             @if(!empty($immobile->immobiles_tour_virtual))
                             <li role="presentation" style="margin-left:10px;">
-                                <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+                                <a href="#profile" class="button back-blue" aria-controls="profile" role="tab" data-toggle="tab"
+                                title="Navegue pelo imóvel em um tour virtual">
                                 360º <i class="fa fa-street-view" aria-hidden="true"></i>
+                                Tour Virtual
                                 </a>
                             </li>
                             @endif
@@ -162,7 +167,7 @@
                                     <div class="col-md-12">
                                         <div class="col-md-4 col-xs-12">
                                            
-                                        <a href="https://api.whatsapp.com/send?text={{$immobile->immobiles_property_title}} - Ver mais https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" data-action="share/whatsapp/share" target="_blank" class="btn_shared_social btn-block"> 
+                                        <a href="whatsapp://send?text={{$immobile->immobiles_property_title}} - Ver mais https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" data-action="share/whatsapp/share" target="_blank" class="btn_shared_social btn-block"> 
                                                 <i class="fa fa-whatsapp" aria-hidden="true"></i>
                                                 Whatsapp
                                             </a> 
