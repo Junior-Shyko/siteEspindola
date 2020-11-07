@@ -50,8 +50,8 @@
                         Data do ultimo sincronismo: 
                         @php
                             $dt = \Carbon\Carbon::parse($sync[0]->settings_date_last_sync)->format('d/m/Y H:i:s');
-                            echo $dt;
                         @endphp
+                        {{$dt}}
                     </li>
                   </ul>
             </div>

@@ -111,7 +111,7 @@
                             @if(!empty($immobile->immobiles_tour_virtual))
                             <li role="presentation" style="margin-left:10px;">
                                 <a href="#profile" class="button back-blue" aria-controls="profile" role="tab" data-toggle="tab"
-                                title="Navegue pelo imóvel em um tour virtual">
+                                title="Navegue por esse imóvel em um tour virtual">
                                 360º <i class="fa fa-street-view" aria-hidden="true"></i>
                                 Tour Virtual
                                 </a>

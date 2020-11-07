@@ -652,6 +652,7 @@ public function allType($type)
             'image' => url('img/site/logo.png')];
         $page_title = "Sincronismo | ";
         $site = Site::all();
+        //INFORMAÇÃO DO SINCRONISMO
         $sync = DB::table('settings')->get();
         return view('site.pages.synchronize', compact( 'meta_site' , 'page_title', 'site', 'immobile', 'sync'));
     }

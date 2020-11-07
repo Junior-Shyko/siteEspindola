@@ -518,16 +518,11 @@ class Immobile extends Model
                         'photo_immobiles_code_immobile' => $value->CodigoImovel
                     ]);                         
                 }
-            //print_r(array_keys($immobile));     
-            //echo "Codigo: ".$xml->Imoveis->Imovel->CodigoImovel;
-            echo $br;
         }
         $idUser = 0;
         (Auth::user() == null) ? $idUser = 0 : $idUser = Auth::user()->id;
         DB::table('settings')->update(['settings_date_last_sync' => $carbon->now() , 'settings_total_immobile_sync' => $totalImmobile , 'settings_id_user_sync' =>  $idUser]);
-        //return redirect()->back()->with('success' , 'Imóveis Sincronizados');
         return redirect('sincronismo');
-        $immobile = Immobile::all();
         
         
     } catch (Exception $e) {
