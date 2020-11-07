@@ -642,4 +642,20 @@ public function allType($type)
         $site = Site::all();
         return view('site.pages.contact' , compact( 'meta_site' , 'page_title', 'site'));
     }
+
+    public function synchronize()
+    {
+        $meta_site = ['url' => url('/') , 
+            'title' => "Aluguel e Vendas | Espindola imobiliária" , 
+            'type' => 'website' , 
+            'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 
+            'image' => url('img/site/logo.png')];
+        $page_title = "Sincronismo | ";
+        $site = Site::all();
+        //INFORMAÇÃO DO SINCRONISMO
+        $sync = DB::table('settings')->get();
+        return view('site.pages.synchronize', compact( 'meta_site' , 'page_title', 'site', 'immobile', 'sync'));
+    }
+    
+    
 }

@@ -33,9 +33,14 @@
                 <ul class="social-icons circle">
                     <li><a href="https://www.facebook.com/espindolaimobiliaria" target="_blank"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="https://www.instagram.com/espindolaimobiliaria/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="https://plus.google.com/u/0/100490517695208314633" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                     <li><a href="https://www.youtube.com/c/espindolaimobiliariafortaleza" target="_blank"><i class="fa fa-youtube"></i></a></li>
                     <li><a href="https://pt.linkedin.com/company/espíndola-imobiliária" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <ul class="social-icons">
+                    <li>
+                        <br>
+                        <a href="{{url('sync')}}" target="_blank">Sincronizar</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-4 widget footer-widget from-the-blog">
