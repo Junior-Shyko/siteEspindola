@@ -77,7 +77,17 @@
       @show
       @yield('content')
       @yield('footer')
+      <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v8.0&appId=1504290103179579&autoLogAppEvents=1" nonce="1PVcfdUf"></script>
    </body>
+   <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    //conteúdo que será compartilhado: Título da página + URL
+    var conteudo = encodeURIComponent(document.title + " " + window.location.href);
+    //altera a URL do botão
+    document.getElementById("whatsapp-share-btt").href = "https://api.whatsapp.com/send?text=" + conteudo;
+}, false);
+   </script>
    <!-- JavaScript file links -->
    {{ Html::script('/js/jquery-3.1.1.min.js') }}
    {{ Html::script('/assets/jquery-ui/jquery-ui.min.js') }}

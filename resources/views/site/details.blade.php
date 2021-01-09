@@ -10,6 +10,14 @@
     display: block;
     line-height: 2.4;
     }
+    .shareWhatsapp {
+        color: #fff;
+    background: #5CA81D;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 3px;
+    font-weight: 600;
+    }
 </style>
 <section class="module">
     <div class="container">
@@ -147,15 +155,28 @@
                                         @endforeach
                                     </div>
                                    <div class="row">
-                                    <div class="col-md-12 text-center" id="infoShared">
-                                        <span class="text-danger">Link compartilhado</span>
-                                    </div>
+                                   
                                     <div class="col-md-12 text-center">
+                                        <div class="col-md-4">                                            
                                         <input id="inputShared" type="text" value="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}"/>
                                         <a href="#" target="_blanck" id="btn_shared" class="btn btn-success">
-                                             Compartilhar link 
+                                             Copiar url 
                                             <i class="fa fa-share-alt" aria-hidden="true"></i>
                                         </a>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="fb-share-button" data-href="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" data-layout="button_count" data-size="small"><a target="_blank" href="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" class="fb-xfbml-parse-ignore">Compartilhar</a></div>
+
+                                        </div>
+                                        <div class="col-md-4">
+                                            <a href="" class="shareWhatsapp" id="whatsapp-share-btt" rel="nofollow" target="_blank">
+                                            <i class="fa fa-whatsapp"></i> Compartilhar
+                                            </a>    
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 text-center" id="infoShared">
+                                        <span class="text-danger">Copiado para área de transferência</span>
                                     </div>
                                    </div>
                                 </div>
@@ -625,6 +646,7 @@
 </section>
 @endsection
 @push('scripts')
+
 <script type="text/javascript">
     lat     = '{{ $immobile->immobiles_latitude }}';
     log     = '{{ $immobile->immobiles_longitude }}';
@@ -640,18 +662,19 @@
     code_immobile = '{{ $immobile->immobiles_code }}';
     $(document).ready(function () {
         $("#infoShared").hide();
+        $("#inputShared").hide();
     });
     $(function () {
      $('[data-toggle="tooltip"]').tooltip();
      $('[data-toggle="popover"]').popover();
      //property-gallery-thumb
-    // $("#btn_shared").click(function (e) { 
-    //     $("#infoShared").show();
-    //     e.preventDefault();
-    //     // setTimeout(() => {
-    //     //    $("#infoShared").hide();
-    //     // }, 3000);
-    // });
+    $("#btn_shared").click(function (e) { 
+        $("#infoShared").show();
+        e.preventDefault();
+        setTimeout(() => {
+           $("#infoShared").hide();
+        }, 3000);
+    });
     
       
     })
