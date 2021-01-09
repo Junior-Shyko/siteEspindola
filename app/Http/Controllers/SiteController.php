@@ -282,7 +282,7 @@ public function show($id)
         }
         $insurance_fire_monthly = ( (100 * $price_insurance_fire) * 0.0015946667 / 12);//mensal
         $insurance_fire_annual  = ( (100 * $price_insurance_fire) * 0.0015946667);//anual
-        $body_info_fire = 'Valor único e anual. Inclui proteção obrigatória contra incêndio, queda de raio ou explosão. O imóvel fica protegido e o proprietário é indenizado em casos de acidentes.';
+        $body_info_fire = 'Valor único e anual. Inclui proteção obrigatória contra incêndio, queda de raio ou explosão. O imóvel fica protegido e o proprietário é indenizado em casos de acidentes. *Os valores estão sujeitas a alteração pela seguradora';
         //SE ACEITA NEGOCIAÇÃO
         $accept_negotiation = ($immobile->immobiles_accept_negotiation == 1 ? 'Sim' : 'Não');
 
@@ -642,4 +642,20 @@ public function allType($type)
         $site = Site::all();
         return view('site.pages.contact' , compact( 'meta_site' , 'page_title', 'site'));
     }
+
+    public function synchronize()
+    {
+        $meta_site = ['url' => url('/') , 
+            'title' => "Aluguel e Vendas | Espindola imobiliária" , 
+            'type' => 'website' , 
+            'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 
+            'image' => url('img/site/logo.png')];
+        $page_title = "Sincronismo | ";
+        $site = Site::all();
+        //INFORMAÇÃO DO SINCRONISMO
+        $sync = DB::table('settings')->get();
+        return view('site.pages.synchronize', compact( 'meta_site' , 'page_title', 'site', 'immobile', 'sync'));
+    }
+    
+    
 }

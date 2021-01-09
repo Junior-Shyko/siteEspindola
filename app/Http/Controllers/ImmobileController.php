@@ -38,4 +38,8 @@ class ImmobileController extends Controller
         $immobile = Immobile::all();
         return response()->json($immobile);
     }
+
+    public function create(Request $request) {
+        return $request->all();
+    }
 }

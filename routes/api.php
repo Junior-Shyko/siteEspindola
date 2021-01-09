@@ -22,6 +22,9 @@ Route::prefix('v1')->group(function () {
     Route::get('immobile-id/{id}' , 'ImmobileController@show');
 });
 
+Route::post('create' , 'ImmobileController@create');
+
+
 $router->post('newsletters/attachments', [
     'uses' => 'AttachmentsController@store',
     'as' => 'attachments.store',
