@@ -161,30 +161,6 @@
                                         @endforeach
                                     </div>
                                    <div class="row">
-<<<<<<< HEAD
-                                   
-                                    <div class="col-md-12 text-center">
-                                        <div class="col-md-4">                                            
-                                        <input id="inputShared" type="text" value="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}"/>
-                                        <a href="#" target="_blanck" id="btn_shared" class="btn btn-success">
-                                             Copiar url 
-                                            <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                        </a>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="fb-share-button" data-href="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" data-layout="button_count" data-size="small"><a target="_blank" href="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" class="fb-xfbml-parse-ignore">Compartilhar</a></div>
-
-                                        </div>
-                                        <div class="col-md-4">
-                                            <a href="" class="shareWhatsapp" id="whatsapp-share-btt" rel="nofollow" target="_blank">
-                                            <i class="fa fa-whatsapp"></i> Compartilhar
-                                            </a>    
-
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12 text-center" id="infoShared">
-                                        <span class="text-danger">Copiado para área de transferência</span>
-=======
                                     <div class="col-md-12 text-center" id="infoShared">
                                         <span class="text-danger">Link compartilhado</span>
                                     </div>
@@ -216,7 +192,6 @@
                                     </div>
                                     <div class="col-md-12 text-center">
                                         
->>>>>>> 08ce99707e74a2e1243d485948933c68bccec723
                                     </div>
                                    </div>
                                 </div>
@@ -351,7 +326,8 @@
                                                             <div class="col-md-2"></div>
                                                             <div class="col-md-8">
                                                                 <div class="form-group">
-                                                                    <select name="tipo" id="" class="form-control "   required >
+                                                                    <select name="tipo"
+                                                                    class="form-control "   required >
                                                                         <option value="">--Selecione--</option>
                                                                         <option value="Pessoa Física">Pessoa Física</option>
                                                                         <option value="Pessoa Jurídica">Pessoa Jurídica</option>
@@ -601,11 +577,11 @@
                         </div>
                         <div class="form-block">
                             <label>Email</label>                               
-                            <input type="text" name="email_contact" name="immobiles_rental_price" class="form-control"  placeholder="Informe seu telefone (opcional)">                                
+                            <input type="text" name="email_contact" name="immobiles_rental_price" class="form-control"  placeholder="Informe seu telefone (opcional)">
                         </div>
                         <div class="form-block">
-                            <label>Mensagem</label>                               
-                            <textarea name="message_contact" id="" cols="30" rows="10" class="form-control">Olá, eu gostaria de obter mais informações sobre este imóvel: {{$immobile->immobiles_property_title}} – {{$immobile->immobiles_code}}. Aguardarei o contato.Obrigado.</textarea>                                
+                            <label>Mensagem</label> 
+                            <textarea name="message_contact" cols="30" rows="10" class="form-control">Olá, eu gostaria de obter mais informações sobre este imóvel: {{$immobile->immobiles_property_title}} – {{$immobile->immobiles_code}}. Aguardarei o contato.Obrigado.</textarea> 
                         </div>
                        
                         <div class="form-block text-center">
@@ -728,13 +704,6 @@
      $('[data-toggle="popover"]').popover();
      //property-gallery-thumb
     $("#btn_shared").click(function (e) { 
-<<<<<<< HEAD
-        $("#infoShared").show();
-        e.preventDefault();
-        setTimeout(() => {
-           $("#infoShared").hide();
-        }, 3000);
-=======
         //$("#infoShared").show();
         e.preventDefault();
         // setTimeout(() => {
@@ -750,7 +719,6 @@
             animate_speed: 'fast',
             stack: {"dir1": "down", "dir2": "right", "push": "bottom", "modal": true, "overlay_close": true}
         });
->>>>>>> 08ce99707e74a2e1243d485948933c68bccec723
     });
     
       
