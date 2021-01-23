@@ -623,28 +623,28 @@
                     <div class="widget-content">
                         <div class="recent-property">
                             <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-4"><a href="https://www.espindola.imb.br/single-post/2016/09/05/DICAS-PARA-LIMPAR-SUA-COZINHA-FACILMENTE"><img src="https://static.wixstatic.com/media/cffaeb_89082296362e423fb7d688fb85b42a59~mv2.jpg/v1/fill/w_549,h_458,al_c,q_80,usm_0.66_1.00_0.01/cffaeb_89082296362e423fb7d688fb85b42a59~mv2.webp" alt="DICAS PARA LIMPAR SUA COZINHA FACILMENTE" /></a></div>
+                                <div class="col-lg-4 col-md-4 col-sm-4"><a href="https://blogs.gazetaonline.com.br/dicasdalucy/2012/11/27/como-limpar-cozinha-cozinha-limpa-e-organizada/"  target="_blank"><img src="https://static.wixstatic.com/media/cffaeb_89082296362e423fb7d688fb85b42a59~mv2.jpg/v1/fill/w_549,h_458,al_c,q_80,usm_0.66_1.00_0.01/cffaeb_89082296362e423fb7d688fb85b42a59~mv2.webp" alt="DICAS PARA LIMPAR SUA COZINHA FACILMENTE" /></a></div>
                                 <div class="col-lg-8 col-md-8 col-sm-8">
-                                    <h5><a href="https://www.espindola.imb.br/single-post/2016/09/05/DICAS-PARA-LIMPAR-SUA-COZINHA-FACILMENTE">DICAS PARA LIMPAR SUA COZINHA FACILMENTE</a></h5>
+                                    <h5><a href="https://blogs.gazetaonline.com.br/dicasdalucy/2012/11/27/como-limpar-cozinha-cozinha-limpa-e-organizada/"  target="_blank">DICAS PARA LIMPAR SUA COZINHA FACILMENTE</a></h5>
                                     <p><i class="fa fa-calendar-o"></i> 5 de Setembro</p>
                                 </div>
                             </div>
                         </div>
                         <div class="recent-property">
                             <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-4"><a href="https://www.espindola.imb.br/single-post/2016/08/30/12-ALIMENTOS-QUE-VOC%C3%8A-COMPRA-UMA-VEZ-E-REPLANTA-PARA-SEMPRE"><img src="https://static.wixstatic.com/media/cffaeb_997cac55522c4558a060a5150e931f52~mv2.jpg/v1/fill/w_630,h_479,al_c,q_80,usm_0.66_1.00_0.01/cffaeb_997cac55522c4558a060a5150e931f52~mv2.webp" alt="12 ALIMENTOS QUE VOCÊ COMPRA UMA VEZ E REPLANTA PARA SEMPRE" /></a></div>
+                                <div class="col-lg-4 col-md-4 col-sm-4"><a href="https://virtuaportaria.com.br/dicas-seguranca-condominios/" target="_blank"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5ykFlO4fOSjDR08axCnkFdBVU4VOmGeO1BQ&usqp=CAU" alt="10 principais dicas de segurança em condomínios" /></a></div>
                                 <div class="col-lg-8 col-md-8 col-sm-8">
-                                    <h5><a href="https://www.espindola.imb.br/single-post/2016/08/30/12-ALIMENTOS-QUE-VOC%C3%8A-COMPRA-UMA-VEZ-E-REPLANTA-PARA-SEMPRE">12 ALIMENTOS QUE VOCÊ COMPRA UMA VEZ E REPLANTA PARA SEMPRE</a></h5>
-                                    <p><i class="fa fa-calendar-o"></i> 30 de Agosto</p>
+                                    <h5><a href="https://virtuaportaria.com.br/dicas-seguranca-condominios/" target="_blank">10 principais dicas de segurança em condomínios</a></h5>
+                                    <p><i class="fa fa-calendar-o"></i> 23 de Janeiro</p>
                                 </div>
                             </div>
                         </div>
                         <div class="recent-property">
                             <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-4"><a href="https://www.espindola.imb.br/single-post/2016/07/20/Quais-os-cuidados-voc%C3%AA-deve-ter-ao-alugar-um-im%C3%B3vel"><img src="https://static.wixstatic.com/media/c27506_b54d30dc36e34c6bb54f26277fb56548~mv2.jpg/v1/fill/w_630,h_371,al_c,q_80,usm_0.66_1.00_0.01/c27506_b54d30dc36e34c6bb54f26277fb56548~mv2.webp" alt="Qais os cuidados você deve ter ao alugar um imóvel?" /></a>
+                                <div class="col-lg-4 col-md-4 col-sm-4"><a href="https://epocanegocios.globo.com/Dinheiro/noticia/2016/10/7-dicas-para-quem-vai-colocar-um-imovel-para-alugar.html"  target="_blank"><img src="https://s2.glbimg.com/8oSpXgBDkFgRye23oqt-4_U8p-Q=/620x430/e.glbimg.com/og/ed/f/original/2016/10/24/alu_caiu_flap00780.jpg" alt="Qais os cuidados você deve ter ao alugar um imóvel?" /></a>
                                 </div>
                                 <div class="col-lg-8 col-md-8 col-sm-8">
-                                    <h5><a href="https://www.espindola.imb.br/single-post/2016/07/20/Quais-os-cuidados-voc%C3%AA-deve-ter-ao-alugar-um-im%C3%B3vel">Quais os cuidados você deve ter ao alugar um imóvel?</a></h5>
+                                    <h5><a href="https://epocanegocios.globo.com/Dinheiro/noticia/2016/10/7-dicas-para-quem-vai-colocar-um-imovel-para-alugar.html"  target="_blank">Quais os cuidados você deve ter ao alugar um imóvel?</a></h5>
                                     <p><i class="fa fa-calendar-o"></i> 20 de Julho</p>
                                 </div>
                             </div>
