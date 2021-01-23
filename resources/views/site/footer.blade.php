@@ -1,27 +1,9 @@
 
-<section class="module cta newsletter">
-@php $site = \SiteEspindola\Site::getInfoSite();  @endphp
+
   <div class="container">
-	<div class="row">
-		<div class="col-lg-7 col-md-7">
-            <div class="col-md-3">
-                <br><img src="https://i.imgur.com/jydMhSR.png" alt="" class="pull-right">
-            </div>
-            <div class="col-md-9"  style="color: #002266;">
-                <h3 style="color: #002266;">Inscreva-se para o nosso<strong> newsletter.</strong></h3>
-                <p>Enviamos mensalmente as principais notícias e novidades do mercado imobiliário.</p>
-            </div>
-			
-		</div>
-		<div class="col-lg-5 col-md-5">
-            {{ Form::open(['route' => 'create-news' , 'method' => 'post' , 'id' => 'newsletter-form' , 'class' => 'newsletter-form']) }}		
-				<input type="email" name="newsletters_email" placeholder="Digite o seu e-mail" />
-				<button type="submit" form="newsletter-form"><i class="fa fa-send"></i></button>
-			{{ Form::close() }}
-		</div>
-	</div><!-- end row -->
+    @php $site = \SiteEspindola\Site::getInfoSite();  @endphp
   </div><!-- end container -->
-</section>
+
 
 <footer id="footer">
     <div class="container">
