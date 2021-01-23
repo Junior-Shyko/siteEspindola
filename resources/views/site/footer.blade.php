@@ -1,41 +1,28 @@
 
-<section class="module cta newsletter">
-@php $site = \SiteEspindola\Site::getInfoSite();  @endphp
+
   <div class="container">
-	<div class="row">
-		<div class="col-lg-7 col-md-7">
-            <div class="col-md-3">
-                <br><img src="https://i.imgur.com/jydMhSR.png" alt="" class="pull-right">
-            </div>
-            <div class="col-md-9"  style="color: #002266;">
-                <h3 style="color: #002266;">Inscreva-se para o nosso<strong> newsletter.</strong></h3>
-                <p>Enviamos mensalmente as principais notícias e novidades do mercado imobiliário.</p>
-            </div>
-			
-		</div>
-		<div class="col-lg-5 col-md-5">
-            {{ Form::open(['route' => 'create-news' , 'method' => 'post' , 'id' => 'newsletter-form' , 'class' => 'newsletter-form']) }}		
-				<input type="email" name="newsletters_email" placeholder="Digite o seu e-mail" />
-				<button type="submit" form="newsletter-form"><i class="fa fa-send"></i></button>
-			{{ Form::close() }}
-		</div>
-	</div><!-- end row -->
+    @php $site = \SiteEspindola\Site::getInfoSite();  @endphp
   </div><!-- end container -->
-</section>
+
 
 <footer id="footer">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-4 widget footer-widget">
-                <a class="footer-logo" href="index.html"><img src="https://i.imgur.com/orVOsad.png" alt="Homely" /></a>
+                <a class="footer-logo" href="#"><img src="https://i.imgur.com/orVOsad.png" alt="Homely" /></a>
                 <p><strong>Espíndola Imobiliária</strong>- CRECI/CE 847J<br>CNPJ: 09.652.345/0001-02</p>
                 <div class="divider"></div>
                 <ul class="social-icons circle">
                     <li><a href="https://www.facebook.com/espindolaimobiliaria" target="_blank"><i class="fa fa-facebook"></i></a></li>
                     <li><a href="https://www.instagram.com/espindolaimobiliaria/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                    <li><a href="https://plus.google.com/u/0/100490517695208314633" target="_blank"><i class="fa fa-google-plus"></i></a></li>
                     <li><a href="https://www.youtube.com/c/espindolaimobiliariafortaleza" target="_blank"><i class="fa fa-youtube"></i></a></li>
                     <li><a href="https://pt.linkedin.com/company/espíndola-imobiliária" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+                <ul class="social-icons">
+                    <li>
+                        <br>
+                        <a href="{{url('sync')}}" target="_blank">Sincronizar</a>
+                    </li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-4 widget footer-widget from-the-blog">

@@ -741,7 +741,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  .subheader.simple-search {
  	text-align:center;
  	padding:200px 0px;
- 	background-image:url(../img/site/1920x950.png);
+ 	background-image:url(../img/site/family-new-home.png);
  }
  .subheader.simple-search h1 { float:none; font-size:48px; font-weight:700; }
  .subheader.simple-search p {
@@ -1287,12 +1287,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  .property-gallery.full-width #slide5 { background:url(../images/1837x1206.png) center / cover no-repeat; }
  .property-gallery.full-width #slide6 { background:url(../images/1837x1206.png) center / cover no-repeat; }
  .property-gallery.full-width #slide7 { background:url(../images/1837x1206.png) center / cover no-repeat; }
-/* MUDANDO A COR DO ITEM ATIVO */
-.nav-tabs > li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-	color: #fff !important;
-    background: #5fc97e !important;;
-    margin: 1px !important;;
-}
+
  .additional-details-list {
  	columns:2; 
  	-webkit-columns:2; 

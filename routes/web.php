@@ -49,11 +49,12 @@ Route::get('calculos-imobiliarios' , 'CalculationController@index');
 /* REDIRECIONAMENTO DE ERROS */
 Route::get('/pagenotfound', 'HomeController@padenotfound');
 /** SINCRONIZAR */
-Route::get('xml' , 'SiteController@sync');
+Route::get('sync' , 'SiteController@sync');
 
 Route::get('espindola', 'SiteController@espindola');
 Route::get('servicos', 'SiteController@services');
 Route::get('equipe', 'SiteController@team');
 Route::get('cliente', 'SiteController@client');
 Route::get('contato' , 'SiteController@contact');
+Route::get('sincronismo' , 'SiteController@synchronize');
 

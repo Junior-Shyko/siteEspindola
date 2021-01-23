@@ -3,7 +3,7 @@
 namespace SiteEspindola;
 
 use Illuminate\Database\Eloquent\Model;
-use DB;
+use DB,Auth;
 use Carbon\Carbon;
 
 class Immobile extends Model
@@ -326,48 +326,50 @@ class Immobile extends Model
         $totalImmobile = 0;
         echo "<p>Aguarde um momento...</p>";
         //dd($xml);
-
+        // echo "Publicar venda e locação - 1
+        // Publicar SOMENTE venda - 2
+        // Publicar SOMENTE locação - 3
+        // Não publicar valores - 4";
+        // echo $br;
     try {
         foreach ($xml->Imoveis->Imovel as $value) {
             $totalImmobile = ($totalImmobile + 1);
-            
-    //     // echo "Cod: ".$xml->Imoveis->Imovel->CodigoImovel;
-    //     // echo $br;
-         foreach ($value->corretor as $dataCorretor) {
-             echo "NOme do corretor: ".$dataCorretor->nome;
-             echo $br;
-             echo "telefone do corretor: ".$dataCorretor->telefone;
-             echo $br;
-             echo "celular do corretor: ".$dataCorretor->celular;
-             echo $br;
-             echo "email do corretor: ".$dataCorretor->email;
-             echo $br;
-             echo "foto do corretor: ".$dataCorretor->foto;
-             echo $br;
-             DB::table('realtor')->insert([
-                'realtor_name' => $dataCorretor->nome,
-                'realtor_fixo' => $dataCorretor->telefone,
-                'realtor_mobile' => $dataCorretor->celular,
-                'realtor_email' => $dataCorretor->email,
-                'realtor_photo' => $dataCorretor->foto,
-                'realtor_code_imobile' => $value->CodigoImovel
-             ]);
-         }
+            foreach ($value->corretor as $dataCorretor) {
+                //  echo "NOme do corretor: ".$dataCorretor->nome;
+                //  echo $br;
+                //  echo "telefone do corretor: ".$dataCorretor->telefone;
+                //  echo $br;
+                //  echo "celular do corretor: ".$dataCorretor->celular;
+                //  echo $br;
+                //  echo "email do corretor: ".$dataCorretor->email;
+                //  echo $br;
+                //  echo "foto do corretor: ".$dataCorretor->foto;
+                //  echo $br;
+                //  DB::table('realtor')->insert([
+                //     'realtor_name' => $dataCorretor->nome,
+                //     'realtor_fixo' => $dataCorretor->telefone,
+                //     'realtor_mobile' => $dataCorretor->celular,
+                //     'realtor_email' => $dataCorretor->email,
+                //     'realtor_photo' => $dataCorretor->foto,
+                //     'realtor_code_imobile' => $value->CodigoImovel
+                //  ]);
+            }
             //$dt = Carbon::createFromFormat('Y-m-d H:i:s', $value->DataCadastro);
-            
-           echo "PreçoVenda = ".gettype($value->PrecoVenda)."\n";
-           echo "Valor da venda = ".$value->PrecoVenda.' do imóvel '.$value->CodigoImovel;
-           echo $br;
+            // echo "Codigo: ".$value->CodigoImovel." | Bairro: ".$value->Bairro. " | Finalizade: ".$value->Finalidade." para ".$value->TipoLocacao;
+        //    echo "PreçoVenda = ".gettype($value->PrecoVenda)."\n";
+        //    echo "Valor da venda = ".$value->PrecoVenda.' do imóvel '.$value->CodigoImovel;
+       
+        // echo $br;
            if($value->PrecoVenda == ""){
                $precoVenda = 0.00;
                $temporada = $value->PrecoLocacaoTemporada;
-               echo "venda" . $precoVenda;
+               //echo "venda" . $precoVenda;
            }else{
             $precoVenda = $value->PrecoVenda;
            }
-           if($value->PrecoLocacaoTemporada == ""){           
+            if($value->PrecoLocacaoTemporada == ""){           
                 $temporada = 0.00;
-                echo "temporada" . $temporada;
+                //echo "temporada" . $temporada;
             }else{
                 $temporada = $value->PrecoLocacaoTemporada;
             }
@@ -442,65 +444,64 @@ class Immobile extends Model
                 $numeroAndar = $value->NumeroAndar;
             }
             Immobile::insert(
-                [
-                    'immobiles_cep' => $value->CEP, 
-                    'immobiles_address' => $value->Endereco , 
-                    'immobiles_number' => $value->Numero , 
-                    'immobiles_complement' => $value->ComplementoEndereco , 
-                    'immobiles_district' => $value->Bairro , 
-                    'immobiles_city' => $value->Cidade , 
-                    'immobiles_state' => $value->Estado , 
-                    'immobiles_reference_point' => $value->PontoReferenciaEndereco , 
-                    'immobiles_code' => $value->CodigoImovel , 
-                    'immobiles_status' => "Ativo" ,
-                    'immobiles_date_register' => Immobile::DataBRtoMySQL( $value->DataCadastro ), 
-                    'immobiles_date_update' => Immobile::DataBRtoMySQL( $value->DataAtualizacao ), 
-                    'immobiles_property_title' => $value->TituloImovel ,
-                    'immobiles_finality' => $value->Finalidade , 
-                    'immobiles_publish' => $value->Publicar , 
-                    'immobiles_type_publication' => $value->PublicaValores,
-                    'immobiles_name_condo' => $value->NomeCondominio , 
-                    'immobiles_business_status' => $value->StatusComercial , 
-                    'immobiles_type_offer' => $value->TipoOferta , 
-                    'immobiles_selling_price' => $precoVenda , 
-                    'immobiles_type_rental' => $value->TipoLocacao , 
-                    'immobiles_rental_price' => $precoLocacao , 
-                    'immobiles_rental_warranty' => $value->GarantiaLocacao , 
-                    'immobiles_board_on_site' => $value->PlacaNoLocal , 
-                    'immobiles_useful_area' => $value->AreaUtil, 
-                    'immobiles_total_area' => $value->AreaTotal, 
-                    'immobiles_metrica_unit' => $value->UnidadeMetrica, 
-                    'immobiles_property_default' => $value->PadraoImovel , 
-                    'immobiles_property_localization' => $value->PadraoLocalizacao , 
-                    'immobiles_ocupacion' => $value->Ocupacao , 
-                    'immobiles_accept_negotiation' => $value->AceitaNegociacao , 
-                    'immobiles_face_immobile' => $value->FaceImovel , 
-                    'immobiles_qtd_dormitory' => $value->QtdDormitorios , 
-                    'immobiles_qtd_suite' => $value->QtdSuites , 
-                    'immobiles_qtd_toilet' => $value->QtdBanheiros , 
-                    'immobiles_qtd_uncovered_jobs'=> $value->QtdVagas , 'immobiles_ps' => $value->Observacao ,
-                    'immobiles_latitude' => $value->latitude, 
-                    'immobiles_longitude'=> $value->longitude,  
-                    'immobiles_iptu_price'=> $precoIptu,
-                    'immobiles_condominium_price' => $precoCondominio,
-                    'immobiles_type_immobiles' => $value->TipoImovel,
-                    'immobiles_tour_virtual' => $value->TourVirtual,
-                    'created_at' => $carbon->now() , 'updated_at' => $carbon->now(),
-                    'immobiles_price_season' => $temporada,
-                    'immobiles_face' => $value->FaceImovel,
-                    'immobiles_electronic_door' => $portaoEletronico,
-                    'immobiles_front_sea' => $frenteMar,
-                    'immobiles_sea_shore' => $BeiraMar,
-                    'immobiles_wine_house' => $adega,
-                    'immobiles_elevator' => $qutdAndar,//estou registrando o total de andar
-                    'immobiles_barbecue_grill' => $churrasqueira,
-                    'immobiles_poll' => $piscina,
-                    'immobiles_sports_court' => $quadraPoliEsportiva,
-                    'immobiles_soccer_field' => $campoFutebol,
-                    'immobiles_furnished' => $mobiliado,
-                    'immobiles_floors' => $numeroAndar
-                ]
-            );
+            [
+                'immobiles_cep' => $value->CEP, 
+                'immobiles_address' => $value->Endereco , 
+                'immobiles_number' => $value->Numero , 
+                'immobiles_complement' => $value->ComplementoEndereco , 
+                'immobiles_district' => $value->Bairro , 
+                'immobiles_city' => $value->Cidade , 
+                'immobiles_state' => $value->Estado , 
+                'immobiles_reference_point' => $value->PontoReferenciaEndereco , 
+                'immobiles_code' => $value->CodigoImovel , 
+                'immobiles_status' => "Ativo" ,
+                'immobiles_date_register' => Immobile::DataBRtoMySQL( $value->DataCadastro ), 
+                'immobiles_date_update' => Immobile::DataBRtoMySQL( $value->DataAtualizacao ), 
+                'immobiles_property_title' => $value->TituloImovel ,
+                'immobiles_finality' => $value->Finalidade , 
+                'immobiles_publish' => $value->Publicar , 
+                'immobiles_type_publication' => $value->PublicaValores,
+                'immobiles_name_condo' => $value->NomeCondominio , 
+                'immobiles_business_status' => $value->StatusComercial , 
+                'immobiles_type_offer' => $value->TipoOferta , 
+                'immobiles_selling_price' => $precoVenda , 
+                'immobiles_type_rental' => $value->TipoLocacao , 
+                'immobiles_rental_price' => $precoLocacao , 
+                'immobiles_rental_warranty' => $value->GarantiaLocacao , 
+                'immobiles_board_on_site' => $value->PlacaNoLocal , 
+                'immobiles_useful_area' => $value->AreaUtil, 
+                'immobiles_total_area' => $value->AreaTotal, 
+                'immobiles_metrica_unit' => $value->UnidadeMetrica, 
+                'immobiles_property_default' => $value->PadraoImovel , 
+                'immobiles_property_localization' => $value->PadraoLocalizacao , 
+                'immobiles_ocupacion' => $value->Ocupacao , 
+                'immobiles_accept_negotiation' => $value->AceitaNegociacao , 
+                'immobiles_face_immobile' => $value->FaceImovel , 
+                'immobiles_qtd_dormitory' => $value->QtdDormitorios , 
+                'immobiles_qtd_suite' => $value->QtdSuites , 
+                'immobiles_qtd_toilet' => $value->QtdBanheiros , 
+                'immobiles_qtd_uncovered_jobs'=> $value->QtdVagas , 'immobiles_ps' => $value->Observacao ,
+                'immobiles_latitude' => $value->latitude, 
+                'immobiles_longitude'=> $value->longitude,  
+                'immobiles_iptu_price'=> $precoIptu,
+                'immobiles_condominium_price' => $precoCondominio,
+                'immobiles_type_immobiles' => $value->TipoImovel,
+                'immobiles_tour_virtual' => $value->TourVirtual,
+                'created_at' => $carbon->now() , 'updated_at' => $carbon->now(),
+                'immobiles_price_season' => $temporada,
+                'immobiles_face' => $value->FaceImovel,
+                'immobiles_electronic_door' => $portaoEletronico,
+                'immobiles_front_sea' => $frenteMar,
+                'immobiles_sea_shore' => $BeiraMar,
+                'immobiles_wine_house' => $adega,
+                'immobiles_elevator' => $qutdAndar,//estou registrando o total de andar
+                'immobiles_barbecue_grill' => $churrasqueira,
+                'immobiles_poll' => $piscina,
+                'immobiles_sports_court' => $quadraPoliEsportiva,
+                'immobiles_soccer_field' => $campoFutebol,
+                'immobiles_furnished' => $mobiliado,
+                'immobiles_floors' => $numeroAndar
+            ]);
             //   $count_gaarantia = count($value->GarantiaLocacao->Garantia);
             // for ($i=0; $i < $count_gaarantia; $i++) { 
             //    // echo ' Guarantia: '.$value->GarantiaLocacao->Garantia[$i].' - ';
@@ -517,12 +518,13 @@ class Immobile extends Model
                         'photo_immobiles_code_immobile' => $value->CodigoImovel
                     ]);                         
                 }
-            //print_r(array_keys($immobile));           
         }
-
-        //DB::table('settings')->update(['settings_date_last_sync' => $carbon->now() , 'settings_total_immobile_sync' => $totalImmobile , 'settings_id_user_sync' => Auth::user()->id ]);
-        //return redirect()->back()->with('success' , 'Imóveis Sincronizados');
-        return "Imovel sincronizado";
+        $idUser = 0;
+        (Auth::user() == null) ? $idUser = 0 : $idUser = Auth::user()->id;
+        DB::table('settings')->update(['settings_date_last_sync' => $carbon->now() , 'settings_total_immobile_sync' => $totalImmobile , 'settings_id_user_sync' =>  $idUser]);
+        return redirect('sincronismo');
+        
+        
     } catch (Exception $e) {
         return redirect()->back()->with(['error' , 'Ocorreu um erro de conexão, tente mais tarde']);
     }

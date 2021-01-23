@@ -10,6 +10,18 @@
     display: block;
     line-height: 2.4;
     }
+    .btn_shared_social {
+        padding: 8px;
+        text-align: center;
+        /* max-width: 150px; */
+        border: 1px solid #48a0dc;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+    .back-blue {
+        background: #48a0dc !important;
+    }
 </style>
 <section class="module">
     <div class="container">
@@ -91,15 +103,17 @@
                     <div class="property-single-item property-main">
                         <ul class="nav nav-tabs" role="tablist">
                             <li role="presentation" class="active" style="margin-left:10px;">
-                                <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                                <a href="#home" aria-controls="home" role="tab" data-toggle="tab" title="Fotos de todos os ambientes">
                                     Fotos
                                     <i class="fa fa-image"  aria-hidden="true"></i>
                                 </a>
                             </li>
                             @if(!empty($immobile->immobiles_tour_virtual))
                             <li role="presentation" style="margin-left:10px;">
-                                <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
+                                <a href="#profile" class="button back-blue" aria-controls="profile" role="tab" data-toggle="tab"
+                                title="Navegue por esse imóvel em um tour virtual">
                                 360º <i class="fa fa-street-view" aria-hidden="true"></i>
+                                Tour Virtual
                                 </a>
                             </li>
                             @endif
@@ -147,15 +161,37 @@
                                         @endforeach
                                     </div>
                                    <div class="row">
-                                    <div class="col-md-12 text-center">
+                                    <div class="col-md-12 text-center" id="infoShared">
                                         <span class="text-danger">Link compartilhado</span>
                                     </div>
+                                    <div class="col-md-12">
+                                        <div class="col-md-4 col-xs-12">
+                                           
+                                        <a href="whatsapp://send?text={{$immobile->immobiles_property_title}} - Ver mais https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" data-action="share/whatsapp/share" target="_blank" class="btn_shared_social btn-block"> 
+                                                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                                                Whatsapp
+                                            </a> 
+                                        </div>
+                                        <div class="col-md-4 text-center">
+                                            <div class="fb-share-button" data-href="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" data-layout="button" data-size="large">
+                                                <a target="_blank" href="https://espindolaimobiliaria.com.br/imovel/{{$immobile->immobiles_code}}" class="fb-xfbml-parse-ignore ">
+                                                    <i class="fa fa-facebook"></i>
+                                                    Facebook
+                                                </a>
+                                            </div>
+                                        </div>
+                                    
+                                        <div class="col-md-4  col-xs-12">
+                                            <input id="inputShared" type="text" value="{{url('imovel/'.$immobile->immobiles_code)}}"/>
+                                            <a href="#" target="_blanck" id="btn_shared" class="btn_shared_social pull-right btn-block">
+                                                Copiar link 
+                                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        
+                                    </div>
                                     <div class="col-md-12 text-center">
-                                        <input id="inputShared" type="text" value="https://espindolaimobiliaria.com.br/imovel/AP0002"/>
-                                        <a href="#" target="_blanck" id="btn_shared" class="btn btn-success">
-                                             Compartilhar link 
-                                            <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                        </a>
+                                        
                                     </div>
                                    </div>
                                 </div>
@@ -290,7 +326,8 @@
                                                             <div class="col-md-2"></div>
                                                             <div class="col-md-8">
                                                                 <div class="form-group">
-                                                                    <select name="tipo" id="" class="form-control "   required >
+                                                                    <select name="tipo"
+                                                                    class="form-control "   required >
                                                                         <option value="">--Selecione--</option>
                                                                         <option value="Pessoa Física">Pessoa Física</option>
                                                                         <option value="Pessoa Jurídica">Pessoa Jurídica</option>
@@ -540,11 +577,11 @@
                         </div>
                         <div class="form-block">
                             <label>Email</label>                               
-                            <input type="text" name="email_contact" name="immobiles_rental_price" class="form-control"  placeholder="Informe seu telefone (opcional)">                                
+                            <input type="text" name="email_contact" name="immobiles_rental_price" class="form-control"  placeholder="Informe seu telefone (opcional)">
                         </div>
                         <div class="form-block">
-                            <label>Mensagem</label>                               
-                            <textarea name="message_contact" id="" cols="30" rows="10" class="form-control">Olá, eu gostaria de obter mais informações sobre este imóvel: {{$immobile->immobiles_property_title}} – {{$immobile->immobiles_code}}. Aguardarei o contato.Obrigado.</textarea>                                
+                            <label>Mensagem</label> 
+                            <textarea name="message_contact" cols="30" rows="10" class="form-control">Olá, eu gostaria de obter mais informações sobre este imóvel: {{$immobile->immobiles_property_title}} – {{$immobile->immobiles_code}}. Aguardarei o contato.Obrigado.</textarea> 
                         </div>
                        
                         <div class="form-block text-center">
@@ -559,7 +596,7 @@
                                 <i class="fa fa-whatsapp"></i>
                                 Mande um Whatsapp</a>
                         </div>
-                        <div class="form-block ">
+                        {{-- <div class="form-block ">
                             @if ($id_agency == 1)
                             <div class="agent-details">
                                 <p><i class="fa fa-tag icon"></i>Agência Aldeota</p>
@@ -575,7 +612,7 @@
                                 <p><i class="fa fa-whatsapp icon"></i>(85) 98810-1166</p>
                             </div>
                             @endif
-                        </div>
+                        </div> --}}
                     </div>
                     <!-- end widget content -->
                 </div>
@@ -622,9 +659,12 @@
         <!-- end row -->
     </div>
     <!-- end container -->
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v8.0&appId=1504290103179579&autoLogAppEvents=1" nonce="TRGKSuyS"></script>
 </section>
 @endsection
 @push('scripts')
+
 <script type="text/javascript">
     lat     = '{{ $immobile->immobiles_latitude }}';
     log     = '{{ $immobile->immobiles_longitude }}';
@@ -633,17 +673,53 @@
     district= '{{ $immobile->immobiles_district }}';
     city    = '{{ $immobile->immobiles_city }}';
     codeIm  = '{{ $immobile->immobiles_code }}';
+    
 </script>
+<script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+  
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+  
+    return t;
+  }(document, "script", "twitter-wjs"));</script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBisdaSyLJ4WC4bFxEFA5rdhGq_8B1B52I"></script>
 {{ Html::script('public/js/map-single.js') }}
 <script type="text/javascript">
     code_immobile = '{{ $immobile->immobiles_code }}';
-    
+    $(document).ready(function () {
+        $("#infoShared").hide();
+        $("#inputShared").hide();
+    });
     $(function () {
      $('[data-toggle="tooltip"]').tooltip();
      $('[data-toggle="popover"]').popover();
      //property-gallery-thumb
-    
+    $("#btn_shared").click(function (e) { 
+        //$("#infoShared").show();
+        e.preventDefault();
+        // setTimeout(() => {
+        //    $("#infoShared").hide();
+        // }, 3000);
+        new PNotify({
+            title: 'Copiado',
+            text: 'Esse link foi copiado para sua área de transferencia.',
+            type: 'info',
+            icon: 'fa fa-info-circle',
+            styling: 'fontawesome',
+            animation: 'fade',
+            animate_speed: 'fast',
+            stack: {"dir1": "down", "dir2": "right", "push": "bottom", "modal": true, "overlay_close": true}
+        });
+    });
     
       
     })
