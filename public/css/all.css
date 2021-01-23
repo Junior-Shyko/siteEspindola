@@ -698,7 +698,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	position:relative;
  	z-index:1;
  }
+ .subheader_page {
+ 	background:#787c8a url(../img/site/subheader_page.jpg) no-repeat center;
+ 	background-size:cover;
+ 	color:white;
+ 	padding-top:160px;
+ 	padding-bottom:40px;
+ 	letter-spacing:0.5px;
+ 	position:relative;
+ 	z-index:1;
+ }
  .subheader h1 {
+ 	margin-bottom:0px;
+ 	font-weight:700;
+ 	font-size:40px;
+ 	color:white;
+ 	float:left;
+ }
+ .subheader_page h1 {
  	margin-bottom:0px;
  	font-weight:700;
  	font-size:40px;
@@ -714,7 +731,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	padding:0;
  	padding-top:20px;
  }
- .subheader .breadcrumb a { color:white; }
+ .subheader .breadcrumb a { color:white; font-weight:600;}
+ .subheader_page a { color:white; font-weight:600;}
+
  .subheader .breadcrumb a.current { font-weight:600; }
  .subheader .breadcrumb .fa { margin-left:6px; margin-right:6px; }
 
@@ -722,7 +741,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  .subheader.simple-search {
  	text-align:center;
  	padding:200px 0px;
- 	background-image:url(../img/site/1920x950.png);
+ 	background-image:url(../img/site/family-new-home.png);
  }
  .subheader.simple-search h1 { float:none; font-size:48px; font-weight:700; }
  .subheader.simple-search p {
@@ -1171,11 +1190,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  .property-cat h3 { color:white; font-weight:200; }
  .property-cat:hover .color-bar { width:130px; }
 
- .property-cat-apartments { background-image:url(../images/1000x560.png);}
- .property-cat-houses { background-image:url(../images/1000x560.png);}
- .property-cat-condos { background-image:url(../images/1000x560.png);}
- .property-cat-waterfront { background-image:url(../images/1000x560.png);}
- .property-cat-cozy { background-image:url(../images/1000x560.png);}
+ .property-cat-apartments { background-image:url(../img/site/apartamento.jpg);}
+ .property-cat-houses { background-image:url(../img/site/casa.png);}
+ .property-cat-condos { background-image:url(../img/site/sala.jpg);}
+ .property-cat-waterfront { background-image:url(../img/site/loja.png);}
+ .property-cat-cozy { background-image:url(../img/site/fortaleza.png);}
 
  /** PROPERTY SINGLE **/
  .property-single-item { margin-bottom:45px; background:white; padding:30px; }
@@ -1487,9 +1506,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  }
  .agent-row .agent-footer .social-icons { margin-top:5px; }
 
- .agent-row-sidebar .agent-img { min-height:254px; max-height:254px;  }
+ .agent-row-sidebar .agent-img { min-height:228px; max-height:228px;  }
  .agent-row-sidebar .agent-text { font-size:13px; }
- .agent-row-sidebar .agent-content { min-height:254px; }
+ .agent-row-sidebar .agent-content { min-height:228px; }
  .agent-row-sidebar .agent-footer { bottom:20px; }
 
  /** AGENT SINGLE **/
@@ -1539,7 +1558,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  .blog-post-img { position:relative; display:block; }
  .blog-post-date { 
  	position:absolute; 
- 	background:url(../images/hexagon.png) no-repeat;
+ 	background:url(../img/site/hexagon.png) no-repeat;
  	line-height:1.1; 
  	bottom:-21px;
  	padding-top:7px; 
@@ -1728,7 +1747,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  /* MISC MODULES
  /*====================================================================================*/
  .about-video-thumb { max-width:100%; height:auto; }
-
+ .about-text-indent-p { text-indent:4em }
  /* SERVICES */
  .services { padding-top:0; }
  .services .service-item {
@@ -1826,7 +1845,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	top:23px;
  }
 
- .cta.hexs { background:#ffb400 url(../images/pattern.jpg) no-repeat bottom; background-size:cover; }
+ .cta.hexs { background:#ffb400 url(../img/site/pattern.jpg) no-repeat bottom; background-size:cover; }
  .cta.hexs .hex { min-height:195px; padding-top:57px; text-align:center; position:relative; }
  .cta.hexs .hex p { position:relative; z-index:10; }
  .cta.hexs .hex p span { font-size:33px; font-weight:700; display:block; }
@@ -1836,7 +1855,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	padding:150px 0px;
  	position:relative;
  	text-align:center;
- 	background:#ffb400 url(../images/1920x950.png) no-repeat center; 
+ 	background:#ffb400 url(../img/site/slider-img2.jpg) no-repeat center; 
  	background-attachment:fixed;
  	background-size:cover; 
  }
@@ -1845,7 +1864,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
  /** TESTIMONIALS **/
  .testimonials {
- 	background:#ffb400 url(../images/pattern.jpg) no-repeat;
+ 	background:#ffb400 url(../img/site/pattern.jpg) no-repeat;
  	background-size:cover;
  	background-position:bottom;
  	color:white;
@@ -1999,13 +2018,14 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	width: 35% !important;
  }
  .btn-buscar{
- 	    padding: 7px;
-    margin-top: -14px;
-    width: 16%;
- 	border-radius: 3px;
- 	background-color: #FFB400;
+	margin: 0;
+    
+    height: 40px !important;
+    box-shadow: none;
+    background-color: #FFB400;
  	font-weight:600;
- 	font-family:'Raleway', Helvetica, Arial;
+	font-family:'Raleway', Helvetica, Arial;
+	color: #fff;
  }
  .btn-buscar:hover{
  	color:white;
@@ -2026,7 +2046,7 @@ input[type="text"].ui-autocomplete-input:-ms-input-placeholder { color:black; }
 .select_filter{
   margin-top: -20px !important;
 }
-/*PÁGINA DE LISTA DE IMÓVEIS*/
+/*PÃGINA DE LISTA DE IMÃ“VEIS*/
 .img_property{
 	max-width: 281px; height: 187px !important; margin: 0 auto;
 }
@@ -2221,7 +2241,12 @@ input[type="text"].ui-autocomplete-input:-ms-input-placeholder { color:black; }
   }
   #input-code-mobile{
     color: black;
-  }
+	}
+	.property-gallery img {
+    max-width: 100%;
+		height: auto !important;
+		margin: 0 auto;
+	}
   
 
 }
@@ -2312,7 +2337,11 @@ input[type="text"].ui-autocomplete-input:-ms-input-placeholder { color:black; }
 #input-code-mobile{
 	color: black;
 }
-
+.property-gallery img {
+	max-width: 100%;
+	height: auto !important;
+	margin: 0 auto;
+}
 }
 
 @media only screen and (max-width: 480px) {
@@ -2351,6 +2380,12 @@ input[type="text"].ui-autocomplete-input:-ms-input-placeholder { color:black; }
   }
   #input-code-mobile{
     color: black;
-  }
-  
+	}
+	.property-gallery img {
+    max-width: 100%;
+		height: auto !important;
+		margin: 0 auto;
+	}
+
+
 }
