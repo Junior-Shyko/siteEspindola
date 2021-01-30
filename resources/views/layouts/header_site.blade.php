@@ -15,7 +15,8 @@
                     Ligue<br/>
                     
                     <span style="font-size: 14px;">
-                    {{$site[0]->sites_phoneFixed}}
+                    {{-- {{$site[0]->sites_phoneFixed}} --}}
+                    (85) 3491-1166
                     </span>
                   </td>
                 </tr>
@@ -40,7 +41,8 @@
                 <td><i class="fa fa-whatsapp"></i></td>
                 <td class="header-item-text">
                   WhatsApp<br/>
-                  <span style="font-size: 14px;">{{$site[0]->sites_phoneMobile}}</span>
+                  {{-- <span style="font-size: 14px;">{{$site[0]->sites_phoneMobile}}</span> --}}
+                  <span style="font-size: 14px;">(85) 98810-1166 </span>
                 </td>
               </tr>
             </table>
@@ -51,7 +53,10 @@
                 <td><i class="fa fa-envelope"></i></td>
                 <td class="header-item-text">
                   E-mail<br/>
-                <span style="font-size: 15px; color: black;"><a href="mailto: meajuda@espindolaimobiliaria.com.br">{{$site[0]->sites_email}}</a> </span>
+                <span style="font-size: 15px; color: black;">
+                  {{-- <a href="mailto: meajuda@espindolaimobiliaria.com.br">{{$site[0]->sites_email}}</a>  --}}
+                  <a href="mailto: meajuda@espindolaimobiliaria.com.br">meajuda@espindolaimobiliaria.com.br</a>
+                </span>
                 </td>
               </tr>
             </table>
@@ -77,9 +82,9 @@
         <div class="main-menu-wrap">
           <div class="container-fixed">
 
-            <div class="member-actions right">
+            {{-- <div class="member-actions right">
               <a href="http://www.alugaemfortaleza.com/cadastro-imovel.aspx" target="_blank" class="button small alt button-icon"><i class="fa fa-plus"></i>Anuncie seu imóvel</a>
-            </div>
+            </div> --}}
             <ul class="nav navbar-nav right">
 
               <li><a href="{{'/'}}">Home</a></li>
