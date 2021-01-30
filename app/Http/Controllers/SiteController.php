@@ -282,7 +282,7 @@ public function show($id)
         }
         $insurance_fire_monthly = ( (100 * $price_insurance_fire) * 0.0015946667 / 12);//mensal
         $insurance_fire_annual  = ( (100 * $price_insurance_fire) * 0.0015946667);//anual
-        $body_info_fire = 'Valor único e anual. Inclui proteção obrigatória contra incêndio, queda de raio ou explosão. O imóvel fica protegido e o proprietário é indenizado em casos de acidentes. *Os valores estão sujeitas a alteração pela seguradora';
+        $body_info_fire = 'Valor único e anual. Inclui proteção obrigatória contra incêndio, queda de raio ou explosão. O imóvel fica protegido e o proprietário é indenizado em casos de acidentes.';
         //SE ACEITA NEGOCIAÇÃO
         $accept_negotiation = ($immobile->immobiles_accept_negotiation == 1 ? 'Sim' : 'Não');
 
