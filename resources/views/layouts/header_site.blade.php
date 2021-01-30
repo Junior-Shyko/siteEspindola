@@ -118,10 +118,10 @@
                 <a href="#">Corretor</a>
                 <ul class="sub-menu">
                   <li>
-                    <a href="https://espindolaimobiliaria.com.br/v1/public/login" target="_blank" class="top-bar-item" title="Login no EspindolaAdmin"><i class="fa fa-sign-in icon"></i>Login</a>
+                    <a href="https://espindolaimobiliaria.com.br/v1/public/login" target="_blank" class="top-bar-item" title="Login no EspindolaAdmin"><i class="fa fa-sign-in icon"></i> Login</a>
                   </li>
                   <li>
-                    <a href="https://espindolaimobiliaria.com.br/admin/login" target="_blank" class="top-bar-item"><i class="fa fa-user-plus icon"></i>Vistoria</a>
+                    <a href="https://espindolaimobiliaria.com.br/admin/login" target="_blank" class="top-bar-item"><i class="fa fa-user-plus icon"></i> Vistoria</a>
                   </li>
                 </ul>
               </li>
