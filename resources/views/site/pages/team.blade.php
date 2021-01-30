@@ -111,7 +111,7 @@
                         @endif
 
                         @if ($item->teamSites_office == 'Administração de Imóveis')
-                        <div class="col-lg-12">
+                        {{-- <div class="col-lg-12">
                             <h4>Administração de Imóveis</h4>
                             <img src="img/site/divider-half-blue.png" alt=""><br><br>
                             <div class="agent agent-row agent-row-sidebar shadow-hover">
@@ -138,7 +138,7 @@
                                 </div>
                                 <div class="clear"></div>
                             </div>
-                        </div>
+                        </div> --}}
                         @endif
 
                         @if ($item->teamSites_office == 'Administrativo e Financeiro')
