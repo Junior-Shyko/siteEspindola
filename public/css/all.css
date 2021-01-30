@@ -897,7 +897,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  /*====================================================================================*/
 /* 05 FILTER
 /*====================================================================================*/
-.filter { min-height:300px; background:#cbd8e3; padding-bottom:40px; }
+.filter { min-height:300px; background:#408DC1; padding-bottom:40px; }
 
 .filter-header { background:#48a0dc; }
 .filter .ui-tabs .ui-tabs-panel { padding:50px 0px 0px 0px; background:transparent; }
@@ -993,7 +993,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .google-maps .filter .button { background:#323746; margin-bottom:5px; }
 .google-maps .filter .button:hover { background:white; color:#48a0dc; }
 
-
+.filter-white {
+	color: white;
+}
 /*====================================================================================*/
  /* PROPERTIES
  /*====================================================================================*/
@@ -1760,7 +1762,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	z-index:10;
  }
 
- .services .service-item:hover .fa { background:#67b5ea; }
+ .services .service-item:hover .fa { background:#ffb400; }
 
  .services .service-item .fa {
  	width:110px;

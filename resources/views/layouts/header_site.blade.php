@@ -1,18 +1,5 @@
   <header class="header-default">
     <div  id="demo_loc"></div>
-    <div class="top-bar">
-      <div class="container">
-        @php $site = \SiteEspindola\Site::getInfoSite();
-        @endphp
-        <div class="top-bar-right right">
-          <a href="https://espindolaimobiliaria.com.br/v1/public/login" target="_blank" class="top-bar-item" title="Login no EspindolaAdmin"><i class="fa fa-sign-in icon"></i>Login</a>
-          <a href="https://espindolaimobiliaria.com.br/admin/login" target="_blank" class="top-bar-item"><i class="fa fa-user-plus icon"></i>Vistoria</a>
-          <div class="clear"></div>
-        </div>
-        <div class="clear"></div>
-      </div>
-    </div>
-
     <div class="container">
 
       <!-- navbar header -->
@@ -126,6 +113,19 @@
           <li><a href="{{url('cliente')}}">Área do Cliente</a></li>        
           <li><a href="{{url('https://espindola.zendesk.com/hc/pt-br')}}" target="_blank">Perguntas Frequentes</a></li>
           <li><a href="{{url('contato')}}">Contato</a></li>
+          <li>
+            <li class="menu-item-has-children">
+                <a href="#">Corretor</a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="https://espindolaimobiliaria.com.br/v1/public/login" target="_blank" class="top-bar-item" title="Login no EspindolaAdmin"><i class="fa fa-sign-in icon"></i> Login</a>
+                  </li>
+                  <li>
+                    <a href="https://espindolaimobiliaria.com.br/admin/login" target="_blank" class="top-bar-item"><i class="fa fa-user-plus icon"></i> Vistoria</a>
+                  </li>
+                </ul>
+              </li>
+          </li>
         </ul>
         <div class="clear"></div>
 
