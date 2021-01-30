@@ -99,6 +99,7 @@ public function searchList(Request $request)
     $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('img/site/logo.png')];
     $order_by = Immobile::getOrderFile($request['opcao'] , $request['orderSearch']);
     //FORÇANDO A ENTRAR NA CONDIÇÃO PARA LOCAÇÃO
+    $site = Site::all();
     if(($request['opcao'] == 'alugar')  && $request['region-immobile'] == "")
     {   //SE TIVER OS TIPOS DE IMOVEIS
         
@@ -108,12 +109,12 @@ public function searchList(Request $request)
                         ->orderBy($order_by[0] , $order_by[1])->get();
             $info_total_immobile = count($immobile);  
             
-            return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' ));
+            return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'site', 'page_title' , 'meta_site' ));
         }//SE NAO TIVER OS TIPOS DOS IMOVEIS
         $immobile =  Immobile::getRent();     
         $info_total_immobile = count($immobile);  
        
-        return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' ));
+        return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title', 'site' , 'meta_site' ));
     }
     if(($request['opcao'] == 'alugar') &&  $request['region-immobile'] !== "")
     {
@@ -130,7 +131,7 @@ public function searchList(Request $request)
             $all_immobiles = $immobile->toArray();
             $info_total_immobile = count($immobile);  
             
-            return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'all_immobiles'));
+            return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' ,'site', 'page_title' , 'meta_site' , 'all_immobiles'));
         }
 
         $query_search = Immobile::getDistrictForRegion($request['region-immobile']);
@@ -143,7 +144,7 @@ public function searchList(Request $request)
         $all_immobiles = $immobile->toArray();
         $info_total_immobile = count($immobile);
         
-        return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'all_immobiles'));
+        return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'site', 'meta_site' , 'all_immobiles'));
    
     }
 
@@ -282,7 +283,7 @@ public function show($id)
         }
         $insurance_fire_monthly = ( (100 * $price_insurance_fire) * 0.0015946667 / 12);//mensal
         $insurance_fire_annual  = ( (100 * $price_insurance_fire) * 0.0015946667);//anual
-        $body_info_fire = 'Valor único e anual. Inclui proteção obrigatória contra incêndio, queda de raio ou explosão. O imóvel fica protegido e o proprietário é indenizado em casos de acidentes.';
+        $body_info_fire = 'Valor único e anual. Inclui proteção obrigatória contra incêndio, queda de raio ou explosão. O imóvel fica protegido e o proprietário é indenizado em casos de acidentes.  *Os valores estão sujeitas a alteração pela seguradora';
         //SE ACEITA NEGOCIAÇÃO
         $accept_negotiation = ($immobile->immobiles_accept_negotiation == 1 ? 'Sim' : 'Não');
 
@@ -307,12 +308,12 @@ public function show($id)
             }
 
         $realtor = DB::table('realtor')->where('realtor_code_imobile', $immobile->immobiles_code)->first();
-        
+        $site = Site::all();
         // dd($district);
         return view('site.details' , compact('immobile' , 'photo_immobile' , 'rental_type' , 'recents' , 
         'offer_type' , 'page_title' , 'type' , 'district' , 'meta_site' , 'insurance_fire_monthly' ,
         'body_info_fire' , 'accept_negotiation' , 'key_cadastre' , 'insurance_fire_annual', 'other_immobile', 'districtAll',
-        'id_agency' , 'realtor'));
+        'id_agency' , 'realtor', 'site'));
     }    
 }
 
@@ -450,7 +451,8 @@ public function getDistrict()
 public function notfound()
 {
         $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('img/site/logo.png')];
-    return view('site.404', compact('meta_site'));
+        $site = Site::all();
+    return view('site.404', compact('meta_site', 'site'));
 }
 
 public function immobileAdvanced(Request $request)
@@ -587,8 +589,8 @@ public function allType($type)
     $immobile =  Immobile::where('immobiles_type_immobiles' , $type)->get();
     $info_total_immobile = count($immobile);  
     $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('img/site/logo.png')];
-   
-    return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'meta_site'));
+    $site = Site::all();
+    return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' ,'site', 'meta_site'));
 
 }
     
@@ -601,15 +603,16 @@ public function allType($type)
     public function espindola()
     {
         $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('img/site/logo.png')];
-    
-        return view('site.pages.espindola' , compact( 'meta_site'));
+        $site = Site::all();
+        return view('site.pages.espindola' , compact('site', 'meta_site'));
     }
 
     public function services()
     {
         $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('img/site/logo.png')];
         $page_title = "Serviços ";
-        return view('site.pages.services' , compact( 'meta_site' , 'page_title'));
+        $site = Site::all();
+        return view('site.pages.services' , compact('site', 'meta_site' , 'page_title'));
     }
 
     public function team()
@@ -617,7 +620,8 @@ public function allType($type)
         $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('img/site/logo.png')];
         $page_title = "Equipe ";
         $team = DB::table('teamSites')->get();
-        return view('site.pages.team' , compact( 'meta_site' , 'page_title', 'team'));
+        $site = Site::all();
+        return view('site.pages.team' , compact('site', 'meta_site' , 'page_title', 'team'));
     }
 
     public function client()
@@ -628,7 +632,8 @@ public function allType($type)
             'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 
             'image' => url('img/site/logo.png')];
         $page_title = "Equipe ";
-        return view('site.pages.client' , compact( 'meta_site' , 'page_title'));
+        $site = Site::all();
+        return view('site.pages.client' , compact('site', 'meta_site' , 'page_title'));
     }
 
     public function contact()

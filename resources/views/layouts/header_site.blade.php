@@ -15,8 +15,7 @@
                     Ligue<br/>
                     
                     <span style="font-size: 14px;">
-                    {{-- {{$site[0]->sites_phoneFixed}} --}}
-                    (85) 3491-1166
+                    {{$site[0]->sites_phoneFixed}}
                     </span>
                   </td>
                 </tr>
@@ -35,14 +34,13 @@
             </div>
            --}}
           
-                     <div class="header-item header-phone left">
+            <div class="header-item header-phone left">
             <table>
               <tr>
                 <td><i class="fa fa-whatsapp"></i></td>
                 <td class="header-item-text">
                   WhatsApp<br/>
-                  {{-- <span style="font-size: 14px;">{{$site[0]->sites_phoneMobile}}</span> --}}
-                  <span style="font-size: 14px;">(85) 98810-1166 </span>
+                  <span style="font-size: 14px;">{{$site[0]->sites_phoneMobile}}</span>
                 </td>
               </tr>
             </table>
@@ -54,8 +52,8 @@
                 <td class="header-item-text">
                   E-mail<br/>
                 <span style="font-size: 15px; color: black;">
-                  {{-- <a href="mailto: meajuda@espindolaimobiliaria.com.br">{{$site[0]->sites_email}}</a>  --}}
-                  <a href="mailto: meajuda@espindolaimobiliaria.com.br">meajuda@espindolaimobiliaria.com.br</a>
+                  <a href="mailto: meajuda@espindolaimobiliaria.com.br">{{$site[0]->sites_email}}</a>
+                  {{-- <a href="mailto: meajuda@espindolaimobiliaria.com.br">meajuda@espindolaimobiliaria.com.br</a> --}}
                 </span>
                 </td>
               </tr>
