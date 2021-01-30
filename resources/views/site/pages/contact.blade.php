@@ -12,9 +12,8 @@
     <div class="container">
         <div>
             Home <i class="fa fa-angle-right"></i> 
-            <a href="#" class="">A Espíndola</a>
-            <i class="fa fa-angle-right"></i>
-            <a href="#" class="">Equipe Espíndola</a>
+            <a href="#" class="">Contato</a>
+
         </div>
         <div class="clear"></div>
     </div>

@@ -1917,6 +1917,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  .slider-nav-testimonials .slider-prev:hover,
  .slider-nav-testimonials .slider-next:hover { background:white; color:#ffb400; }
 
+ /** A ESPÍNDOLA **/
+.contact-espindola {
+	background:#002266 url(../images/contact-bg.png) no-repeat bottom;
+ 	background-size:cover;
+}
+.about-espindola { background:white;}
  /** CONTACT **/
  .contact-details {
  	background:#48a0dc url(../images/contact-bg.png) no-repeat bottom;

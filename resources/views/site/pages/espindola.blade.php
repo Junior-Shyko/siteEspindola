@@ -11,7 +11,7 @@
         <div class="clear"></div>
     </div>
 </section>
-<section class="module content blog-post">
+<section class="module content about-espindola">
     <div class="container">
         <div class="row">
             <div class="col-lg-9 col-md-9">
@@ -57,7 +57,7 @@
         </div>
     </div>
 </section>
-<section class="module contact-details">
+<section class="module contact-espindola">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

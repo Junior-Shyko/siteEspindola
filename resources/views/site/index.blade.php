@@ -98,7 +98,7 @@
          @foreach($immobile_all as $immobiles)
          @if($immobiles->immobiles_type_publication == '2' || $immobiles->immobiles_type_publication == '3')
          <div class="property property-hidden-content slide" style="background: url({{ SiteEspindola\Immobile::getPhotoFeatured($immobiles->immobiles_code) }});background-size: 338px 230px;margin: auto;background-repeat: no-repeat;    min-height: 225px;">
-            <a href="{{ url('imovel/'.$immobiles->immobiles_code) }}" class="property-content" title="{{ $immobiles->immobiles_property_title }}">
+            <a href="{{ url('imovel/'.$immobiles->immobiles_code) }}" target="_blank" class="property-content" title="{{ $immobiles->immobiles_property_title }}">
                <div class="property-title">
                   <h4>{{ $immobiles->immobiles_property_title }}</h4>
                   <p class="property-address"><i class="fa fa-map-marker icon"></i>{{ substr($immobiles->immobiles_address.' , '.$immobiles->immobiles_number. ' , '.$immobiles->immobiles_district. ' , '.$immobiles->immobiles_city, 0, 48)}}...</p>
@@ -147,14 +147,14 @@
     
         <div class="row">
           <div class="col-lg-8 col-md-8">
-         <a href="{{url('/todos-os-tipos/apartamento')}}" class="property-cat property-cat-apartments">
+         <a href="{{url('/todos-os-tipos/apartamento')}}" target="_blank" class="property-cat property-cat-apartments">
               <h3>Apartamento</h3>
               <div class="color-bar"></div>
               <span class="button small">Ver Todos</span>
             </a>
           </div>
           <div class="col-lg-4 col-md-4">
-            <a href="{{url('/todos-os-tipos/casa')}}" class="property-cat property-cat-houses">
+            <a href="{{url('/todos-os-tipos/casa')}}" target="_blank" class="property-cat property-cat-houses">
               <h3>Casa</h3>
               <div class="color-bar"></div>
               <span class="button small">Ver Todos</span>
@@ -164,21 +164,21 @@
     
         <div class="row">
           <div class="col-lg-4 col-md-4">
-            <a href="{{url('/todos-os-tipos/sala')}}" class="property-cat property-cat-condos">
+            <a href="{{url('/todos-os-tipos/sala')}}" target="_blank" class="property-cat property-cat-condos">
               <h3>Sala Comercial</h3>
               <div class="color-bar"></div>
               <span class="button small">Ver Todos</span>
             </a>
           </div>
           <div class="col-lg-4 col-md-4">
-            <a href="{{url('/todos-os-tipos/loja')}}" class="property-cat property-cat-waterfront">
+            <a href="{{url('/todos-os-tipos/loja')}}" target="_blank" class="property-cat property-cat-waterfront">
               <h3>Loja</h3>
               <div class="color-bar"></div>
               <span class="button small">Ver Todos</span>
             </a>
           </div>
           <div class="col-lg-4 col-md-4">
-            <a href="{{url('search?opcao=alugar&region-immobile=')}}" class="property-cat property-cat-cozy">
+            <a href="{{url('search?opcao=alugar&region-immobile=')}}" target="_blank" class="property-cat property-cat-cozy">
               <h3>Todos os imóveis</h3>
               <div class="color-bar"></div>
               <span class="button small">Ver todas as locações</span>

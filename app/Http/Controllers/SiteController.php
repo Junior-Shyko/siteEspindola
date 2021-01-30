@@ -590,7 +590,8 @@ public function allType($type)
     $info_total_immobile = count($immobile);  
     $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('img/site/logo.png')];
     $site = Site::all();
-    return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' ,'site', 'meta_site'));
+    $page_title =  ucfirst($type). " - Aluguel e Vendas | Espindola imobiliária";
+    return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' ,'site', 'meta_site', 'page_title'));
 
 }
     
@@ -604,13 +605,14 @@ public function allType($type)
     {
         $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('img/site/logo.png')];
         $site = Site::all();
-        return view('site.pages.espindola' , compact('site', 'meta_site'));
+        $page_title =  "Aluguel e Vendas | ";
+        return view('site.pages.espindola' , compact('site', 'meta_site', 'page_title'));
     }
 
     public function services()
     {
         $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('img/site/logo.png')];
-        $page_title = "Serviços ";
+        $page_title = "Serviços | ";
         $site = Site::all();
         return view('site.pages.services' , compact('site', 'meta_site' , 'page_title'));
     }
@@ -618,7 +620,7 @@ public function allType($type)
     public function team()
     {
         $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('img/site/logo.png')];
-        $page_title = "Equipe ";
+        $page_title = "Equipe | ";
         $team = DB::table('teamSites')->get();
         $site = Site::all();
         return view('site.pages.team' , compact('site', 'meta_site' , 'page_title', 'team'));
@@ -631,7 +633,7 @@ public function allType($type)
             'type' => 'website' , 
             'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 
             'image' => url('img/site/logo.png')];
-        $page_title = "Equipe ";
+        $page_title = "Cliente | ";
         $site = Site::all();
         return view('site.pages.client' , compact('site', 'meta_site' , 'page_title'));
     }
