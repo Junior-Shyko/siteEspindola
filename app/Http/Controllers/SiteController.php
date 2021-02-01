@@ -157,12 +157,12 @@ public function searchList(Request $request)
                         ->whereIn('immobiles_type_publication' , $type_rental)
                         ->orderBy($order_by[0] , $order_by[1])->get();
             $info_total_immobile = count($immobile);  
-            return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' ));
+            return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' ,'site', 'page_title' , 'meta_site' ));
         }//SE NAO TIVER OS TIPOS DOS IMOVEIS
         $immobile =  Immobile::getSale();     
         $info_total_immobile = count($immobile);  
        
-        return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' ));
+        return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'site' ));
     }
     if(($request['opcao'] == 'comprar') &&  $request['region-immobile'] !== "")
     {
@@ -190,7 +190,7 @@ public function searchList(Request $request)
         $all_immobiles = $immobile->toArray();
         $info_total_immobile = count($immobile);
 
-        return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'all_immobiles'));
+        return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'all_immobiles', 'site'));
    
     }
     //PESQUISA PARA AMBOS
@@ -203,7 +203,7 @@ public function searchList(Request $request)
             $info_total_immobile = count($immobile);
             $all_immobiles = $immobile->toArray();
             $info_total_immobile = count($immobile);              
-            return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'all_immobiles'));
+            return view('site.list' , compact('site', 'immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'all_immobiles'));
         }
         //CASO NÃO ESCOLHA O TIPO
         $query_search = Immobile::getDistrictForRegion($request['region-immobile']);
@@ -212,11 +212,11 @@ public function searchList(Request $request)
         $info_total_immobile = count($immobile);
         $all_immobiles = $immobile->toArray();
         $info_total_immobile = count($immobile);  
-        return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'all_immobiles'));
+        return view('site.list' , compact('immobile' ,'site', 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'all_immobiles'));
     }
     if( ($request['opcao'] == 'ambos') && $request['region-immobile'] !== "")
     {   //SE ESCOLHER O TIPO
-        if(isset($request['typeImmobile']) ){   
+        if(isset($request['typeImmobile']) ){
             $query_search = Immobile::getDistrictForRegion($request['region-immobile']);         
             $immobile = Immobile::whereIn('immobiles_district' ,$query_search)
                         ->whereIn('immobiles_type_immobiles' , $request['typeImmobile'])
@@ -225,7 +225,7 @@ public function searchList(Request $request)
             $info_total_immobile = count($immobile);
             $all_immobiles = $immobile->toArray();
             $info_total_immobile = count($immobile);              
-            return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'all_immobiles'));
+            return view('site.list' , compact('site','immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'all_immobiles'));
         }
         //CASO NÃO ESCOLHA O TIPO
         $query_search = Immobile::getDistrictForRegion($request['region-immobile']);
@@ -234,7 +234,7 @@ public function searchList(Request $request)
         $info_total_immobile = count($immobile);
         $all_immobiles = $immobile->toArray();
         $info_total_immobile = count($immobile);  
-        return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'all_immobiles'));
+        return view('site.list' , compact('immobile' ,'site', 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'all_immobiles'));
     }
 }
 /**
