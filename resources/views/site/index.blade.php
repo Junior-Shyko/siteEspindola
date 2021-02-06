@@ -82,112 +82,117 @@
 </section>
 @include('site.immobileAdvanced')
 @include('site.services')
-<section class="module no-padding properties featured">
-   <div class="container">
+@include('site.pages.top_footer')
+  <section class="module property-categories">
+    <div class="container">
       <div class="module-header">
-         <h2><strong>Destaques</strong></h2>
-         <img src="images/divider.png" alt="" />
+        <h2>Uma busca melhor por um tipo<strong> específico de imóvel</strong></h2>
+        <img src="images/divider.png" alt="">
+        <p>Você poderá buscar todos os imóveis de acordo com o tipo que você escolher, não diferenciando
+            cidade, bairro, locação ou venda. Basca clicar no que você desejar.
+        </p>
       </div>
-   </div>
-   <div class="slider-nav slider-nav-properties-featured">
-      <span class="slider-prev"><i class="fa fa-angle-left"></i></span>
-      <span class="slider-next"><i class="fa fa-angle-right"></i></span>
-   </div>
-   <div class="slider-wrap">
-      <div class="slider slider-featured">
-         @foreach($immobile_all as $immobiles)
-         @if($immobiles->immobiles_type_publication == '2' || $immobiles->immobiles_type_publication == '3')
-         <div class="property property-hidden-content slide" style="background: url({{ SiteEspindola\Immobile::getPhotoFeatured($immobiles->immobiles_code) }});background-size: 338px 230px;margin: auto;background-repeat: no-repeat;    min-height: 225px;">
-            <a href="{{ url('imovel/'.$immobiles->immobiles_code) }}" target="_blank" class="property-content" title="{{ $immobiles->immobiles_property_title }}">
-               <div class="property-title">
-                  <h4>{{ $immobiles->immobiles_property_title }}</h4>
-                  <p class="property-address"><i class="fa fa-map-marker icon"></i>{{ substr($immobiles->immobiles_address.' , '.$immobiles->immobiles_number. ' , '.$immobiles->immobiles_district. ' , '.$immobiles->immobiles_city, 0, 48)}}...</p>
-               </div>
-               <table class="property-details">
-                  <tr>
-                     <td><i class="fa fa-bed"></i> {{ $immobiles->immobiles_qtd_dormitory }} Qtos</td>
-                     <td><i class="fa fa-tint"></i> {{ $immobiles->immobiles_qtd_toilet }} WC </td>
-                     <td><i class="fa fa-expand"></i> {{ $immobiles->immobiles_total_area}} </td>
-                  </tr>
-               </table>
-            </a>
-            <a href="#" class="property-img">
-               <div class="img-fade"></div>
-               {{-- 
-               <div class="property-tag button alt featured">Featured</div>
-               --}}
-               @if ($immobiles->immobiles_selling_price > 0)
-               <div class="property-tag button status">Venda</div>
-               <div class="property-price">R$ {{ number_format($immobiles->immobiles_selling_price, 0, ',' , '.') }}</div>
-               @else
-               <div class="property-tag button status">Locação</div>
-               <div class="property-price">R$ {{ number_format($immobiles->immobiles_rental_price, 0, ',' , '.') }}</div>
-               @endif                 
-               <div class="property-color-bar"></div>
-               <img src="images/1837x1206.png" alt="" />
-            </a>
-         </div>
-         @endif
-         @endforeach
-      </div>
-      <!-- end slider -->
-   </div>
-   <!-- end slider wrap -->
-</section>
-<section class="module property-categories">
-      <div class="container">
-    
-        <div class="module-header">
-          <h2>Uma busca melhor por um tipo<strong> específico de imóvel</strong></h2>
-          <img src="images/divider.png" alt="">
-          <p>Você poderá buscar todos os imóveis de acordo com o tipo que você escolher, não diferenciando
-             cidade, bairro, locação ou venda. Basca clicar no que você desejar.
-          </p>
+  
+      <div class="row">
+        <div class="col-lg-8 col-md-8">
+        <a href="{{url('/todos-os-tipos/apartamento')}}" target="_blank" class="property-cat property-cat-apartments">
+            <h3>Apartamento</h3>
+            <div class="color-bar"></div>
+            <span class="button small">Ver Todos</span>
+          </a>
         </div>
-    
-        <div class="row">
-          <div class="col-lg-8 col-md-8">
-         <a href="{{url('/todos-os-tipos/apartamento')}}" target="_blank" class="property-cat property-cat-apartments">
-              <h3>Apartamento</h3>
-              <div class="color-bar"></div>
-              <span class="button small">Ver Todos</span>
-            </a>
+        <div class="col-lg-4 col-md-4">
+          <a href="{{url('/todos-os-tipos/casa')}}" target="_blank" class="property-cat property-cat-houses">
+            <h3>Casa</h3>
+            <div class="color-bar"></div>
+            <span class="button small">Ver Todos</span>
+          </a>
+        </div>
+      </div><!-- end row -->
+  
+      <div class="row">
+        <div class="col-lg-4 col-md-4">
+          <a href="{{url('/todos-os-tipos/sala')}}" target="_blank" class="property-cat property-cat-condos">
+            <h3>Sala Comercial</h3>
+            <div class="color-bar"></div>
+            <span class="button small">Ver Todos</span>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <a href="{{url('/todos-os-tipos/loja')}}" target="_blank" class="property-cat property-cat-waterfront">
+            <h3>Loja</h3>
+            <div class="color-bar"></div>
+            <span class="button small">Ver Todos</span>
+          </a>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <a href="{{url('search?opcao=alugar&region-immobile=')}}" target="_blank" class="property-cat property-cat-cozy">
+            <h3>Todos os imóveis</h3>
+            <div class="color-bar"></div>
+            <span class="button small">Ver todas as locações</span>
+          </a>
+        </div>
+      </div><!-- end row -->
+  
+    </div><!-- end container -->
+  </section>
+  <section class="module testimonials">
+    <div class="container">
+      <div class="module-header">
+        <h2>Our <strong>Testimonials</strong></h2>
+        <img src="images/divider-white.png" alt="">
+        <p>Morbi accumsan ipsum velit nam nec tellus a odiose tincidunt auctor a ornare odio sed non mauris vitae erat consequat auctor</p>
+      </div>
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        </ol>
+        -->
+        <!-- Wrapper for slides -->
+        <div class="testimonial">
+          <div class="carousel-inner" role="listbox">
+            <div class="item active">
+              <h3>"Pontualidade seriedade onestidade  credibilidade tudo que e dade"</h3>
+              <div class="testimonial-details">
+                <img class="testimonial-img" src="https://scontent-for1-1.xx.fbcdn.net/v/t1.0-1/p200x200/1469836_1391486527821579_3020469505130490578_n.jpg?_nc_cat=105&ccb=2&_nc_sid=7206a8&_nc_eui2=AeGDrnke4TJMCMaDj96JPon6cZ8xgsaqLwVxnzGCxqovBZ2Q4BeQqhe8rndCvQ28YyNlTGX-NI1olWb6oK8F6sFk&_nc_ohc=ngKMP23y_kwAX-kwBui&_nc_ht=scontent-for1-1.xx&tp=6&oh=38abd692cd5103b13ede7ec7b9163b95&oe=60464DB2" alt="">
+                <p class="testimonial-name"><strong>Haroldo Freimanis</strong></p>
+                {{-- <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="0">Rype Creative</a></em></span> --}}
+              </div>
+            </div>
+            <div class="item">
+              <h3>"Empresa Parceira de Nosso projeto de Futsal . Venham conhecer essa imobiliaria de muito Sucesso."</h3>
+              <div class="testimonial-details">
+                <img class="testimonial-img" src="https://scontent-for1-1.xx.fbcdn.net/v/t1.0-1/p200x200/144013520_3489870001125006_1639300381676406809_o.jpg?_nc_cat=110&ccb=2&_nc_sid=7206a8&_nc_eui2=AeHMQa1A8xG0vLwnh5LoSesbo3tl3PBIvHmje2Xc8Ei8eblILNm6pEvZG-ljpEyYWBU1FxDzrgsTzqpZtXaXqe90&_nc_ohc=4jvgGLxPOzMAX_AM1en&_nc_ht=scontent-for1-1.xx&tp=6&oh=5724931dd6bbf1cd451de9e196d77fb0&oe=6044D9FB" alt="">
+                <p class="testimonial-name"><strong>Daniel Alencar</strong></p>
+                {{-- <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="0">Rype Creative</a></em></span> --}}
+              </div>
+            </div>
+            <div class="item">
+              <h3>"Qualidade, simpatia e muita cordialidade no atendimento, com ferramentas que otimizam o tempo do cliente, e acima de tudo preços de compra e venda muito competitivos"</h3>
+              <div class="testimonial-details">
+                <img class="testimonial-img" src="https://scontent-for1-1.cdninstagram.com/v/t51.2885-19/s150x150/33229042_174358090071102_8619407894535733248_n.jpg?_nc_ht=scontent-for1-1.cdninstagram.com&_nc_ohc=NSVdl19XN-gAX_5wPsw&tp=1&oh=cf51f3e901e7179b8179ba1f8448c74e&oe=604797C2" alt="">
+                <p class="testimonial-name"><strong>Ciro de Castro</strong></p>
+                {{-- <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="0">Rype Creative</a></em></span> --}}
+              </div>
+            </div>
           </div>
-          <div class="col-lg-4 col-md-4">
-            <a href="{{url('/todos-os-tipos/casa')}}" target="_blank" class="property-cat property-cat-houses">
-              <h3>Casa</h3>
-              <div class="color-bar"></div>
-              <span class="button small">Ver Todos</span>
-            </a>
-          </div>
-        </div><!-- end row -->
-    
-        <div class="row">
-          <div class="col-lg-4 col-md-4">
-            <a href="{{url('/todos-os-tipos/sala')}}" target="_blank" class="property-cat property-cat-condos">
-              <h3>Sala Comercial</h3>
-              <div class="color-bar"></div>
-              <span class="button small">Ver Todos</span>
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-4">
-            <a href="{{url('/todos-os-tipos/loja')}}" target="_blank" class="property-cat property-cat-waterfront">
-              <h3>Loja</h3>
-              <div class="color-bar"></div>
-              <span class="button small">Ver Todos</span>
-            </a>
-          </div>
-          <div class="col-lg-4 col-md-4">
-            <a href="{{url('search?opcao=alugar&region-immobile=')}}" target="_blank" class="property-cat property-cat-cozy">
-              <h3>Todos os imóveis</h3>
-              <div class="color-bar"></div>
-              <span class="button small">Ver todas as locações</span>
-            </a>
-          </div>
-        </div><!-- end row -->
-    
-      </div><!-- end container -->
-    </section>
+        </div>
+        <!-- Controls -->
+        <a class="left carousel-control-home" href="#carousel-example-generic" role="button" data-slide="prev">
+          <span class="slider-prev slick-arrow">
+            <i class="fa fa-angle-left"></i>
+          </span>
+        </a>
+        <a class="right carousel-control-home" href="#carousel-example-generic" role="button" data-slide="next">
+          <span class="slider-next slick-arrow">
+            <i class="fa fa-angle-right"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
 @endsection
 @section('footer')
 @include('site.footer')

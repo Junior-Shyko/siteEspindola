@@ -125,7 +125,7 @@
     </div><!-- end container -->
 </section> --}}
 
-      <section class="module content">
+<section class="module content">
     <div class="container">
     <div class="row">
         <div class="col-lg-12 col-md-12">

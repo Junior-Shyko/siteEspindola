@@ -1564,7 +1564,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	line-height:1.1; 
  	bottom:-21px;
  	padding-top:7px; 
- 	left:30px; 
+ 	left: 37%; 
  	font-size:12px; 
  	width:90px;
  	text-align:center;
@@ -1784,7 +1784,33 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	color:#323746;
  	margin-bottom:20px;
  }
+.white-date {
+	color: #fff;
+}
+.service-post-img { position:relative; display:block; cursor: default; }
+ .service-post-date { 
+ 	position:absolute; 
+ 	background:url(../img/site/hexagon.png) no-repeat;
+ 	line-height:1.1; 
+ 	bottom:-21px;
+ 	padding-top:7px; 
+ 	left:30px; 
+ 	font-size:12px; 
+ 	width:90px;
+ 	text-align:center;
+ }
+ .service-post-date span { font-weight:bold; font-size:22px; display:block; }
+ .service-post-img .img-fade { opacity:0.7; }
+ .service-post-img img { max-width:100%; height:auto; }
 
+ .service-post-details { margin-bottom:20px; padding:10px 0px 15px 0px; border-bottom:1px solid rgba(0, 0, 0, 0.1);  }
+ .service-post-details li { margin-right:13px; font-weight:600; font-size:13px; color:#9eaab2; list-style:none !important; display:inline; }
+ .service-post-content { padding:5%; }
+ .service-post-content h3 a { font-weight:100; color:#3a464e; cursor: default;}
+ .service-post-content h3 a:hover { color:#ffb400; }
+
+ .service-post-creative { margin-bottom:30px; }
+ .service-post-creative h3 { font-size:23px; margin-top:15px; }
  /** TEAM (LEADERS) **/
  .team-member { margin-bottom:30px; }
  .team-member img { max-width:100%; height:auto; }
@@ -2339,19 +2365,48 @@ input[type="text"].ui-autocomplete-input:-ms-input-placeholder { color:black; }
   .agent-row .agent-footer { text-align:center; }
   .agent-row .agent-footer .button { float:none; margin-top:15px; }
 
-.space_button{
-  margin: 10px;
-}
-#input-code-mobile{
-	color: black;
-}
-.property-gallery img {
-	max-width: 100%;
-	height: auto !important;
-	margin: 0 auto;
-}
+	.space_button{
+		margin: 10px;
+	}
+	#input-code-mobile{
+		color: black;
+	}
+	.property-gallery img {
+		max-width: 100%;
+		height: auto !important;
+		margin: 0 auto;
+	}
 }
 
+.saiba-mais{
+	padding: 7px;
+    margin: 5px;
+    border-radius: 3px;
+    background: #408dc1;
+    color: #fff;
+}
+
+.saiba-mais:hover{
+	padding: 7px;
+    margin: 5px;
+    border-radius: 3px;
+    background: #002266;
+    color: #fff;
+}
+.carousel-control-home {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+    background-color: rgba(0,0,0,0);
+    filter: alpha(opacity=50);
+    opacity: .0;
+}
 @media only screen and (max-width: 480px) {
   /** PROPERTIES **/
   .property-count { display:block; float:none; width:100%; margin-bottom:20px; }
@@ -2394,6 +2449,45 @@ input[type="text"].ui-autocomplete-input:-ms-input-placeholder { color:black; }
 		height: auto !important;
 		margin: 0 auto;
 	}
+	
 
-
+}
+@media only screen and (max-width: 375px) {
+	.blog-post-date { 
+		position:absolute; 
+		background:url(../img/site/hexagon.png) no-repeat;
+		line-height:1.1; 
+		bottom:-21px;
+		padding-top:7px; 
+		left: 35%; 
+		font-size:12px; 
+		width:90px;
+		text-align:center;
+	}
+}
+@media only screen and (max-width: 360px) {
+	.blog-post-date { 
+		position:absolute; 
+		background:url(../img/site/hexagon.png) no-repeat;
+		line-height:1.1; 
+		bottom:-21px;
+		padding-top:7px; 
+		left: 34%; 
+		font-size:12px; 
+		width:90px;
+		text-align:center;
+	}
+}
+@media only screen and (max-width: 320px) {
+	.blog-post-date { 
+		position:absolute; 
+		background:url(../img/site/hexagon.png) no-repeat;
+		line-height:1.1; 
+		bottom:-21px;
+		padding-top:7px; 
+		left: 32%; 
+		font-size:12px; 
+		width:90px;
+		text-align:center;
+	}
 }

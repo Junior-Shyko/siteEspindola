@@ -110,129 +110,170 @@
             <div class="container">
                 <div class="row grid-blog" style="position: relative; height: 1575px;">
                     <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
+                        <div class="blog-post service-post-creative shadow-hover">
+                            <a href="#" class="service-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker">
+                                <div class="img-overlay">
                                     <i class="fa fa-file-text"></i>
-                                 </div>
+                                </div>
+                                <div class="blog-post-date white-date"><span>10</span>FEB</div>
                                 <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Extrato de Repasse">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center">
-                                    <a href="#" target="_blank">Extrato de Repasse</a></h3>
+                                <h3 class="text-center">Extrato de Repasse</h3>
                                 <p class="text-center">
-                                    Cadastre-se aqui para receber seu extrato via e-mail ou solicite sua 2ª via...  
+                                    Entre em contato conosco para receber seu extrato via e-mail ou solicite sua 2ª via.
                                 </p>
+                                <div class="form-block text-center">
+                                    <p>
+                                        <a href="https://espindolaimobil.superlogica.net/clients/areadofornecedor" class="saiba-mais" target="_blank">
+                                            Acessar Repasse
+                                        </a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                            <div class="blog-post blog-post-creative shadow-hover">
-                                <a href="#" class="blog-post-img">
+                            <div class="blog-post service-post-creative shadow-hover">
+                                <a href="#" class="service-post-img">
                                     <div class="img-fade"></div>
-                                    <div class="img-overlay  blacker">
+                                    <div class="img-overlay">
                                         <i class="fa fa-key"></i>
-                                     </div>
+                                    </div>
+                                    <div class="blog-post-date white-date"><span>10</span>FEB</div>
                                     <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Reserva de chaves">
                                 </a>
                                 <div class="content blog-post-content content_fixed">
-                                    <h3 class="text-center"><a href="#">
-                                        Reserva de chaves</a></h3>
+                                    <h3 class="text-center">Reserva de chaves</h3>
                                     <p class="text-center">
                                         Reserve as chaves para visitar o imóvel escolhido.
                                     </p>
-                                    
-                                      
+                                    <div class="form-block text-center">
+                                        <p>
+                                            <a href="https://api.whatsapp.com/send?phone=5585988101166&text=Ol%C3%A1,%20eu%20estou%20com%20uma%20d%C3%BAvida,%20poderia%20me%20ajudar?" class="saiba-mais" target="_blank">
+                                                Reservar pelo Whatsapp
+                                            </a>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
+                        <div class="blog-post service-post-creative shadow-hover">
+                            <a href="#" class="service-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker">
+                                <div class="img-overlay">
                                     <i class="fa fa-share-square"></i>
-                                 </div>
+                                </div>
+                                <div class="blog-post-date white-date"><span>10</span>FEB</div>
                                 <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Delivery">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="#">Delivery</a></h3>
+                                <h3 class="text-center">Delivery</h3>
                                 <p class="text-center">
                                     Agende sua visita que nós levamos a chave para você!
                                 </p>
+                                <div class="form-block text-center">
+                                    <p>
+                                        <a href="https://api.whatsapp.com/send?phone=5585988101166&text=Ol%C3%A1,%20eu%20estou%20com%20uma%20d%C3%BAvida,%20poderia%20me%20ajudar?" class="saiba-mais" target="_blank">
+                                            Agendar
+                                        </a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;" style="height:194px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
+                        <div class="blog-post service-post-creative shadow-hover">
+                            <a href="#" class="service-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker">
+                                <div class="img-overlay">
                                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                 </div>
+                                </div>
+                                <div class="blog-post-date white-date"><span>10</span>FEB</div>
                                 <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Proposta para locação">
                             </a>
                             <div class="content blog-post-content content_fixed">
                                 <h3 class="text-center">
-                                    <a href="http://espindolaimobiliaria.com.br/escolhaazul/" target="_blank">
-                                        Proposta para locação</a></h3>
+                                        Proposta para locação
+                                </h3>
                                 <p class="text-center">
                                     Gostou de algum imóvel? Faça sua proposta aqui...
                                 </p>
+                                <div class="form-block text-center">
+                                    <p>
+                                        <a href="http://espindolaimobiliaria.com.br/escolhaazul/" class="saiba-mais" target="_blank">
+                                            Fazer proposta
+                                        </a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
+                        <div class="blog-post service-post-creative shadow-hover">
+                            <a href="#" class="service-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker">
+                                <div class="img-overlay">
                                     <i class="fa fa-file-text-o" aria-hidden="true"></i>
-                                 </div>
+                                </div>
+                                <div class="blog-post-date white-date"><span>10</span>FEB</div>
                                 <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Boleto do Aluguel">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center">
-                                    <a href="https://espindolaimobil.superlogica.net/clients/areadocliente" 
-                                     target="_blank">Boleto do Aluguel</a></h3>
+                                <h3 class="text-center">Boleto do Aluguel</h3>
                                 <p class="text-center">
-                                        Caso não tenha recebido seu boleto, solicite sua 2ª via aqui.
+                                    Caso não tenha recebido seu boleto, solicite sua 2ª via aqui.
                                 </p>
+                                <div class="form-block text-center">
+                                    <p>
+                                        <a href="https://espindolaimobil.superlogica.net/clients/areadocliente/" class="saiba-mais" target="_blank">
+                                            2ª via de boleto
+                                        </a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
+                        <div class="blog-post service-post-creative shadow-hover">
+                            <a href="#" class="service-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker">
+                                <div class="img-overlay">
                                     <i class="fa fa-file-o" aria-hidden="true"></i>
                                  </div>
-                                <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="IPTU 2020">
+                                 <div class="blog-post-date white-date"><span>10</span>FEB</div>
+                                <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="IPTU 2021">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="https://www.sefin.fortaleza.ce.gov.br/iptu" target="_blank">
-                                        IPTU 2020</a></h3>
+                                <h3 class="text-center">IPTU 2021</h3>
                                 <p class="text-center">
-                                        Acompanhe aqui as regras e procedimentos para 2019.
+                                    Acompanhe aqui as regras e procedimentos para 2021.
                                 </p>
+                                <div class="form-block text-center">
+                                    <p>
+                                        <a href="https://www.sefin.fortaleza.ce.gov.br/iptu/" class="saiba-mais" target="_blank">
+                                            Iptu 2021
+                                        </a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
+                        <div class="blog-post service-post-creative shadow-hover">
+                            <a href="#" class="service-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker">
+                                <div class="img-overlay">
                                     <i class="fa fa-handshake-o" aria-hidden="true"></i>
                                  </div>
+                                 <div class="blog-post-date white-date"><span>10</span>FEB</div>
                                  <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Indique um amigo">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center"><a href="https://www.espindola.imb.br/indique-um-amigo">
-                                        Indique um amigo</a></h3>
+                                <h3 class="text-center">Indique um amigo</h3>
                                 <p class="text-center">
                                     Preparamos neste ano uma promoção especial para você cliente. Confira! 
                                 </p>
@@ -240,35 +281,42 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                        <div class="blog-post blog-post-creative shadow-hover">
-                            <a href="#" class="blog-post-img">
+                        <div class="blog-post service-post-creative shadow-hover">
+                            <a href="#" class="service-post-img">
                                 <div class="img-fade"></div>
-                                <div class="img-overlay  blacker">
+                                <div class="img-overlay">
                                     <i class="fa fa-building-o" aria-hidden="true"></i>
                                  </div>
+                                 <div class="blog-post-date white-date"><span>10</span>FEB</div>
                                  <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Indique um amigo">
                             </a>
                             <div class="content blog-post-content content_fixed">
-                                <h3 class="text-center">
-                                    <a href="https://www.espindola.imb.br/inspeo-predial">Inspeção Predial</a></h3>
+                                <h3 class="text-center">Inspeção Predial</h3>
                                 <p class="text-center">
-                                        Acesse aqui para saber mais sobre a lei de inspeção predial da cidade de Fortaleza.
+                                    Acesse aqui para saber mais sobre a lei de inspeção predial da cidade de Fortaleza.
                                 </p>
-                                
+                                <div class="form-block text-center">
+                                    <p>
+                                        <a href="https://portal.seuma.fortaleza.ce.gov.br/fortalezaonline/portal/listaservicos.jsf?hash=inspecoes_prediais/" target="_blank">
+                                            Acessar
+                                        </a>
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4" style="position: absolute; left: 0px; top: 0px;">
-                            <div class="blog-post blog-post-creative shadow-hover">
-                                <a href="#" class="blog-post-img">
+                            <div class="blog-post service-post-creative shadow-hover">
+                                <a href="#" class="service-post-img">
                                     <div class="img-fade"></div>
-                                    <div class="img-overlay  blacker">
+                                    <div class="img-overlay">
                                     <i class="fa fa-wrench" aria-hidden="true"></i>
                                  </div>
+                                 <div class="blog-post-date white-date"><span>10</span>FEB</div>
                                  <img src="{{'https://i.imgur.com/UHIWiz2.jpg'}}" alt="Indique um amigo">
                                 </a>
                                 <div class="content blog-post-content content_fixed">
-                                    <h3 class="text-center"><a href="#">Reformas e Reparos </a></h3>
+                                    <h3 class="text-center">Reformas e Reparos</h3>
                                     <p class="text-center">
                                         Com o intuito de agilizar o processo de locaçao, adiministramos pequenas reformas e reparos.
                                     </p>
