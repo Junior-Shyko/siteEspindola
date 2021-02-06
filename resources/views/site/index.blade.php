@@ -139,9 +139,9 @@
   <section class="module testimonials">
     <div class="container">
       <div class="module-header">
-        <h2>Our <strong>Testimonials</strong></h2>
+        <h2>Nossa <strong>Parceria</strong></h2>
         <img src="images/divider-white.png" alt="">
-        <p>Morbi accumsan ipsum velit nam nec tellus a odiose tincidunt auctor a ornare odio sed non mauris vitae erat consequat auctor</p>
+        <p>Conheça a história de amigos inquilinos e proprietários que já estão conosco ao longo do tempo.</p>
       </div>
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
         <!-- Indicators
