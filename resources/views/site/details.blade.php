@@ -88,15 +88,9 @@
                             <div class="property-tag button status">
                                 {{ $info }}
                             </div>
-                            @if ($id_agency == 1)
                             <div class="property-tag button alt featured">
                                 Agência Aldeota
                             </div>
-                            @else
-                            <div class="property-tag button alt featured">
-                                Agência Fátima
-                            </div>
-                            @endif
                             <div class="property-type right">Finalidade: <a href="#">{{ $immobile->immobiles_finality }}</a></div>
                         </div>
                     </div>
