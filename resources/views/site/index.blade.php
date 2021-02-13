@@ -67,7 +67,7 @@
             Busca por Código </a>
             {{ Form::open(['url' => 'searchCode', 'method' => 'GET']) }}
             <input type="text" name="immobiles_code" class="select-form" id="input-code-mobile" style="width: 82.5% !important; color:black !important;" placeholder='Digite o código. (Ex: CA0001,CA0002)'>
-            <button type="submit" class="btn btn-success btn-buscar"> Buscar </button>                           
+            <button type="submit" class="btn btn-success btn-buscar"> Buscar </button>
             {{ Form::close() }}
          </div>
       </div>

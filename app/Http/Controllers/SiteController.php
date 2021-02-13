@@ -245,6 +245,7 @@ public function searchList(Request $request)
  */
 public function show($id)
 {
+    
     $immobile = Immobile::where('immobiles_code' , $id)->first();
     if(empty($immobile))
     {
@@ -369,8 +370,8 @@ public function notImmobiles()
 
 
     $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('img/site/logo.png')];
-
-    return view('site.empty' , compact('type' , 'district' , 'recents' , 'immobile' , 'page_title' , 'meta_site'));
+    $site = Site::all();
+    return view('site.empty' , compact('type' , 'district' , 'recents' , 'immobile' , 'page_title' , 'meta_site' , 'site'));
 }
 
 public function getIp()
