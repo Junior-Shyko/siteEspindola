@@ -223,7 +223,7 @@
                             <li><a href="#tabs-3"><i class="fa fa-key icon"></i>Reservar Chaves</a></li>
                             --}}
                             @if($immobile->immobiles_finality == 'Comercial' )
-                            <li><a href="#tabs-2"> Adequabilidade </a></li>
+                            {{-- <li><a href="#tabs-2"> Adequabilidade </a></li> --}}
                             @endif
                         </ul>
                         <div id="tabs-1" class="ui-tabs-hide">
@@ -498,7 +498,7 @@
                             <div class="agent-details">
                                 <h4><a href="#">{{$realtor->realtor_name}}</a></h4>
                                 <p><i class="fa fa-envelope icon"></i>{{$realtor->realtor_email}}</p>
-                                <p><i class="fa fa-phone icon"></i>{{$realtor->	realtor_fixo}}</p>
+                                <p><i class="fa fa-phone icon"></i>{{$realtor->realtor_fixo}}</p>
                                 <p><i class="fa fa-whatsapp icon"></i>{{$realtor->realtor_mobile}}</p>
                             </div>
                         </div>

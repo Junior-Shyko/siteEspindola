@@ -154,9 +154,9 @@
         <div class="testimonial">
           <div class="carousel-inner" role="listbox">
             <div class="item active">
-              <h3>"Pontualidade seriedade onestidade  credibilidade tudo que e dade"</h3>
+              <h3>"Pontualidade, seriedade, honestidade e credibilidade em tudo que faz."</h3>
               <div class="testimonial-details">
-                <img class="testimonial-img" src="https://scontent-for1-1.xx.fbcdn.net/v/t1.0-1/p200x200/1469836_1391486527821579_3020469505130490578_n.jpg?_nc_cat=105&ccb=2&_nc_sid=7206a8&_nc_eui2=AeGDrnke4TJMCMaDj96JPon6cZ8xgsaqLwVxnzGCxqovBZ2Q4BeQqhe8rndCvQ28YyNlTGX-NI1olWb6oK8F6sFk&_nc_ohc=ngKMP23y_kwAX-kwBui&_nc_ht=scontent-for1-1.xx&tp=6&oh=38abd692cd5103b13ede7ec7b9163b95&oe=60464DB2" alt="">
+                <img class="testimonial-img" src="{{url('public/img/site/depoiments/Haroldo_Freimanis.jpg')}}" alt="Haroldo Freimanis">
                 <p class="testimonial-name"><strong>Haroldo Freimanis</strong></p>
                 {{-- <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="0">Rype Creative</a></em></span> --}}
               </div>
@@ -164,7 +164,7 @@
             <div class="item">
               <h3>"Empresa Parceira de Nosso projeto de Futsal . Venham conhecer essa imobiliaria de muito Sucesso."</h3>
               <div class="testimonial-details">
-                <img class="testimonial-img" src="https://scontent-for1-1.xx.fbcdn.net/v/t1.0-1/p200x200/144013520_3489870001125006_1639300381676406809_o.jpg?_nc_cat=110&ccb=2&_nc_sid=7206a8&_nc_eui2=AeHMQa1A8xG0vLwnh5LoSesbo3tl3PBIvHmje2Xc8Ei8eblILNm6pEvZG-ljpEyYWBU1FxDzrgsTzqpZtXaXqe90&_nc_ohc=4jvgGLxPOzMAX_AM1en&_nc_ht=scontent-for1-1.xx&tp=6&oh=5724931dd6bbf1cd451de9e196d77fb0&oe=6044D9FB" alt="">
+                <img class="testimonial-img" src="{{url('public/img/site/depoiments/Daniel_Alencar.jpg')}}" alt="Daniel Alencar">
                 <p class="testimonial-name"><strong>Daniel Alencar</strong></p>
                 {{-- <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="0">Rype Creative</a></em></span> --}}
               </div>
@@ -172,7 +172,7 @@
             <div class="item">
               <h3>"Qualidade, simpatia e muita cordialidade no atendimento, com ferramentas que otimizam o tempo do cliente, e acima de tudo preços de compra e venda muito competitivos"</h3>
               <div class="testimonial-details">
-                <img class="testimonial-img" src="https://scontent-for1-1.cdninstagram.com/v/t51.2885-19/s150x150/33229042_174358090071102_8619407894535733248_n.jpg?_nc_ht=scontent-for1-1.cdninstagram.com&_nc_ohc=NSVdl19XN-gAX_5wPsw&tp=1&oh=cf51f3e901e7179b8179ba1f8448c74e&oe=604797C2" alt="">
+                <img class="testimonial-img" src="{{url('public/img/site/depoiments/cirodecastro.png')}}" alt="Ciro de Castro">
                 <p class="testimonial-name"><strong>Ciro de Castro</strong></p>
                 {{-- <span class="testiomnial-title"><em>CEO at <a href="#" tabindex="0">Rype Creative</a></em></span> --}}
               </div>
@@ -193,6 +193,22 @@
       </div>
     </div>
   </section>
+  <!-- Modal -->
+<div class="modal fade" id="myMarketingEspindola" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      <div class="modal-body">
+        <img src="{{url('public/img/site/mark/semfiadorsemcaucao.jpg')}}" alt="marketing" style="width: 100%;">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection
 @section('footer')
 @include('site.footer')

@@ -57,4 +57,5 @@ Route::get('equipe', 'SiteController@team');
 Route::get('cliente', 'SiteController@client');
 Route::get('contato' , 'SiteController@contact');
 Route::get('sincronismo' , 'SiteController@synchronize');
+Route::get('politica-privacidade', 'SiteController@policy');
 

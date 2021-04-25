@@ -45,8 +45,8 @@ $(function () {
 
 $(document).ready(function () {
     
-    //modal de contato
-    //$("#modal_reserve_key").modal('show');
+    //Abrindo modal de propaganda na home
+    $("#myMarketingEspindola").modal('show');
     $("#btn_send_contact").html('Enviar Mensagem');
     $("#img-load").hide();
     $("#inputShared").hide();
