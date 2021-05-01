@@ -345,14 +345,14 @@ class Immobile extends Model
                 //  echo $br;
                 //  echo "foto do corretor: ".$dataCorretor->foto;
                 //  echo $br;
-                //  DB::table('realtor')->insert([
-                //     'realtor_name' => $dataCorretor->nome,
-                //     'realtor_fixo' => $dataCorretor->telefone,
-                //     'realtor_mobile' => $dataCorretor->celular,
-                //     'realtor_email' => $dataCorretor->email,
-                //     'realtor_photo' => $dataCorretor->foto,
-                //     'realtor_code_imobile' => $value->CodigoImovel
-                //  ]);
+                 DB::table('realtor')->insert([
+                    'realtor_name' => $dataCorretor->nome,
+                    'realtor_fixo' => $dataCorretor->telefone,
+                    'realtor_mobile' => $dataCorretor->celular,
+                    'realtor_email' => $dataCorretor->email,
+                    'realtor_photo' => $dataCorretor->foto,
+                    'realtor_code_imobile' => $value->CodigoImovel
+                 ]);
             }
             //$dt = Carbon::createFromFormat('Y-m-d H:i:s', $value->DataCadastro);
             // echo "Codigo: ".$value->CodigoImovel." | Bairro: ".$value->Bairro. " | Finalizade: ".$value->Finalidade." para ".$value->TipoLocacao;

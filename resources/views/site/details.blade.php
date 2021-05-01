@@ -491,7 +491,12 @@
                     <div class="agent">
                         <a href="#" class="agent-img">
                             <div class="img-fade"></div>
+                            @if (empty($realtor->realtor_photo))
+                                <img src="{{url('img/site/user-avatar-rector.png')}}" alt="">
+                            @else 
                             <img src="{{$realtor->realtor_photo}}" alt="" />
+                            @endif
+                            
                             <div class="button alt agent-tag">Espíndola Imobiliária</div>
                         </a>
                         <div class="agent-content">
