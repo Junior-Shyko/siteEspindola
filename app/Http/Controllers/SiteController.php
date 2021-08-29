@@ -489,8 +489,8 @@ public function immobileAdvanced(Request $request)
 
     $meta_site = ['url' => url('/') , 'title' => "Aluguel e Vendas | Espindola imobiliária" , 'type' => 'website' , 'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 'image' => url('img/site/logo.png')];
     $info_total_immobile = count($immobile);     
-
-    return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' ));
+    $site = Site::all();
+    return view('site.list' , compact('immobile' , 'rental_type' , 'offer_type' , 'info_total_immobile' , 'page_title' , 'meta_site' , 'site'));
 
     
 }
