@@ -677,4 +677,15 @@ public function allType($type)
         $site = Site::all();
         return view('site.pages.policy' , compact( 'meta_site' , 'page_title', 'site'));
     }
+
+    public function friend() {
+        $meta_site = ['url' => url('/') , 
+            'title' => "Aluguel e Vendas | Espindola imobiliária" , 
+            'type' => 'website' , 
+            'description' => 'Espindola imobiliaria - Imobiliária, Casas, Apartamentos, Terrenos, Compra, Venda, Locação de Imóveis , Fortaleza, CE' , 
+            'image' => url('img/site/logo.png')];
+        $page_title = "Politica e privacidade | ";
+        $site = Site::all();
+        return view('site.pages.indicate_friend' , compact( 'meta_site' , 'page_title', 'site'));
+    }
 }

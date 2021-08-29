@@ -708,6 +708,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	position:relative;
  	z-index:1;
  }
+ .subheader_friend {
+	background:#787c8a url(../img/site/friend2.jpg) no-repeat center;
+	background-size:cover;
+	color:white;
+	padding-top:160px;
+	padding-bottom:40px;
+	letter-spacing:0.5px;
+	position:relative;
+	z-index:1;
+}
+.subheader_friend h1 {
+	margin-bottom:0px;
+	font-weight:700;
+	font-size:40px;
+	color:white;
+	float:left;
+}
+
  .subheader h1 {
  	margin-bottom:0px;
  	font-weight:700;

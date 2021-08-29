@@ -50,7 +50,7 @@ Route::get('calculos-imobiliarios' , 'CalculationController@index');
 Route::get('/pagenotfound', 'HomeController@padenotfound');
 /** SINCRONIZAR */
 Route::get('sync' , 'SiteController@sync');
-
+/** PÁGINAS DO SITE */
 Route::get('espindola', 'SiteController@espindola');
 Route::get('servicos', 'SiteController@services');
 Route::get('equipe', 'SiteController@team');
@@ -58,4 +58,5 @@ Route::get('cliente', 'SiteController@client');
 Route::get('contato' , 'SiteController@contact');
 Route::get('sincronismo' , 'SiteController@synchronize');
 Route::get('politica-privacidade', 'SiteController@policy');
+Route::get('indique-amigo', 'SiteController@friend');
 
