@@ -84,9 +84,9 @@
         <div class="main-menu-wrap">
           <div class="container-fixed">
 
-            {{-- <div class="member-actions right">
-              <a href="http://www.alugaemfortaleza.com/cadastro-imovel.aspx" target="_blank" class="button small alt button-icon"><i class="fa fa-plus"></i>Anuncie seu imóvel</a>
-            </div> --}}
+            <div class="member-actions right">
+              <a href="whatsapp://send?text=Gostaria de anunciar o meu imóvel" target="_blank" data-action="share/whatsapp/share"  class="button small alt button-icon"><i class="fa fa-plus"></i>Anuncie seu imóvel</a>
+            </div>
             <ul class="nav navbar-nav right">
 
               <li><a href="{{'/'}}">Home</a></li>
