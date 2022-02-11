@@ -27,12 +27,18 @@ class Immobile extends Model
 
     static public function getPhotoFeatured($code)
     {
+        $feature = '';
     	$photo_featured = DB::table('photo_immobiles')->where([
     							['photo_immobiles_code_immobile' , '=', $code],
     							['photo_immobiles_principal' , '=' ,  1]
     						])->first();
-
-    	return $photo_featured->photo_immobiles_url;
+                           
+            if(count((array)$photo_featured) > 1) {
+                $feature = $photo_featured->photo_immobiles_url;
+            }else{
+                $feature = $code;
+            }
+    	return $feature;
     }
 
     static public function getRealtor($code)
