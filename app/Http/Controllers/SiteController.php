@@ -504,11 +504,7 @@ public function sendContact(Request $request)
     $date_send = Carbon::now('America/Fortaleza');
     $date = Carbon::parse($date_send, 'UTC');
     $date = $date->format('d \d\e F \d\e Y H:m');
-    if($request->id_agency == 1){
-        $agency = "Ag. Aldeota";
-    }else{
-        $agency = "Ag. Fátima";
-    }
+    $agency = "Ag. Aldeota";
     $mail = \Mail::to('meajuda@espindolaimobiliaria.com.br')->send(new ContactMail($immobile, $contact, $date, $agency ));
    
     if($mail)
