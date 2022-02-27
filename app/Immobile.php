@@ -27,6 +27,7 @@ class Immobile extends Model
 
     static public function getPhotoFeatured($code)
     {
+        //adicionar condição em casos de não ter a foto de destaque
         $feature = '';
     	$photo_featured = DB::table('photo_immobiles')->where([
     							['photo_immobiles_code_immobile' , '=', $code],

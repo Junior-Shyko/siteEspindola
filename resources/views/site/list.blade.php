@@ -87,8 +87,16 @@
 						</div>
 
 						<div class="property-color-bar"></div>
-
-							<img src="{{SiteEspindola\Immobile::getPhotoFeatured($immobiles->immobiles_code) }}" alt="" 
+							@php
+								$img = SiteEspindola\Immobile::getPhotoFeatured($immobiles->immobiles_code);
+								$src = '';
+								if($img == ''){
+									echo $immobiles->immobiles_code;
+								}else{
+									$src = $img;
+								}
+							@endphp
+							<img src="{{$src}}" alt="" 
 							class="img-responsive img_property"  />
 						</a>
 
