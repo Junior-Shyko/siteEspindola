@@ -45,7 +45,6 @@ static protected $geoip;
 */
 public function index()
 {
-
     if(!isset($_SERVER['HTTP_REFERER']))
     {
         $refer = url('/');
