@@ -73,11 +73,13 @@
    </head>
    <body>
       @section('sidebar')
+      @include('cookieConsent::index')
       @include('layouts.header_site')
       @show
       @yield('content')
       @yield('footer')
       <div id="fb-root"></div>
+      
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v8.0&appId=1504290103179579&autoLogAppEvents=1" nonce="1PVcfdUf"></script>
    </body>
    <script>

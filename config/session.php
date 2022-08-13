@@ -148,7 +148,7 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN', null),
+    'domain' => env('https://espindolaimobiliaria.com.br/'),
 
     /*
     |--------------------------------------------------------------------------

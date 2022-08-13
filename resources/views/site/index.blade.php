@@ -211,7 +211,7 @@
 </div>
 @endsection
 
-@include('cookieConsent::index')
+{{-- @include('cookieConsent::index') --}}
 @section('footer')
 @include('site.footer')
 @endsection

@@ -15,10 +15,12 @@
     }
 </style>
 {{--  --}}
+
 <div class="js-cookie-consent cookie-consent">
 
     <span class="cookie-consent__message">
-        Usamos cookies para personalizar conteúdos e melhorar a sua experiência. Ao navegar neste site, você concorda com a nossa Política de Cookies.
+        Usamos cookies para personalizar conteúdos e melhorar a sua experiência. 
+        Ao navegar neste site, você concorda com a nossa Política de Cookies.
     </span>
 
     <button class="js-cookie-consent-agree cookie-consent__agree">
