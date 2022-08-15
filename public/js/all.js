@@ -14,7 +14,7 @@ $(function () {
         //seleciona todo o texto do elemento
         inputTest.select();
         //executa o comando copy
-        //aqui é feito o ato de copiar para a area de trabalho com base na seleção
+        //aqui Ã© feito o ato de copiar para a area de trabalho com base na seleÃ§Ã£o
         document.execCommand('copy');
         $("#inputShared").hide();
     });
@@ -35,7 +35,7 @@ $(function () {
 
     $("#selectDistrictForm").select2();
     $(".typefilteradvanced").chosen({
-        no_results_text: "Oops, Não foi encontrado!",
+        no_results_text: "Oops, NÃ£o foi encontrado!",
         
     });
     $(".cityfilteradvanced").chosen();
@@ -45,8 +45,8 @@ $(function () {
 
 $(document).ready(function () {
     
-    //modal de contato
-    //$("#modal_reserve_key").modal('show');
+    //Abrindo modal de propaganda na home
+    //$("#myMarketingEspindola").modal('show');
     $("#btn_send_contact").html('Enviar Mensagem');
     $("#img-load").hide();
     $("#inputShared").hide();
@@ -92,7 +92,7 @@ $(document).ready(function () {
         to: 1200
 
     });
-    //OCUTANDO DIV DE BUSCA AVANÇADA  
+    //OCUTANDO DIV DE BUSCA AVANÃ‡ADA  
     $("#filterAdvancedImmobile").hide();
     $("#code-mobile").hide();
     all_district = [];
@@ -169,7 +169,7 @@ $(document).ready(function () {
         nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
         search: true,
         searchText: 'Escolha o Tipo',
-        placeholder: 'Qual o Imóvel?',
+        placeholder: 'Qual o ImÃ³vel?',
         captionFormat: '{0} selecionado',
         noMatch: 'Nada encontrado "{0}"',
         locale: ['OK', 'Cancelar']
@@ -178,7 +178,7 @@ $(document).ready(function () {
         nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
         search: true,
         searchText: 'Escolha o Tipo',
-        placeholder: 'Qual o Imóvel?',
+        placeholder: 'Qual o ImÃ³vel?',
         captionFormat: '{0} selecionado',
         noMatch: 'Nada encontrado "{0}"',
         locale: ['OK', 'Cancelar']
@@ -187,21 +187,21 @@ $(document).ready(function () {
         nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
         search: true,
         searchText: 'Escolha o Tipo',
-        placeholder: 'Tipo do Imóvel',
+        placeholder: 'Tipo do ImÃ³vel',
         captionFormat: '{0} selecionado'
     });
     $("#type-immobile-all").SumoSelect({
         nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
         search: true,
         searchText: 'Escolha o Tipo',
-        placeholder: 'Qual o Imóvel?',
+        placeholder: 'Qual o ImÃ³vel?',
         captionFormat: '{0} selecionado'
     });
     $("#district-all").SumoSelect({
         nativeOnDevice: ['Android', 'BlackBerry', 'iPhone', 'iPad', 'iPod', 'Opera Mini', 'IEMobile', 'Silk'],
         search: true,
         searchText: 'Escolha o Tipo',
-        placeholder: 'Tipo do Imóvel',
+        placeholder: 'Tipo do ImÃ³vel',
         captionFormat: '{0} selecionado'
     });
     $("#city_index").SumoSelect({
@@ -230,7 +230,7 @@ $(document).ready(function () {
         }
     });
 
-    /*DIV DE FILTRO AVANÇADO*/
+    /*DIV DE FILTRO AVANÃ‡ADO*/
     // $(".typefilteradvanced").SumoSelect({
     //     search: true,
     //     searchText: 'Escolha ou pesquise',
@@ -287,9 +287,9 @@ $(document).ready(function () {
         // $(".typefilteradvanced")[0].sumo.enableItem(1);
         // $(".typefilteradvanced")[0].sumo.enableItem(2);
     }
-    //SELECIONANDO A OPÇÃO PARA DESABILITAR OUTROS ITENS
+    //SELECIONANDO A OPÃ‡ÃƒO PARA DESABILITAR OUTROS ITENS
     // $(".typefilteradvanced").change(function (event) {
-    //     //FORÇANDO A SELEÇÃO
+    //     //FORÃ‡ANDO A SELEÃ‡ÃƒO
     //     $(".typefilteradvanced")[0].sumo.selectItem($(".typefilteradvanced").val());
     //     //DESABILITANDO EM CASO DE ESCOLHER TERRENO OU SALA
     //     if ($(".typefilteradvanced").val() == "Terreno" || $(".typefilteradvanced").val() == "Sala") {
@@ -331,27 +331,6 @@ $(document).ready(function () {
         });
     });
 
-    $.ajax({
-        url: domain_complet + 'search-key/' + code_immobile,
-        type: 'GET',
-        dataType: 'JSON',
-        success: function success(data) {
-            //console.log('Numero da chave: ' + data.agency);
-            $("#code_key_reserve").html('Código da Chave: <b>' + data.keys_code + '<b/>');
-            $("#agency_key_reserve").html('Agência: <b>' + data.agency + '<b/>');
-            $("#address_key_reserve").html('Endreço: <b>' + data.address + '<b/>');
-            $("#keys_cod_immobile_reserve").val(data.keys_cod_immobile);
-            $("#keys_code_reserve").val(data.keys_code);
-            $("#agency_reserve").val(data.agency);
-        }
-    }).done(function () {
-        console.log("success");
-    }).fail(function () {
-        console.log("error");
-    }).always(function () {
-        console.log("complete");
-    });
-
     $(".form_datetime").datetimepicker({
         format: 'dd/mm/yyyy hh:ii',
         autoclose: true,
@@ -364,8 +343,8 @@ $(function () {
     //$('[data-toggle="popover"]').popover();
     $('#read_services_juri').popover({
         trigger: 'click',
-        content: '<p>O Departamento Jurídico da <b>Espíndola Imobiliária </b> é o escritório de advocacia <a href="https://www.itamarespindola.adv.br/" target="_blank">Itamar Espíndola Advogados</a> Associados, empresa do mesmo grupo,' 
-        +'que dispõe de uma equipe própria de advogados especialistas em Direito Imobiliário, garantindo maior segurança nas negociações.</p>',
+        content: '<p>O Departamento JurÃ­dico da <b>EspÃ­ndola ImobiliÃ¡ria </b> Ã© o escritÃ³rio de advocacia <a href="https://www.itamarespindola.adv.br/" target="_blank">Itamar EspÃ­ndola Advogados</a> Associados, empresa do mesmo grupo,' 
+        +'que dispÃµe de uma equipe prÃ³pria de advogados especialistas em Direito ImobiliÃ¡rio, garantindo maior seguranÃ§a nas negociaÃ§Ãµes.</p>',
         html: true
     });
     $('.read_services').popover({

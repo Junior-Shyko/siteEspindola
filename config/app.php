@@ -182,7 +182,8 @@ return [
         PulkitJalan\GeoIP\GeoIPServiceProvider::class,
         //
         Hocza\Sendy\SendyServiceProvider::class,
-
+        //PARA USO DOS COOKIES
+        Spatie\CookieConsent\CookieConsentServiceProvider::class,
     ],
 
     /*

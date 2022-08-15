@@ -1,16 +1,17 @@
 $(function() {
-    PNotify.prototype.options.styling = "bootstrap3";
     PNotify.prototype.options.styling = "fontawesome";
 
     $("#submitSearch").click(function(event) {
         if ($("#immobile-type-advanced").val() == "") {
             new PNotify({
-                title: 'Importante',
-                text: 'O Tipo deve ser preenchido',
-                type: 'error',
-                icon: 'fa fa-error',
+                title: 'Copiado',
+                text: 'Esse link foi copiado para sua área de transferencia.',
+                type: 'info',
+                icon: 'fa fa-info-circle',
                 styling: 'fontawesome',
-                animate_speed: 'fast'
+                animation: 'fade',
+                animate_speed: 'fast',
+                stack: {"dir1": "down", "dir2": "right", "push": "bottom", "modal": true, "overlay_close": true}
             });
             return false;
         }
@@ -346,32 +347,6 @@ $(document).ready(function() {
         });
         
     }); 
-
-
-
-    $.ajax({
-      url: domain_complet + 'search-key/' + code_immobile,
-      type: 'GET',
-      dataType: 'JSON',
-      success: function(data){
-         //console.log('Numero da chave: ' + data.agency);
-         $("#code_key_reserve").html('Código da Chave: <b>'+data.keys_code+'<b/>');
-         $("#agency_key_reserve").html('Agência: <b>'+data.agency+'<b/>');
-         $("#address_key_reserve").html('Endreço: <b>' + data.address+'<b/>'); 
-         $("#keys_cod_immobile_reserve").val(data.keys_cod_immobile); 
-         $("#keys_code_reserve").val(data.keys_code); 
-         $("#agency_reserve").val(data.agency);
-      }
-    })
-    .done(function() {
-       console.log("success");
-    })
-    .fail(function() {
-       console.log("error");
-    })
-    .always(function() {
-       console.log("complete");
-    });
 
     $(".form_datetime").datetimepicker({
            format: 'dd/mm/yyyy hh:ii',

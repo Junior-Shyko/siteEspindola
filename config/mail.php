@@ -83,7 +83,7 @@ return [
 
     'username' => 'contato@espindolaimobiliaria.com.br',
 
-    'password' => 'espindola!',
+    'password' => 'Dola@0812',
 
     /*
     |--------------------------------------------------------------------------

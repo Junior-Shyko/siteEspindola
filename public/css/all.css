@@ -708,6 +708,24 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	position:relative;
  	z-index:1;
  }
+ .subheader_friend {
+	background:#787c8a url(../img/site/friend2.jpg) no-repeat center;
+	background-size:cover;
+	color:white;
+	padding-top:160px;
+	padding-bottom:40px;
+	letter-spacing:0.5px;
+	position:relative;
+	z-index:1;
+}
+.subheader_friend h1 {
+	margin-bottom:0px;
+	font-weight:700;
+	font-size:40px;
+	color:white;
+	float:left;
+}
+
  .subheader h1 {
  	margin-bottom:0px;
  	font-weight:700;
@@ -741,7 +759,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  .subheader.simple-search {
  	text-align:center;
  	padding:200px 0px;
- 	background-image:url(../img/site/1920x950.png);
+ 	background-image:url(../img/site/family-new-home.png);
  }
  .subheader.simple-search h1 { float:none; font-size:48px; font-weight:700; }
  .subheader.simple-search p {
@@ -897,7 +915,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  /*====================================================================================*/
 /* 05 FILTER
 /*====================================================================================*/
-.filter { min-height:300px; background:#cbd8e3; padding-bottom:40px; }
+.filter { min-height:300px; background:#408DC1; padding-bottom:40px; }
 
 .filter-header { background:#48a0dc; }
 .filter .ui-tabs .ui-tabs-panel { padding:50px 0px 0px 0px; background:transparent; }
@@ -993,7 +1011,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .google-maps .filter .button { background:#323746; margin-bottom:5px; }
 .google-maps .filter .button:hover { background:white; color:#48a0dc; }
 
-
+.filter-white {
+	color: white;
+}
 /*====================================================================================*/
  /* PROPERTIES
  /*====================================================================================*/
@@ -1287,12 +1307,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  .property-gallery.full-width #slide5 { background:url(../images/1837x1206.png) center / cover no-repeat; }
  .property-gallery.full-width #slide6 { background:url(../images/1837x1206.png) center / cover no-repeat; }
  .property-gallery.full-width #slide7 { background:url(../images/1837x1206.png) center / cover no-repeat; }
-/* MUDANDO A COR DO ITEM ATIVO */
-.nav-tabs > li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-	color: #fff !important;
-    background: #5fc97e !important;;
-    margin: 1px !important;;
-}
+
  .additional-details-list {
  	columns:2; 
  	-webkit-columns:2; 
@@ -1567,7 +1582,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	line-height:1.1; 
  	bottom:-21px;
  	padding-top:7px; 
- 	left:30px; 
+ 	left: 37%; 
  	font-size:12px; 
  	width:90px;
  	text-align:center;
@@ -1765,7 +1780,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	z-index:10;
  }
 
- .services .service-item:hover .fa { background:#67b5ea; }
+ .services .service-item:hover .fa { background:#ffb400; }
 
  .services .service-item .fa {
  	width:110px;
@@ -1787,7 +1802,33 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  	color:#323746;
  	margin-bottom:20px;
  }
+.white-date {
+	color: #fff;
+}
+.service-post-img { position:relative; display:block; cursor: default; }
+ .service-post-date { 
+ 	position:absolute; 
+ 	background:url(../img/site/hexagon.png) no-repeat;
+ 	line-height:1.1; 
+ 	bottom:-21px;
+ 	padding-top:7px; 
+ 	left:30px; 
+ 	font-size:12px; 
+ 	width:90px;
+ 	text-align:center;
+ }
+ .service-post-date span { font-weight:bold; font-size:22px; display:block; }
+ .service-post-img .img-fade { opacity:0.7; }
+ .service-post-img img { max-width:100%; height:auto; }
 
+ .service-post-details { margin-bottom:20px; padding:10px 0px 15px 0px; border-bottom:1px solid rgba(0, 0, 0, 0.1);  }
+ .service-post-details li { margin-right:13px; font-weight:600; font-size:13px; color:#9eaab2; list-style:none !important; display:inline; }
+ .service-post-content { padding:5%; }
+ .service-post-content h3 a { font-weight:100; color:#3a464e; cursor: default;}
+ .service-post-content h3 a:hover { color:#ffb400; }
+
+ .service-post-creative { margin-bottom:30px; }
+ .service-post-creative h3 { font-size:23px; margin-top:15px; }
  /** TEAM (LEADERS) **/
  .team-member { margin-bottom:30px; }
  .team-member img { max-width:100%; height:auto; }
@@ -1920,6 +1961,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
  .slider-nav-testimonials .slider-prev:hover,
  .slider-nav-testimonials .slider-next:hover { background:white; color:#ffb400; }
 
+ /** A ESPÍNDOLA **/
+.contact-espindola {
+	background:#002266 url(../images/contact-bg.png) no-repeat bottom;
+ 	background-size:cover;
+}
+.about-espindola { background:white;}
  /** CONTACT **/
  .contact-details {
  	background:#48a0dc url(../images/contact-bg.png) no-repeat bottom;
@@ -2336,19 +2383,48 @@ input[type="text"].ui-autocomplete-input:-ms-input-placeholder { color:black; }
   .agent-row .agent-footer { text-align:center; }
   .agent-row .agent-footer .button { float:none; margin-top:15px; }
 
-.space_button{
-  margin: 10px;
-}
-#input-code-mobile{
-	color: black;
-}
-.property-gallery img {
-	max-width: 100%;
-	height: auto !important;
-	margin: 0 auto;
-}
+	.space_button{
+		margin: 10px;
+	}
+	#input-code-mobile{
+		color: black;
+	}
+	.property-gallery img {
+		max-width: 100%;
+		height: auto !important;
+		margin: 0 auto;
+	}
 }
 
+.saiba-mais{
+	padding: 7px;
+    margin: 5px;
+    border-radius: 3px;
+    background: #408dc1;
+    color: #fff;
+}
+
+.saiba-mais:hover{
+	padding: 7px;
+    margin: 5px;
+    border-radius: 3px;
+    background: #002266;
+    color: #fff;
+}
+.carousel-control-home {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15%;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 1px 2px rgb(0 0 0 / 60%);
+    background-color: rgba(0,0,0,0);
+    filter: alpha(opacity=50);
+    opacity: .0;
+}
 @media only screen and (max-width: 480px) {
   /** PROPERTIES **/
   .property-count { display:block; float:none; width:100%; margin-bottom:20px; }
@@ -2391,6 +2467,45 @@ input[type="text"].ui-autocomplete-input:-ms-input-placeholder { color:black; }
 		height: auto !important;
 		margin: 0 auto;
 	}
+	
 
-
+}
+@media only screen and (max-width: 375px) {
+	.blog-post-date { 
+		position:absolute; 
+		background:url(../img/site/hexagon.png) no-repeat;
+		line-height:1.1; 
+		bottom:-21px;
+		padding-top:7px; 
+		left: 35%; 
+		font-size:12px; 
+		width:90px;
+		text-align:center;
+	}
+}
+@media only screen and (max-width: 360px) {
+	.blog-post-date { 
+		position:absolute; 
+		background:url(../img/site/hexagon.png) no-repeat;
+		line-height:1.1; 
+		bottom:-21px;
+		padding-top:7px; 
+		left: 34%; 
+		font-size:12px; 
+		width:90px;
+		text-align:center;
+	}
+}
+@media only screen and (max-width: 320px) {
+	.blog-post-date { 
+		position:absolute; 
+		background:url(../img/site/hexagon.png) no-repeat;
+		line-height:1.1; 
+		bottom:-21px;
+		padding-top:7px; 
+		left: 32%; 
+		font-size:12px; 
+		width:90px;
+		text-align:center;
+	}
 }

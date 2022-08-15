@@ -114,8 +114,6 @@
 
 
 			<div class="col-lg-4 col-md-4 sidebar">
-				@include('site.searchadvanced')
-
 				@include('site.immobilerecents')
 			</div>
 			

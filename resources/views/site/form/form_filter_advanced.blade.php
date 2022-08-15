@@ -1,6 +1,6 @@
 
        <div class="form-group col-md-4 col-xs-12">
-         <label>Tipo</label>
+         <label class="filter-white">Tipo</label>
          <select name="immobiles_type_immobiles[]" class="form-control typefilteradvanced" multiple="multiple" 
          data-placeholder="Qual o tipo?">
            @foreach($type as $types)
@@ -9,7 +9,7 @@
          </select>
        </div>
         <div class="form-group col-md-4 col-xs-12">
-         <label>Cidade</label>
+         <label class="filter-white">Cidade</label>
          <select name="immobiles_city[]" class="form-control cityfilteradvanced" multiple="multiple" 
          data-placeholder="Qual a cidade?" >
            @foreach($city_all as $cities)
@@ -20,7 +20,7 @@
  
        <div class="form-group col-md-4 col-xs-12">
 
-         <label>Bairro</label>
+         <label class="filter-white">Bairro</label>
          
          <select name="immobiles_district[]" id="" multiple="multiple" class="form-control districtfilteradvanced"
          data-placeholder="Qual a bairro?">
@@ -30,7 +30,7 @@
          </select>
        </div>
        <div class="form-group col-md-1 col-xs-12">
-         <label>Dormitório</label>
+         <label class="filter-white">Dormitório</label>
          <select name="immobiles_qtd_dormitory" id="immobiles_qtd_dormitory" class="form-control">
             <option>1</option>
             <option>2</option>
@@ -41,7 +41,7 @@
        </div>       
 
       <div class="form-group col-md-2 col-xs-12">
-         <label>Garagem</label>
+         <label class="filter-white">Garagem</label>
          <select name="immobiles_qtd_uncovered_jobs" id="immobiles_qtd_uncovered_jobs" class="form-control">
             <option value="0">Quantas vagas?</option>
             <option value="1">1</option>
@@ -53,7 +53,7 @@
        </div>
        
         <div class="form-group col-md-3 col-xs-12">
-          <label for="">Tamanho desejado</label>
+          <label  class="filter-white">Tamanho desejado</label>
           <div class="input-group col-md-6 pull-left">
               <span class="input-group-addon" id="basic-addon2">Min.</span>
                <input type="number" name="area_min" class="form-control" placeholder="Área mínima" aria-describedby="basic-addon2">
@@ -67,7 +67,7 @@
          </div>
        
          <div class="form-group col-md-3 col-xs-12">
-            <label for="">Faixa de preço</label>
+            <label class="filter-white">Faixa de preço</label>
             <div class="input-group col-md-6 pull-left">
                 <span class="input-group-addon" id="basic-immobiles_rental_price1">R$ </span>
                  <input type="number" name="price_min" class="form-control" placeholder="Menor" aria-describedby="basic-immobiles_rental_price1">
