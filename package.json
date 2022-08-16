@@ -16,7 +16,10 @@
     "jquery": "^3.5.0",
     "laravel-mix": "^1.0",
     "lodash": "^4.17.19",
-    "vue": "^2.1.10"
+    "popper.js": "^1.12",
+    "sass-loader": "^9.0.2",
+    "vue": "^2.1.10",
+    "vue-loader": "^15.9.3"
   },
   "dependencies": {
     "jquery-datetimepicker": "^2.5.20"

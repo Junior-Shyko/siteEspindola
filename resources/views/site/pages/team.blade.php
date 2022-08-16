@@ -23,6 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12">
+                <team></team>
                 <!--
                     <div class="property-listing-header">
                         <span class="property-count left">8 agents found</span>
@@ -49,6 +50,10 @@
 </section>
 @push('scripts')
     <script src="/js/team.js"></script>
+    <script src="/js/manifest.js"></script>
+    <script src="/js/vendor.js"></script>
+    <script src="{{ mix('/js/team2.js') }}"></script>
+
 @endpush
 
 @include('site.footer')

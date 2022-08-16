@@ -71,12 +71,14 @@
       </script>
       <!-- End of espindola Zendesk Widget script -->
    </head>
-   <body id="app">
+   <body>
       @section('sidebar')
       @include('cookieConsent::index')
       @include('layouts.header_site')
       @show
-      @yield('content')
+      <div id="app">
+         @yield('content')
+      </div>
       @yield('footer')
       <div id="fb-root"></div>
       
@@ -91,6 +93,7 @@
 }, false);
    </script>
    <!-- JavaScript file links -->
+   <script src="{{asset('js/app.js')}}"></script>
    {{ Html::script('js/jquery-3.1.1.min.js') }}
    {{ Html::script('assets/jquery-ui/jquery-ui.min.js') }}
    {{ Html::script('js/bootstrap.min.js') }}

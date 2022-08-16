@@ -36,3 +36,8 @@ mix.styles([
 mix.js(
   	'resources/assets/js/site.js'
 	, 'public/js/site.js').extract(['vue']);
+
+mix.js(
+    'resources/assets/js/team2.js'
+    , 'public/js/team2.js');
+

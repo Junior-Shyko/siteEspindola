@@ -1,4 +1,7 @@
 {
+    "/js/vendor.js": "/js/vendor.js",
+    "/js/team2.js": "/js/team2.js",
     "/js/site.js": "/js/site.js",
+    "/js/manifest.js": "/js/manifest.js",
     "/css/site.css": "/css/site.css"
 }
