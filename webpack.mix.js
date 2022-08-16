@@ -30,9 +30,9 @@ mix.styles([
     'resources/assets/css/style.css',
     'resources/assets/css/responsive.css'
 
-], 'public/css/all.css');
+], 'public/css/site.css');
 
 //JS
 mix.js(
   	'resources/assets/js/site.js'
-	, 'public/js/all.js');
+	, 'public/js/site.js').extract(['vue']);

@@ -71,7 +71,7 @@
       </script>
       <!-- End of espindola Zendesk Widget script -->
    </head>
-   <body>
+   <body id="app">
       @section('sidebar')
       @include('cookieConsent::index')
       @include('layouts.header_site')
