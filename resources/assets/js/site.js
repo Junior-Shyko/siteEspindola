@@ -1,4 +1,5 @@
 $(function() {
+    PNotify.prototype.options.styling = "bootstrap3";
     PNotify.prototype.options.styling = "fontawesome";
 
     $("#submitSearch").click(function(event) {
@@ -125,7 +126,6 @@ $(document).ready(function() {
 
         minLength: 3,
         source: function(request, response) {
-            
             // delegate back to autocomplete, but extract the last term
             response($.ui.autocomplete.filter(
                 all_district, extractLast(request.term)));
@@ -347,6 +347,32 @@ $(document).ready(function() {
         });
         
     }); 
+
+
+
+    $.ajax({
+      url: domain_complet + 'search-key/' + code_immobile,
+      type: 'GET',
+      dataType: 'JSON',
+      success: function(data){
+         //console.log('Numero da chave: ' + data.agency);
+         $("#code_key_reserve").html('Código da Chave: <b>'+data.keys_code+'<b/>');
+         $("#agency_key_reserve").html('Agência: <b>'+data.agency+'<b/>');
+         $("#address_key_reserve").html('Endreço: <b>' + data.address+'<b/>'); 
+         $("#keys_cod_immobile_reserve").val(data.keys_cod_immobile); 
+         $("#keys_code_reserve").val(data.keys_code); 
+         $("#agency_reserve").val(data.agency);
+      }
+    })
+    .done(function() {
+       console.log("success");
+    })
+    .fail(function() {
+       console.log("error");
+    })
+    .always(function() {
+       console.log("complete");
+    });
 
     $(".form_datetime").datetimepicker({
            format: 'dd/mm/yyyy hh:ii',

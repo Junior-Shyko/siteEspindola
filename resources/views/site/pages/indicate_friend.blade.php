@@ -4,27 +4,27 @@
 @parent
 @endsection
 @section('content')
-<section class="subheader_friend">
-    <div class="container">
-        <h1>Indique um amigo</h1>
-        {{-- <div class="breadcrumb right">Home <i class="fa fa-angle-right"></i> <a href="#" class="current">A Espíndola</a></div> --}}
-        <div class="clear"></div>
-    </div>
-</section>
-<section class="module">
-   <div class="container">
-    <div class="row">
-        <div class="col-lg-12 col-md-12">
+    <section class="subheader_friend">
+        <div class="container">
+            <h1>Indique um amigo</h1>
+            {{-- <div class="breadcrumb right">Home <i class="fa fa-angle-right"></i> <a href="#" class="current">A Espíndola</a></div> --}}
+            <div class="clear"></div>
+        </div>
+    </section>
+    <section class="module">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
 
-            <div class="blog-post">
-              <a href="#" class="blog-post-img">
+                    <div class="blog-post">
+                        {{-- <a href="#" class="blog-post-img">
                 <div class="img-fade"></div>
                 
                 <img src="https://onepercentbetter.com/wp-content/uploads/2019/08/group-friends-meeting-local-coffee-shop-find-out-who-your-friends-are-ss-FEATURED.jpg" alt="">
-              </a>
-              <div class="content blog-post-content">
-                <h3><a href="#">Promoção Indique um Amigo</a></h3>
-                {{-- <ul class="blog-post-details">
+              </a> --}}
+                        <div class="content blog-post-content">
+                            <h3><a href="#">Promoção Indique um Amigo</a></h3>
+                            {{-- <ul class="blog-post-details">
                   <li><i class="fa fa-folder-open-o icon"></i>Posted in <a href="#">News</a></li>
                   <li><i class="fa fa-comment-o icon"></i>6 Comments</li>
                   <li><i class="fa fa-share-alt icon"></i>Share</li>

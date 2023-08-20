@@ -8,6 +8,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="csrf-token" content="{{ csrf_token() }}" />
+      <meta name="adopt-website-id" content="7bb59424-366f-4fb1-87e1-ee2cd4ada15c" />
       <link rel="icon" href="{{ url('img/site/favicon.png') }}">
       <meta property="og:url" content="{{ $meta_site['url'] }}" />
       <meta property="og:title" content="{{ $meta_site['title'] }}" />
@@ -20,15 +21,15 @@
       <link rel="stylesheet" href="{{ url('css/all.css') }}" type="text/css" media="all" >
       <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
       <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-      {{ Html::style('assets/pnotify/dist/pnotify.css') }}
-      {{ Html::style('assets/pnotify/dist/pnotify.buttons.css') }}
+      {{ Html::style('public/assets/pnotify/dist/pnotify.css') }}
+      {{ Html::style('public/assets/pnotify/dist/pnotify.buttons.css') }}
 
       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-      {{ Html::style('assets/jquery-ui/jquery-ui.min.css') }}
-      {{ Html::style('assets/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css') }}
-      {{ Html::style('assets/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5.css') }}
+      {{ Html::style('public/assets/jquery-ui/jquery-ui.min.css') }}
+      {{ Html::style('public/assets/ion.rangeSlider-2.2.0/css/ion.rangeSlider.css') }}
+      {{ Html::style('public/assets/ion.rangeSlider-2.2.0/css/ion.rangeSlider.skinHTML5.css') }}
       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
-      {{ Html::style('assets/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css') }}
+      {{ Html::style('public/assets/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css') }}
       <style type="text/css">
          #names_distinct{
          -webkit-columns: 100px 3; /* Chrome, Safari, Opera */
@@ -60,7 +61,7 @@
          /*]]>*/
          
          //GLOBALIZANDO URL
-         var project_survey = '/';
+         var project_survey = ':42000/';
          domin  =  window.location.protocol + "//" + window.location.hostname;
          var domain_complet = domin + project_survey; 
          var url = window.location.origin;
@@ -71,9 +72,26 @@
       </script>
       <!-- End of espindola Zendesk Widget script -->
    </head>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYV2STQCQD"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+
+         gtag('config', 'G-PYV2STQCQD');
+      </script>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-1XMVV042NW"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1XMVV042NW');
+      </script>
    <body>
       @section('sidebar')
-      @include('cookieConsent::index')
       @include('layouts.header_site')
       @show
       @yield('content')
@@ -81,7 +99,8 @@
       <div id="fb-root"></div>
       
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v8.0&appId=1504290103179579&autoLogAppEvents=1" nonce="1PVcfdUf"></script>
-   </body>
+<script src="//tag.goadopt.io/injector.js?website_code=7bb59424-366f-4fb1-87e1-ee2cd4ada15c" class="adopt-injector"></script>  
+</body>
    <script>
       document.addEventListener("DOMContentLoaded", function() {
     //conteúdo que será compartilhado: Título da página + URL
@@ -100,8 +119,8 @@
    {{ Html::script('js/wNumb.js') }}
    {{ Html::script('js/nouislider.min.js') }}
    {{ Html::script('js/global.js') }}
-'   {{ Html::script('assets/pnotify/dist/pnotify.js') }}
-   {{ Html::script('assets/pnotify/dist/pnotify.animate.js') }}'
+   <!-- {{ Html::script('assets/pnotify/dist/pnotify.js') }} -->
+   <!-- {{ Html::script('assets/pnotify/dist/pnotify.animate.js') }} -->
    {{ Html::script('assets/ion.rangeSlider-2.2.0/js/ion-rangeSlider/moment-with-locales.js') }}
    {{ Html::script('assets/ion.rangeSlider-2.2.0/js/ion-rangeSlider/ion.rangeSlider.min.js') }}
    {{ Html::script('assets/sumoselect/jquery.sumoselect.min.js') }}

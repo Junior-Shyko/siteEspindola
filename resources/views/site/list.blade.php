@@ -87,17 +87,8 @@
 						</div>
 
 						<div class="property-color-bar"></div>
-							@php
-								$img = SiteEspindola\Immobile::getPhotoFeatured($immobiles->immobiles_code);
-								$src = '';
-								if($img == ''){
-									echo $immobiles->immobiles_code;
-								}else{
-									$src = $img;
-								}
-							@endphp
-							<img src="{{$src}}" alt="" 
-							class="img-responsive img_property"  />
+
+							<img src="{{SiteEspindola\Immobile::getPhotoFeatured($immobiles->immobiles_code) }}" alt="" class="img-responsive img_property"  />
 						</a>
 
 						<div class="property-content">
@@ -180,5 +171,5 @@ immobile = '{{ $immobile }}';
 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBisdaSyLJ4WC4bFxEFA5rdhGq_8B1B52I&sensor=false"></script>
 
-{{ Html::script('/js/map.js') }}
+{{ Html::script('public/js/map.js') }}
 @endpush

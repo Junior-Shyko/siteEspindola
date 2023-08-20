@@ -11,7 +11,7 @@
     </div>
     <div class="container">
         <div>
-            Home <i class="fa fa-angle-right"></i>
+            Home <i class="fa fa-angle-right"></i> 
             <a href="#" class="">A Espíndola</a>
             <i class="fa fa-angle-right"></i>
             <a href="#" class="">Equipe Espíndola</a>
@@ -23,7 +23,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12">
-                <!--
+                <!-- 
                     <div class="property-listing-header">
                         <span class="property-count left">8 agents found</span>
                         <form action="#" method="get" class="right">
@@ -47,12 +47,12 @@
                                 <div class="agent agent-row agent-row-sidebar shadow-hover">
                                     <a href="#" class="agent-img">
                                         <div class="img-fade"></div>
-                                        <img src="{{url('public/img/site/'.$item->teamSites_photo)}}" alt="{{$item->teamSites_name}}">
+                                        <img src="{{$item->teamSites_photo}}" alt="{{$item->teamSites_name}}">
                                     </a>
                                     <div class="agent-content">
                                         <div class="agent-details">
                                             <h4><a href="#">{{$item->teamSites_name}}</a></h4>
-                                            @php
+                                            @php 
                                                 if ($item->teamSites_name == 'Yara Pereira') {
                                                     echo '<p><i class="fa fa-tag icon"></i>Gerente Agência Aldeota</p>';
                                                 }elseif ($item->teamSites_name == 'Bernadete Espíndola'){
@@ -73,7 +73,7 @@
                                             </ul>
                                         </div>
                                         @endif
-
+                                        
                                     </div>
                                     <div class="clear"></div>
                                 </div>
@@ -82,11 +82,11 @@
                         @if($item->teamSites_office == 'Comercial')
                         <div class="col-lg-12">
                             <h4>Comercial.</h4>
-                            <img src="public/img/site/divider-half-blue.png" alt=""><br><br>
+                            <img src="img/site/divider-half-blue.png" alt=""><br><br>
                             <div class="agent agent-row agent-row-sidebar shadow-hover">
                                 <a href="#" class="agent-img">
                                     <div class="img-fade"></div>
-                                    <img src="{{url('public/img/site/'.$item->teamSites_photo)}}" alt="{{$item->teamSites_name}}">
+                                    <img src="{{$item->teamSites_photo}}" alt="{{$item->teamSites_name}}">
                                 </a>
                                 <div class="agent-content">
                                     <div class="agent-details">
@@ -111,18 +111,18 @@
                         @endif
 
                         @if ($item->teamSites_office == 'Administração de Imóveis')
-                        <div class="col-lg-12">
+                        {{-- <div class="col-lg-12">
                             <h4>Administração de Imóveis</h4>
-                            <img src="public/img/site/divider-half-blue.png" alt=""><br><br>
+                            <img src="img/site/divider-half-blue.png" alt=""><br><br>
                             <div class="agent agent-row agent-row-sidebar shadow-hover">
                                 <a href="#" class="agent-img">
                                     <div class="img-fade"></div>
-                                    <img src="{{url('public/img/site/'.$item->teamSites_photo)}}" alt="{{$item->teamSites_name}}">
+                                    <img src="{{$item->teamSites_photo}}" alt="{{$item->teamSites_name}}">
                                 </a>
                                 <div class="agent-content">
                                     <div class="agent-details">
                                         <h4><a href="#">{{$item->teamSites_name}} </a></h4>
-                                        <p><i class="fa fa-tag icon"></i>Administração de Imóveis</p>
+                                        <p><i class="fa fa-tag icon"></i>Administrativo & Financeiro</p>
                                         <p><i class="fa fa-phone icon"></i>{{$item->teamSites_phoneOne}}</p>
                                     </div>
                                     <div class="agent-text">
@@ -138,18 +138,18 @@
                                 </div>
                                 <div class="clear"></div>
                             </div>
-                        </div>
+                        </div> --}}
                         @endif
 
                         @if ($item->teamSites_office == 'Administrativo e Financeiro')
                         @php $infoFinan = 0; @endphp
                         <div class="col-lg-12">
                             <h4>Administrativo & Financeiro</h4>
-                            <img src="public/img/site/divider-half-blue.png" alt=""><br><br>
+                            <img src="img/site/divider-half-blue.png" alt=""><br><br>
                             <div class="agent agent-row agent-row-sidebar shadow-hover">
                                 <a href="#" class="agent-img">
                                     <div class="img-fade"></div>
-                                    <img src="{{url('public/img/site/'.$item->teamSites_photo)}}" alt="{{$item->teamSites_name}}">
+                                    <img src="{{$item->teamSites_photo}}" alt="{{$item->teamSites_name}}">
                                 </a>
                                 <div class="agent-content">
                                     <div class="agent-details">
@@ -176,11 +176,11 @@
                         @if ($item->teamSites_office == 'Equipe Jurídico')
                         <div class="col-lg-12">
                             <h4>Equipe Jurídico</h4>
-                            <img src="public/img/site/divider-half-blue.png" alt=""><br><br>
+                            <img src="img/site/divider-half-blue.png" alt=""><br><br>
                             <div class="agent agent-row agent-row-sidebar shadow-hover">
                                 <a href="#" class="agent-img">
                                     <div class="img-fade"></div>
-                                    <img src="{{url('public/img/site/'.$item->teamSites_photo)}}" alt="{{$item->teamSites_name}}">
+                                    <img src="{{$item->teamSites_photo}}" alt="{{$item->teamSites_name}}">
                                 </a>
                                 <div class="agent-content">
                                     <div class="agent-details">
@@ -203,7 +203,7 @@
                             </div>
                         </div>
                         @endif
-
+                        
                     @endforeach
                 </div>
                 <!-- end row -->
