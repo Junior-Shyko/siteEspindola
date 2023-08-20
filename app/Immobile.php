@@ -288,7 +288,7 @@ class Immobile extends Model
     static public function xml()
     {
         $carbon = Carbon::now();
-        //$url = "https://imob.valuegaia.com.br/integra/midia.ashx?midia=GaiaWebServiceImovel&p=5n9UCbUpZaPJa4ffzP%2bSZQdXvGH%2bBktSruRMsJ6O1aw%3d";
+        // $url = "https://imob.valuegaia.com.br/integra/midia.ashx?midia=GaiaWebServiceImovel&p=5n9UCbUpZaPJa4ffzP%2bSZQdXvGH%2bBktSruRMsJ6O1aw%3d";
         $url = "http://www.valuegaia.com.br/integra/midia.ashx?midia=GaiaWebServiceImovel&p=00%2Flzqjgm%2BFEk6fq3ROvWw%3D%3D";
         // $data = file_get_contents($url);
         // $xml = simplexml_load_string($data);
