@@ -38,14 +38,22 @@ return [
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
         ],
+        /* ON LINE 
+        DB_CONNECTION=mysql
+        DB_HOST=mysql.weblink.com.br
+        DB_PORT=3306
+        DB_DATABASE=u982331984_sisea
+        DB_USERNAME=u982331984_escaz
+        DB_PASSWORD=weblink2017!
+        */
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => 'mysql',
+            'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '3306'),
-            'database' =>  'laravel6',
-            'username' => 'root',
-            'password' => 'livre',
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',

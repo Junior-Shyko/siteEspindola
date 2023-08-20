@@ -29,7 +29,6 @@ class Location extends Model
 
     static public function createLocation($user_agent, $ip, $route, $lat, $log, $city, $country, $region, $timezone, $page_previous, $date)
     {
-       
 
     	try {
 	    	Location::insert(['locations_user_agent' => $user_agent, 'locations_ip' => $ip , 'locations_route' => $route ,'locations_latitude' => $lat ,'locations_longitude' => $log ,'locations_city' => $city ,'locations_country' => $country ,'locations_regionName' => $region ,'locations_timezone' => $timezone ,'locations_page_previous' => $page_previous ,'locations_date_time' => $date]);

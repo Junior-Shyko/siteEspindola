@@ -1,7 +1,7 @@
 @extends('layouts.site')
 @section('title', '')
 @section('sidebar')
-@parent
+    @parent
 @endsection
 @section('content')
 
@@ -94,8 +94,7 @@
             </div>
             <!-- end container -->
             <div class="whatsapp-fixo">
-                <a href="https://api.whatsapp.com/send?phone=5585988101166&text=Olá, eu estou com uma dúvida, poderia me ajudar?"
-                data-toggle="tooltip" data-placement="top"  title="Fale agora com nossos atendentes."  title="Fale agora com nossos atendentes.">
+                <a href="#" data-toggle="modal" data-target="#myModal" title="Fale agora com nossos atendentes.">
                     <img src="{{ url('https://espindolaimobiliaria.com.br/public/img/site/whatsapp.png') }}" width="54"
                         height="54">
                 </a>
@@ -283,6 +282,7 @@
         </div>
     </div>
 @endsection
+{{-- @include('cookieConsent::index') --}}
 @section('footer')
     @include('site.footer')
 @endsection
