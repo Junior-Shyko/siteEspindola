@@ -504,9 +504,10 @@ public function sendContact(Request $request)
     $date = Carbon::parse($date_send, 'UTC');
     $date = $date->format('d \d\e F \d\e Y H:m');
     $agency = "Ag. Aldeota";
-    $mail = \Mail::to('meajuda@espindolaimobiliaria.com.br')->send(new ContactMail($immobile, $contact, $date, $agency ));
-   
-    if($mail)
+    
+    $mail = \Mail::to('meajuda@espindolaimobiliaria.com.br')->cc('contato@espindolaimobiliaria.com.br')->send(new ContactMail($immobile, $contact, $date, $agency ));
+
+    if(is_null($mail))
     {
         return response()->json(['message' => 'success']);
 

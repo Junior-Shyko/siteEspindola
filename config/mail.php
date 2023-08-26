@@ -42,7 +42,7 @@ return [
     |
     */
 
-    'port' => 587,
+    'port' => 465,
 
     /*
     |--------------------------------------------------------------------------
@@ -68,7 +68,7 @@ return [
     |
     */
 
-    'encryption' => 'tls',
+    'encryption' => 'ssl',
 
     /*
     |--------------------------------------------------------------------------
@@ -81,9 +81,9 @@ return [
     |
     */
 
-    'username' => 'contato@espindolaimobiliaria.com.br',
+    'username' => 'naoresponda@espindolaimobiliaria.com.br',
 
-    'password' => 'espindola!',
+    'password' => 'Espindola1212!',
 
     /*
     |--------------------------------------------------------------------------
