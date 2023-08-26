@@ -38,14 +38,6 @@ return [
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
         ],
-        /* ON LINE 
-        DB_CONNECTION=mysql
-        DB_HOST=mysql.weblink.com.br
-        DB_PORT=3306
-        DB_DATABASE=u982331984_sisea
-        DB_USERNAME=u982331984_escaz
-        DB_PASSWORD=weblink2017!
-        */
 
         'mysql' => [
             'driver' => 'mysql',
