@@ -31,24 +31,7 @@
       <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
       {{ Html::style('assets/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css') }}
       <style type="text/css">
-         #names_distinct{
-         -webkit-columns: 100px 3; /* Chrome, Safari, Opera */
-         -moz-columns: 100px 3; /* Firefox */
-         columns: 100px 3;
-         }
-         .whatsapp-fixo {
-         position: fixed;
-         bottom:10px;
-         left:30px;
-         z-index: 999;
-         float: right;
-         }
-         .whatsapp-fixo > a > i{
-         border-color: green;
-         background: green;
-         color: #fff;
-         border-radius: 30px;
-         }
+        
       </style>
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
