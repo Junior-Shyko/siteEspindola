@@ -57,23 +57,23 @@
         </div>
     </div>
 </section>
-<section class="module contact-espindola">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="text-center">
-                    <span style="color: #fff;">
-                        A Espíndola Imobiliária é reconhecida por prestar serviços de locação e vendas de imóveis no mais elevado padrão de qualidade. Tudo isto só é possível porque temos uma equipe de alto nível!
-                    </span>
-                </h3>
-            </div>
-        </div>
-        <div class="row" align="center">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/RyjXjZp5tRk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div><!-- end row -->
-  
-    </div>
-  </section>
+{{--<section class="module contact-espindola">--}}
+{{--    <div class="container">--}}
+{{--        <div class="row">--}}
+{{--            <div class="col-md-12">--}}
+{{--                <h3 class="text-center">--}}
+{{--                    <span style="color: #fff;">--}}
+{{--                        A Espíndola Imobiliária é reconhecida por prestar serviços de locação e vendas de imóveis no mais elevado padrão de qualidade. Tudo isto só é possível porque temos uma equipe de alto nível!--}}
+{{--                    </span>--}}
+{{--                </h3>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <div class="row" align="center">--}}
+{{--            <iframe width="560" height="315" src="https://www.youtube.com/embed/RyjXjZp5tRk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
+{{--        </div><!-- end row -->--}}
+{{--  --}}
+{{--    </div>--}}
+{{--  </section>--}}
 {{-- <section class="module testimonials">
 
     <div class="container">
