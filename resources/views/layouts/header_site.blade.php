@@ -56,7 +56,7 @@
                 <td class="header-item-text">
                   E-mail<br/>
                 <span style="font-size: 15px; color: black;">
-                  <a href="mailto: meajuda@espindolaimobiliaria.com.br">{{$site[0]->sites_email}}</a>
+                  <a href="mailto:{{$site[0]->sites_email}}">{{$site[0]->sites_email}}</a>
                   {{-- <a href="mailto: meajuda@espindolaimobiliaria.com.br">meajuda@espindolaimobiliaria.com.br</a> --}}
                 </span>
                 </td>

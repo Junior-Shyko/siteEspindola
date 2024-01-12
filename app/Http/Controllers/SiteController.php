@@ -505,7 +505,7 @@ public function sendContact(Request $request)
     $date = $date->format('d \d\e F \d\e Y H:m');
     $agency = "Ag. Aldeota";
     
-    $mail = \Mail::to('meajuda@espindolaimobiliaria.com.br')->cc('contato@espindolaimobiliaria.com.br')->send(new ContactMail($immobile, $contact, $date, $agency ));
+    $mail = \Mail::to('contato@espindolaimobiliaria.com.br')->cc('contato@espindolaimobiliaria.com.br')->send(new ContactMail($immobile, $contact, $date, $agency ));
 
     if(is_null($mail))
     {
@@ -560,7 +560,7 @@ public function reserveKey(Request $request)
     $contact->agency            = $request['agency'];
 
     try {
-        \Mail::to('meajuda@espindolaimobiliaria.com.br')->send(new ReserveKey($immobile , $contact));
+        \Mail::to('contato@espindolaimobiliaria.com.br')->send(new ReserveKey($immobile , $contact));
         
         Mail::send('email.confirmReserve', ['contact' => $contact, 'immobile' => $immobile ], function ($message) use ($contact,$immobile )
         {
