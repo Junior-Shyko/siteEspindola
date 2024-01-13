@@ -46,11 +46,7 @@
     <section class="module">
         <div class="container">
             <div class="row">
-            <div class="whatsapp-fixo">
-                <a href="https://api.whatsapp.com/send?phone=5585988101166&amp;text=Olá, eu estou com uma dúvida, poderia me ajudar?" data-toggle="tooltip" data-placement="top" title="" data-original-title="Fale agora com nossos atendentes.">
-                    <img src="https://espindolaimobiliaria.com.br/public/img/site/whatsapp.png" width="54" height="54">
-                </a>
-            </div>
+            @include('site.div-whatsapp')
                 <div class="col-lg-8 col-md-8">
                     <div class="property-single-item property-main">
                         <div class="property-header">

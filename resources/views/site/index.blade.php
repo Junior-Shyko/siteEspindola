@@ -29,13 +29,7 @@
                 </div>
             </div>
             <!-- end container -->
-            <div class="whatsapp-fixo">
-                <a href="https://api.whatsapp.com/send?phone=5585988101166&text=Olá, eu estou com uma dúvida, poderia me ajudar?"
-                data-toggle="tooltip" data-placement="top"  title="Fale agora com nossos atendentes."  title="Fale agora com nossos atendentes.">
-                    <img src="{{ url('https://espindolaimobiliaria.com.br/public/img/site/whatsapp.png') }}" width="54"
-                        height="54">
-                </a>
-            </div>
+            @include('site.div-whatsapp')
 
     </section>
     @include('site.immobileAdvanced')
