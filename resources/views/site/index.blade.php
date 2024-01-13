@@ -29,7 +29,7 @@
                 </div>
             </div>
             <!-- end container -->
-            @include('site.div-whatsapp')
+            {{-- @include('site.div-whatsapp') --}}
 
     </section>
     @include('site.immobileAdvanced')

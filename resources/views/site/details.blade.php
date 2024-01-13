@@ -46,7 +46,7 @@
     <section class="module">
         <div class="container">
             <div class="row">
-            @include('site.div-whatsapp')
+            {{-- @include('site.div-whatsapp') --}}
                 <div class="col-lg-8 col-md-8">
                     <div class="property-single-item property-main">
                         <div class="property-header">
