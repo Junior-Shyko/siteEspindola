@@ -23,25 +23,14 @@
                 </tr>
               </table>
             </div>
-{{--             <div class="header-item header-phone left">
-              <table>
-                <tr>
-                  <td><i class="fa fa-phone"></i></td>
-                  <td class="header-item-text">
-                    Ag. Fátima<br/>
-                    <span>+55(85)3038-0014</span>
-                  </td>
-                </tr>
-              </table>
-            </div>
-           --}}
+
           
             <div class="header-item header-phone left">
             <table>
               <tr>
                 <td><i class="fa fa-whatsapp"></i></td>
                 <td class="header-item-text">
-                  <a href="https://api.whatsapp.com/send?phone=55{{$site[0]->sites_phoneMobile}}&text=Ol%C3%A1,%20eu%20estou%20com%20uma%20d%C3%BAvida,%20poderia%20me%20ajudar?">
+                  <a href="https://api.whatsapp.com/send?phone=5585989704899&text=Ol%C3%A1,%20eu%20estou%20com%20uma%20d%C3%BAvida,%20poderia%20me%20ajudar?">
                   WhatsApp<br/>
                   <span style="font-size: 14px;">{{$site[0]->sites_phoneMobile}}</span>
                 </a>
@@ -100,25 +89,11 @@
                         
                       </ul>
                     </li>
-{{--             <ul class="sub-menu">
-              <li><a href="property-listing-grid.html">Listing Grid</a></li>
-              <li><a href="property-listing-grid-sidebar.html">Listing Grid Sidebar</a></li>
-              <li><a href="property-listing-row.html">Listing Row</a></li>
-              <li><a href="property-listing-row-sidebar.html">Listing Row Sidebar</a></li>
-              <li><a href="property-listing-map.html">Listing Map</a></li>
-              <li class="menu-item-has-children">
-                <a href="property-single.html">Property Single</a>
-                <ul class="sub-menu">
-                  <li><a href="property-single.html">Property Single Classic</a></li>
-                  <li><a href="property-single-full.html">Property Single Full Width</a></li>
-                </ul>
-              </li>
-            </ul> --}}
           </li>
 
           <li><a href="{{url('servicos')}}">Serviços</a></li>
           <li><a href="{{url('cliente')}}">Área do Cliente</a></li>        
-          <li><a href="{{url('https://espindola.zendesk.com/hc/pt-br')}}" target="_blank">Perguntas Frequentes</a></li>
+          <li><a href="{{url('https://espindolaimb.zendesk.com/hc/pt-br')}}" target="_blank">Perguntas Frequentes</a></li>
           <li><a href="{{url('contato')}}">Contato</a></li>
           <li>
             <li class="menu-item-has-children">
