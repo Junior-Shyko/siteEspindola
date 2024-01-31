@@ -274,8 +274,9 @@ public function show($id)
         // return $district;
 
         Location::createLocation(self::$agent, self::$ip, self::$route, self::$lat, self::$log, self::$city, self::$country, self::$region, self::$timezone, self::$page_previous, self::$date);
-
-        $meta_site = ['url' => url('/imovel/'.$id) , 'title' => $page_title , 'type' => 'website' , 'description' => $description , 'image' => $photo_immobile_featured[0]->photo_immobiles_url];
+        $imageFeature = '';
+        count($photo_immobile_featured) > 0 ? $imageFeature = $photo_immobile_featured[0]->photo_immobiles_url : $imageFeature = '';    
+        $meta_site = ['url' => url('/imovel/'.$id) , 'title' => $page_title , 'type' => 'website' , 'description' => $description , 'image' => $imageFeature];
         //SEGURO INCENDIO
         if($immobile->immobiles_rental_price < 300){
             $price_insurance_fire = 300;
